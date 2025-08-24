@@ -13,7 +13,7 @@ It combines **local knowledge retrieval**, **web search integration**, and **Hug
 ## 🚀 Features
 - **LLM Integration**: Powered by Hugging Face Inference (`openai/gpt-oss-120b:fireworks-ai`).  
 - **Graph-based Tool Use**: Runs reasoning pipelines with retrieval + web tools.  
-- **Frontend**: Simple, lightweight interface similar to ChatGPT (HTML, CSS, JS only, no frameworks).  
+- **Frontend**: Simple, lightweight interface (HTML, CSS, JS only, no frameworks).  
 - **Backend**: Python FastAPI backend to handle inference calls.  
 - **Deployment Ready**: Works on local setup or can be hosted on cloud platforms.  
 
@@ -24,7 +24,7 @@ It combines **local knowledge retrieval**, **web search integration**, and **Hug
 RoboChat/
     │── backend/ # Agent, Tools, FastAPI backend, connects to Hugging Face inference
     │── frontend/ # Simple HTML/CSS/JS interface
-    │── notebooks/ # Jupyter notebooks for experiments & demos
+    │── notebook.ipynb # Jupyter notebooks for experiments & demos
     │── README.md # Project documentation
 ```
 
@@ -34,7 +34,7 @@ RoboChat/
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/yourusername/robochat.git
+git clone https://github.com/Seif-Sameh/RoboChat.git
 cd robochat
 ```
 
