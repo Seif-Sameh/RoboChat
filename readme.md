@@ -42,6 +42,7 @@ cd robochat
 ```bash
 cd backend
 pip install -r requirements.txt
+uvicorn main:app --reload --port 8000                                                                  
 ```
 
 ### 3️⃣ Frontend Setup
@@ -49,7 +50,7 @@ Frontend is a simple static app (no frameworks).
 Open frontend/index.html in a browser, or serve via a local web server:
 ```bash
 cd frontend
-python -m http.server 8000
+python -m http.server 5500
 ```
 Now visit:
 http://localhost:8000
