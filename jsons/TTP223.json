@@ -1,0 +1,73 @@
+{
+  "component_name": "TTP223",
+  "category": "Sensor",
+  "manufacturer": "",
+  "sku": "",
+  "description": "The TTP223 is a touch pad detector IC that provides a single touch key with low power consumption and a wide operating voltage range (2.0\u202fV to 5.5\u202fV). It supports multiple output modes (CMOS, open\u2011drain, direct, toggle) and offers fast and low\u2011power operation, adjustable sensitivity, and optional maximum key\u2011on duration.",
+  "application_examples": [
+    "Consumer electronics",
+    "Waterproof electric products",
+    "Button key replacement"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Touch pad detector",
+    "measuring_range": "",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "Fast mode: ~60\u202fms; Low\u2011power mode: ~220\u202fms (at VDD\u202f=\u202f3\u202fV)",
+    "operating_voltage": "2.0\u202fV \u2013 5.5\u202fV",
+    "current_consumption": "Typical 1.5\u202f\u00b5A (low\u2011power, no load), 3.5\u202f\u00b5A (fast, no load); Max 13\u202f\u00b5A (fast, no load)",
+    "interface": "Digital output (CMOS or open\u2011drain)",
+    "operating_temperature": "-20\u202f\u00b0C to +70\u202f\u00b0C",
+    "dimensions": "",
+    "other": [
+      "Sensitivity adjustable via external capacitance (0\u202fpF \u2013 50\u202fpF)",
+      "Fast/Low\u2011power mode selectable via LPMB pin",
+      "Toggle/Direct mode selectable via TOG pin",
+      "Active high/low selectable via AHLB pin",
+      "Maximum key\u2011on duration selectable via MOTB pin (up to 100\u202fs)",
+      "Sampling length selectable via SLRFTB pin (1.6\u202fms or 3.2\u202fms)"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "2.0\u202fV \u2013 5.5\u202fV",
+    "max_current": "13\u202f\u00b5A (fast mode, no load)",
+    "consumption": "Typical 1.5\u202f\u00b5A (low\u2011power, no load); 3.5\u202f\u00b5A (fast, no load)"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "VDD (pin 6)",
+      "GND": "VSS (pin 3)",
+      "Data": "Q (CMOS output, pin 1) or OPDO (open\u2011drain output, pin 2)",
+      "Other": "LPMB, TOG, AHLB, RST, SLRFTB, MOTB, I (sensor input)"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VDD to supply voltage (2.0\u202fV\u20135.5\u202fV), VSS to ground, pad to pin I, and read the output from pin Q (or OPDO). Configure the desired mode pins (LPMB, TOG, AHLB, MOTB, SLRFTB, RST) as per application requirements.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <Arduino.h>\n\nconst int touchPin = 2; // Q pin\n\nvoid setup() {\n  pinMode(touchPin, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  int state = digitalRead(touchPin);\n  Serial.println(state == HIGH ? \"Touched\" : \"Not touched\");\n  delay(100);\n}",
+        "explaination": "Simple Arduino sketch that reads the touch state from the Q pin and prints it to the serial monitor."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "",
+    "address": ""
+  },
+  "revision_history": [
+    {
+      "date": "2008/04/07",
+      "revision": "V_1.0",
+      "notes": "Original version"
+    }
+  ],
+  "languages_available": [],
+  "source_document": "Preliminary TTP223 datasheet (Ver 1.0, 08\u2019/04/07)"
+}

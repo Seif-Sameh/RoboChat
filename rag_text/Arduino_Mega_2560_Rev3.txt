@@ -1,0 +1,98 @@
+component_name: Arduino Mega 2560 Rev3
+category: Control Board
+manufacturer: Arduino S.r.l.
+sku: A000067
+description: Arduino® Mega 2560 Rev3 is an exemplary development board dedicated for building extensive applications as compared to other maker boards by Arduino. The board accommodates the ATmega2560 microcontroller, which operates at a frequency of 16 MHz. The board contains 54 digital input/output pins, 16 analog inputs, 4 UARTs (hardware serial ports), a USB connection, a power jack, an ICSP header, and a reset button.
+application_examples:
+  - Robotics
+  - 3D Printing
+  - Wi-Fi
+related_products:
+  - Arduino UNO R3
+  - Arduino Nano
+  - Arduino Due without headers
+  - Arduino Mega 2560 Rev3
+specifications:
+  main_processor: ATmega2560
+  memory_main:
+    flash: 256k bytes
+    sram: 8k bytes
+    eeprom: 4k bytes
+  secondary_processor: ATmega16U2
+  memory_secondary:
+    flash: 16k bytes
+    sram: 512 bytes
+    eeprom: 512 bytes
+  operating_voltage: 5V
+  input_voltage_recommended: 7-12V
+  input_voltage_limits: 7-12V
+  operating_temperature: -40°C to 85°C
+  digital_io_pins: 54
+  pwm_pins: 15
+  analog_input_pins: 16
+  dc_current_per_io_pin: 
+  flash_memory_for_bootloader: 8k bytes
+power:
+  vin_max: 12V
+  vusb_max: 5.5V
+  consumption: 
+pinout:
+  analog_pins:
+    A0: 9
+    A1: 10
+    A2: 11
+    A3: 12
+    A4: 13
+    A5: 14
+    A6: 15
+    A7: 16
+    A8: 17
+    A9: 18
+    A10: 19
+    A11: 20
+    A12: 21
+    A13: 22
+    A14: 23
+    A15: 24
+  digital_pins:
+  power_pins:
+certifications:
+  - CE
+  - RoHS
+  - REACH
+  - FCC
+getting_started:
+  ide: Arduino Desktop IDE
+  cloud_editor: Arduino Cloud Editor
+sample_sketches: Examples available in the Arduino IDE under the "Examples" menu.
+online_resources:
+  - https://www.arduino.cc/en/Main/Software
+  - https://create.arduino.cc/editor
+  - https://docs.arduino.cc/arduino-cloud/guides/editor/
+  - https://www.arduino.cc/
+  - https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending
+  - https://www.arduino.cc/reference/en/libraries/
+  - https://store.arduino.cc/
+datasheet_url: 
+company_info:
+  name: Arduino S.r.l.
+  address: Via Andrea Appiani 25, 20900 MONZA MB, Italy
+revision_history:
+  - Item 1:
+    date: 25/04/2024
+    revision: 3
+    changes: Updated link to new Cloud Editor
+  - Item 2:
+    date: 09/10/2023
+    revision: 2
+    changes: Updated recommended operating conditions
+  - Item 3:
+    date: 29/09/2020
+    revision: 1
+    changes: First Release
+languages_available:
+source_document: User Manual
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

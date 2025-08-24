@@ -1,0 +1,81 @@
+{
+  "component_name": "L298N Dual H-Bridge Motor Driver",
+  "category": "Motor Driver",
+  "manufacturer": "Handson Technology",
+  "sku": "MDU-1049",
+  "description": "Dual bidirectional motor driver board based on the L298N IC. Supports two DC motors up to 2A each, with input voltage 3.2V~40Vdc. Includes on\u2011board +5V regulator, LED indicators, and protection diodes.",
+  "application_examples": [
+    "Controlling two DC motors with an Arduino",
+    "Controlling a NEMA\u201117 stepper motor"
+  ],
+  "related_products": [],
+  "specifications": {
+    "driver_type": "L298N Dual H-Bridge",
+    "motor_channels": "2",
+    "voltage_range_motor": "3.2V~40Vdc",
+    "voltage_range_logic": "5V (TTL logic)",
+    "continuous_current_per_channel": "2A",
+    "peak_current_per_channel": "2A",
+    "control_interface": "TTL logic (digital pins)",
+    "operating_frequency": "",
+    "operating_temperature": "-25\u00b0C ~ +130\u00b0C",
+    "dimensions": "3.4cm x 4.3cm x 2.7cm",
+    "protection_features": [
+      "On\u2011board +5V regulator",
+      "LED indicators",
+      "Protection diodes"
+    ]
+  },
+  "power": {
+    "vin_max": "40V",
+    "vlogic_max": "5V",
+    "consumption": "Maximum 20W at 75\u00b0C"
+  },
+  "pinout": {
+    "motor_outputs": {
+      "Motor A": {
+        "OUT1": "Pin 1",
+        "OUT2": "Pin 2"
+      },
+      "Motor B": {
+        "OUT3": "Pin 3",
+        "OUT4": "Pin 4"
+      }
+    },
+    "control_pins": {
+      "IN1": "Pin 5",
+      "IN2": "Pin 6",
+      "IN3": "Pin 7",
+      "IN4": "Pin 8"
+    },
+    "power_pins": {
+      "VCC": "Pin 9 (3.2V~40Vdc)",
+      "GND": "Pin 10",
+      "5V_OUT": "Pin 11 (regulated 5V for controller)",
+      "Enable": "Pin 12 (Enable for each channel)"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect IN1\u2011IN4 to Arduino digital pins, VCC to external motor supply (3.2\u201140V), GND to common ground, and use the on\u2011board 5V output to power the Arduino if desired.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "/*\n//  Author      : Handson Technology\n//  Project     : Arduino Uno\n//  Description : L298N Motor Driver\n//  Source-Code : L298N_Motor.ino\n//  Program: Control 2 DC motors using L298N H Bridge Driver\n//*/\n\nint IN1 = 4;\nint IN2 = 5;\nint IN3 = 6;\nint IN4 = 7;\n\nvoid setup() {\n  pinMode(IN1, OUTPUT);\n  pinMode(IN2, OUTPUT);\n  pinMode(IN3, OUTPUT);\n  pinMode(IN4, OUTPUT);\n}\n\nvoid loop() {\n  // Rotate Motor A clockwise\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, LOW);\n  delay(2000);\n  // Stop Motor A\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, HIGH);\n  delay(500);\n\n  // Rotate Motor B clockwise\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, LOW);\n  delay(2000);\n  // Stop Motor B\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, HIGH);\n  delay(500);\n\n  // Rotate Motor A counter\u2011clockwise\n  digitalWrite(IN1, LOW);\n  digitalWrite(IN2, HIGH);\n  delay(2000);\n  // Stop Motor A\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, HIGH);\n  delay(500);\n\n  // Rotate Motor B counter\u2011clockwise\n  digitalWrite(IN3, LOW);\n  digitalWrite(IN4, HIGH);\n  delay(2000);\n  // Stop Motor B\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, HIGH);\n  delay(500);\n}\n",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "Handson Technology User Guide for SKU MDU-1049",
+  "example_code": [
+    {
+      "code": "int IN1 = 4;\nint IN2 = 5;\nint IN3 = 6;\nint IN4 = 7;\n\nvoid setup() {\n  pinMode(IN1, OUTPUT);\n  pinMode(IN2, OUTPUT);\n  pinMode(IN3, OUTPUT);\n  pinMode(IN4, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(IN1, HIGH); digitalWrite(IN2, LOW); delay(2000);\n  digitalWrite(IN1, HIGH); digitalWrite(IN2, HIGH); delay(500);\n  digitalWrite(IN3, HIGH); digitalWrite(IN4, LOW); delay(2000);\n  digitalWrite(IN3, HIGH); digitalWrite(IN4, HIGH); delay(500);\n  digitalWrite(IN1, LOW); digitalWrite(IN2, HIGH); delay(2000);\n  digitalWrite(IN1, HIGH); digitalWrite(IN2, HIGH); delay(500);\n  digitalWrite(IN3, LOW); digitalWrite(IN4, HIGH); delay(2000);\n  digitalWrite(IN3, HIGH); digitalWrite(IN4, HIGH); delay(500);\n}\n",
+      "explaination": "Basic Arduino sketch to drive two DC motors using the L298N dual H\u2011bridge driver."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+component_name: 0.91 Inch I2C SSD1306 OLED Display Module DC 3.3V-5V
+category: Display / Output Device
+manufacturer: 
+sku: 
+description: OLED display, no need backlight, self-illumination. Display Color: Blue. These I2C OLED Display Modules come without pin headers. The display performance is better than the traditional LCD display, also lower consumption; IIC (I2C communications) simplifies connections. Use with Arduino, ESP8266, ESP32, STM32, etc; 3.35v Power.
+application_examples:
+  - Arduino
+  - ESP8266
+  - ESP32
+  - STM32
+related_products:
+specifications:
+  display_type: OLED
+  resolution: 128 x 32
+  color_support: Blue
+  interface: IIC (I2C)
+  operating_voltage: 3.3 ~ 5V
+  current_consumption: 
+  viewing_angle: 
+  brightness: 
+  refresh_rate: 
+  sound_level: 
+  dimensions: 38 * 12 mm
+  operating_temperature: -40 ~ 85 ℃
+power:
+  supply_voltage_range: 3.3 ~ 5V
+  max_current: 
+  consumption: 
+pinout:
+  signal_pins:
+    SCL: Clock Line
+    SDA: Data Line
+  power_pins:
+    GND: Power Ground
+    VCC: Power + (DC 3.3 ~5v)
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect GND to ground, VCC to 3.3-5V, SCL to I2C clock, SDA to I2C data.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: 
+  address: 
+revision_history:
+languages_available:
+source_document: 0.91 Inch I2C SSD1306 OLED Display Module DC 3.3V-5V
+
+Description
+OLED display, no need backlight, self-illumination.Display Color: Blue.
+Plz note: These I2C OLED Display Module comes without pin headers
+The display performance is better than the traditional LCD display, also lower
+consumption; IIC (I2C communications) simplifies connections
+Use with Arduino, ESP8266, ESP32, STM32, etc; 3.35v Power
+Operating temperature:-40 - 85 ℃; Resolution: 128 x 32
+
+Specifications
+Driver IC: SSD1306
+Size: 0.91 inch OLED
+Resolution: 128 x 32
+Size: 38 * 12 mm
+Interface Type: IIC interface
+Display Color: Blue
+Pin Description:
+GND: Power Ground
+VCC: Power + (DC 3.3 ~5v)
+Operating temperature: -40 ~ 85 ℃
+SCL: Clock Line
+SDA: Data Line
+Package Including
+1 * 0.91 Inch I2C SSD1306 OLED Blue Display Module

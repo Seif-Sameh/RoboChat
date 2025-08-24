@@ -1,0 +1,63 @@
+{
+  "component_name": "Ambient Light Sensor Module",
+  "category": "Sensor",
+  "manufacturer": "Handson Technology",
+  "sku": "SSR-1014",
+  "description": "A photosensitive Light Dependent Resistor (LDR) module with a digital output and adjustable sensitivity via an onboard potentiometer. It detects ambient light intensity and provides an LED indicator when the light exceeds a threshold.",
+  "application_examples": [
+    "Automatic brightness adjustment for displays",
+    "Light level monitoring in environmental sensors",
+    "Ambient light detection for robotics and automation"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Light Dependent Resistor (LDR) with digital output",
+    "measuring_range": "",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "3 to 5 Vdc",
+    "current_consumption": "",
+    "interface": "3\u2011pin digital output (VCC, GND, Digital Out)",
+    "operating_temperature": "",
+    "dimensions": "3.2 cm x 1.4 cm",
+    "other": [
+      "LED indicator",
+      "Onboard potentiometer for sensitivity adjustment"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "3-5 Vdc",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "VCC (+)",
+      "GND": "GND (-)",
+      "Data": "Digital Out (Signal)",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to +3 to +5 Vdc, GND to ground, and Digital Out to a microcontroller input pin. The onboard LED will turn on when ambient light exceeds the threshold.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <Arduino.h>\n\nconst int lightPin = 2; // Digital output pin\n\nvoid setup() {\n  pinMode(lightPin, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  int lightState = digitalRead(lightPin);\n  if (lightState == LOW) {\n    Serial.println(\"Light detected\");\n  } else {\n    Serial.println(\"No light\");\n  }\n  delay(500);\n}",
+        "explaination": "Reads the digital output of the LDR module. A LOW value indicates light is detected, while HIGH means no light. The code prints the status to the serial monitor."
+      }
+    ]
+  },
+  "sample_sketches": "#include <Arduino.h>\n\nconst int lightPin = 2;\n\nvoid setup() {\n  pinMode(lightPin, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  int lightState = digitalRead(lightPin);\n  if (lightState == LOW) {\n    Serial.println(\"Light detected\");\n  } else {\n    Serial.println(\"No light\");\n  }\n  delay(500);\n}",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Handson Technology User Guide for Ambient Light Sensor Module"
+}

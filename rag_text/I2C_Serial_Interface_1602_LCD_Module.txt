@@ -1,0 +1,73 @@
+component_name: I2C Serial Interface 1602 LCD Module
+category: Display / Output Device
+manufacturer: Handson Technology
+sku: DSP-1182
+description: 16x2 character LCD display module with I2C interface, negative white characters on blue backlight, built‑in contrast adjustment, backlight control via firmware or jumper, 5V supply.
+application_examples:
+  - Arduino projects requiring a compact text display
+  - Microcontroller status or debug output
+  - Serial monitor character echo
+  - Embedded system user interfaces
+related_products:
+specifications:
+  display_type: Negative white on blue backlight
+  resolution: 16x2 characters
+  color_support: White characters on blue backlight
+  interface: I2C (PCF8574/PCF8574AT) to 4‑bit LCD data and control lines
+  operating_voltage: 5V
+  current_consumption: 
+  viewing_angle: 
+  brightness: 
+  refresh_rate: 
+  sound_level: 
+  dimensions: 80x36 mm
+  operating_temperature: 
+power:
+  supply_voltage_range: 5V
+  max_current: 
+  consumption: 
+pinout:
+  signal_pins:
+    SDA: I2C data line
+    SCL: I2C clock line
+  power_pins:
+    VCC: 5V supply
+    GND: Ground
+  control_pins:
+    Backlight: Controlled via firmware or jumper
+certifications:
+getting_started:
+  connection_guide: Connect SDA to Arduino SDA, SCL to Arduino SCL, VCC to 5V, GND to GND. Backlight can be enabled via firmware or a jumper wire.
+  example_code_url: https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads
+sample_sketches: #include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x3F, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
+
+void setup() {
+  Serial.begin(9600);
+  lcd.begin(16,2);
+  lcd.backlight();
+  lcd.setCursor(0,0);
+  lcd.print("Hello, world!");
+}
+
+void loop() {
+  if (Serial.available()) {
+    lcd.clear();
+    while (Serial.available() > 0) {
+      lcd.write(Serial.read());
+    }
+  }
+}
+online_resources:
+  - Handson Technology website
+  - Arduino I2C LCD library (https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads)
+  - Complete Guide to Arduino LCD Interfacing (PDF)
+datasheet_url: 
+company_info:
+  name: Handson Technology
+  address: 
+revision_history:
+languages_available:
+source_document: Handson Technology User Guide for I2C Serial Interface 1602 LCD Module

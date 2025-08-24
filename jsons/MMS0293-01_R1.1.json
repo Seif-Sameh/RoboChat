@@ -1,0 +1,80 @@
+{
+  "component_name": "L293D Motor Shield",
+  "category": "Motor Driver",
+  "manufacturer": "HTC",
+  "sku": "MMS0293-01",
+  "description": "The L293D Motor Shield is a great motor controller for Arduino. It controls servos, steppers and DC motors with an Arduino. The shield uses the L293D chipset to provide 0.6A per bridge (1.2A peak) with thermal shutdown protection and internal kickback protection diodes. It can run motors from 4.5V to 25V and supports up to 4 bi-directional DC motors, 2 servos, or 2 stepper motors.",
+  "application_examples": [
+    "Robotics",
+    "Mechatronics",
+    "Simple to medium-complexity projects"
+  ],
+  "related_products": [],
+  "specifications": {
+    "driver_type": "Quadruple Dual H-Bridge (L293D)",
+    "motor_channels": "4 DC motors, 2 servos",
+    "voltage_range_motor": "4.5V to 25V",
+    "voltage_range_logic": "5V",
+    "continuous_current_per_channel": "0.6A",
+    "peak_current_per_channel": "1.2A",
+    "control_interface": "Arduino digital pins via AF_Motor library",
+    "operating_frequency": "1kHz (default), up to 64kHz for motors 1-2",
+    "operating_temperature": "",
+    "dimensions": "",
+    "protection_features": [
+      "Thermal shutdown protection",
+      "Internal kickback protection diodes",
+      "Pull-down resistors"
+    ]
+  },
+  "power": {
+    "vin_max": "25V",
+    "vlogic_max": "5V",
+    "consumption": ""
+  },
+  "pinout": {
+    "motor_outputs": {
+      "M1": "DC Motor #1",
+      "M2": "DC Motor #2",
+      "M3": "DC Motor #3",
+      "M4": "DC Motor #4",
+      "SER1": "Servo Motor #1",
+      "SER2": "Servo Motor #2"
+    },
+    "control_pins": {
+      "JP1": "Digital I/O",
+      "JP2": "Digital I/O, GND, AREF",
+      "JP3": "VIN, GND, 5V, 3V, RST",
+      "JP4": "Analog In"
+    },
+    "power_pins": {
+      "+M": "External Power In (6-12V)",
+      "GND": "Ground for External Power",
+      "RESET": "Reset Switch",
+      "PWR": "Power Jumper"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Use the PWR jumper to select external power; connect EXT_PWR to an external supply of 6-12V. Servo power comes from the Arduino 5V rail. Install the AF_Motor library to control the shield via Arduino digital pins.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "HTC",
+    "address": ""
+  },
+  "revision_history": [
+    {
+      "revision": "R1.0",
+      "date": "Oct 2022"
+    }
+  ],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "L293D Motor Shield datasheet Oct 2022 \u2013 R1.0",
+  "example_code": []
+}

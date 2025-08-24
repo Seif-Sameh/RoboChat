@@ -1,0 +1,73 @@
+component_name: HC-05 Bluetooth Serial Module
+category: Communication Module
+manufacturer: Guangzhou HC Information Technology Co., Ltd.
+sku: HC-05
+description: A compact Bluetooth Classic serial interface module that converts UART signals to Bluetooth, supporting master/slave modes, AT command configuration, and serial port profile (SPP) communication.
+application_examples:
+  - Wireless serial communication between two microcontrollers
+  - Connecting a microcontroller to a PC or smartphone via Bluetooth
+  - Remote control of devices over Bluetooth
+  - Data logging from sensors to a mobile app
+related_products:
+  - HC-06 Bluetooth Serial Module
+  - HC-04 Bluetooth Serial Module
+  - HC-03 Bluetooth Serial Module
+  - HC-M4 Bluetooth Adapter
+  - HC-M6 Bluetooth Adapter
+specifications:
+  communication_type: Bluetooth Classic (SPP)
+  frequency_range: 2.4 GHz ISM band
+  data_rate: Up to 1.3 Mbps (configurable 4800–1.3M)
+  protocols_supported:
+    - Serial Port Profile (SPP)
+    - AT command set
+  operating_voltage: 3.0–4.2 V
+  current_consumption: Idle 8 mA, Pairing 25 mA (30–40 mA peak)
+  transmit_power: 
+  receiver_sensitivity: 
+  range: 
+  antenna_type: Internal PCB antenna
+  operating_temperature: 
+  dimensions: 28 mm × 15 mm × 2.35 mm
+power:
+  supply_voltage_range: 3.0–4.2 V
+  max_current: 40 mA
+  consumption: Idle 8 mA, Pairing 25 mA
+pinout:
+  communication_pins:
+    TXD: PIN1
+    RXD: PIN2
+  power_pins:
+    VCC: PIN12
+    GND1: PIN13
+    GND2: PIN22
+  control_pins:
+    RESET: PIN11
+    LED1 (mode indicator): PIN31
+    LED2 (pairing indicator): PIN32
+    MODE (AT mode switch): PIN34
+    KEY (memory clear for master): PIN26
+certifications:
+getting_started:
+  connection_guide: Connect PIN1 (TXD) to MCU RXD, PIN2 (RXD) to MCU TXD, PIN12 (VCC) to 3.3 V, PIN13/22 (GND) to ground. Optionally connect LED1/LED2 for status indication and PIN34 for AT mode entry.
+  example_code_url: https://www.wavesen.com/download/HC-05_datasheet.pdf
+sample_sketches: 
+online_resources:
+  - https://www.wavesen.com/download/HC-05_datasheet.pdf
+  - https://github.com/adafruit/Adafruit_BLE_Arduino
+  - https://learn.sparkfun.com/tutorials/serial-communication-with-bluetooth
+datasheet_url: https://www.wavesen.com/download/HC-05_datasheet.pdf
+company_info:
+  name: Guangzhou HC Information Technology Co., Ltd.
+  address: 
+revision_history:
+languages_available:
+  - English
+source_document: HC Serial Bluetooth Products User Instructional Manual (excerpt provided)
+example_code:
+  - Item 1:
+    code: AT+ROLE=1\r\n
+    explaination: Set the HC-05 to master mode via AT command.
+  - Item 2:
+    code: Serial.begin(9600);
+    explaination: Initialize UART communication at 9600 bps for transparent mode.

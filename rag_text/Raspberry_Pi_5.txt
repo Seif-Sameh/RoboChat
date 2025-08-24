@@ -1,0 +1,60 @@
+component_name: Raspberry Pi 5
+category: Single-board computer
+manufacturer: Raspberry Pi Ltd
+sku: 
+description: The Raspberry Pi 5 is a 64‑bit quad‑core ARM Cortex‑A76 single‑board computer featuring a 2.4 GHz CPU, VideoCore VII GPU, dual 4Kp60 HDMI output with HDR, 4Kp60 HEVC decoder, LPDDR4X‑4267 SDRAM (2/4/8/16 GB options), dual‑band 802.11ac Wi‑Fi, Bluetooth 5.0, microSD slot with SDR104 mode, USB 3.0 and USB 2.0 ports, Gigabit Ethernet with PoE+ support, two 4‑lane MIPI camera/display transceivers, PCIe 2.0 x1 interface, 5 V/5 A USB‑C power with Power Delivery, and a 40‑pin header.
+application_examples:
+  - Desktop computing
+  - Industrial automation
+  - Robotics
+  - Media center
+related_products:
+  - Raspberry Pi 4
+  - Raspberry Pi 3
+specifications:
+  main_processor: Broadcom BCM2712 2.4GHz quad‑core 64‑bit Arm Cortex‑A76 CPU
+  memory_main:
+    flash: 
+    sram: 
+    eeprom: 
+  secondary_processor: 
+  memory_secondary:
+    flash: 
+    sram: 
+    eeprom: 
+  operating_voltage: 5V
+  input_voltage_recommended: 5V
+  input_voltage_limits: 
+  operating_temperature: 
+  digital_io_pins: 
+  pwm_pins: 
+  analog_input_pins: 
+  dc_current_per_io_pin: 
+  flash_memory_for_bootloader: 
+power:
+  vin_max: 5V
+  vusb_max: 5V
+  consumption: 
+pinout:
+  analog_pins:
+  digital_pins:
+  power_pins:
+certifications:
+getting_started:
+  ide: 
+  cloud_editor: 
+sample_sketches: 
+online_resources:
+  - https://www.raspberrypi.com/products/raspberry-pi-5/
+datasheet_url: 
+company_info:
+  name: Raspberry Pi Ltd
+  address: 
+revision_history:
+languages_available:
+  - English
+source_document: Raspberry Pi 5 Specification Sheet
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

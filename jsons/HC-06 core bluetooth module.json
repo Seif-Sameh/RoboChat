@@ -1,0 +1,75 @@
+{
+  "component_name": "HC-06 Core Bluetooth Module",
+  "category": "Communication Module",
+  "manufacturer": "BOLUTEK",
+  "sku": "",
+  "description": "The HC-06 is a Bluetooth 2.0 slave module that provides short\u2011range wireless data communication via UART. It supports up to 2.1\u202fMb/s data rate, operates on the 2.402\u20132.480\u202fGHz ISM band, and is ideal for hobby, robotics, and embedded applications.",
+  "application_examples": [
+    "Hobby projects",
+    "Engineering applications",
+    "Robotics",
+    "Mobile Phone Accessories",
+    "Servers",
+    "Computer Peripherals",
+    "Sports and Leisure Equipment",
+    "USB Dongles"
+  ],
+  "related_products": [],
+  "specifications": {
+    "communication_type": "Bluetooth",
+    "frequency_range": "2.402 GHz \u2013 2.480 GHz",
+    "data_rate": "2.1 Mb/s",
+    "protocols_supported": [
+      "Bluetooth 2.0",
+      "UART"
+    ],
+    "operating_voltage": "+3.3V to +6V",
+    "current_consumption": "40 mA",
+    "transmit_power": "+6 dBm (Class 2)",
+    "receiver_sensitivity": "-85 dBm",
+    "range": "< 100 meters",
+    "antenna_type": "",
+    "operating_temperature": "-20\u00b0C to +55\u00b0C",
+    "dimensions": ""
+  },
+  "power": {
+    "supply_voltage_range": "+3.3V to +6V",
+    "max_current": "40 mA",
+    "consumption": "40 mA"
+  },
+  "pinout": {
+    "communication_pins": {
+      "TXD": "Serial data transmitted (3.3\u202fV logic)",
+      "RXD": "Serial data received (3.3\u202fV logic)"
+    },
+    "power_pins": {
+      "VCC": "Positive supply (+5\u202fV recommended)",
+      "GND": "Ground"
+    },
+    "control_pins": {
+      "Key": "AT command mode selector (High = AT mode, Low/NC = normal)",
+      "STATE": "LED indicator for module state"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to +5\u202fV, GND to ground, TXD to Arduino RXD via a 5\u202fV to 3.3\u202fV voltage divider, and RXD to Arduino TXD. Set UART baud rate to 9600\u202fbps. Use AT commands for configuration.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "BOLUTEK",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Provided source text",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

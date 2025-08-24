@@ -1,0 +1,49 @@
+component_name: 18650 MG1 2900mAh Lithium Ion Battery
+category: Power Component
+sub_category: Battery
+manufacturer: LG Chem
+sku: 
+description: Rechargeable cylindrical lithium ion battery, 18650 form factor, nominal capacity 2,850 mAh, nominal voltage 3.62 V, max charge voltage 4.2 V, max discharge current 10 A, weight 46 g, dimensions 18.3 mm diameter (max 18.4 mm) by 65 mm height (max 65.2 mm). Operates at charge temperatures 0–45 °C and discharge temperatures –20 to 60 °C.
+application_examples:
+  - Light Electric Vehicle
+related_products:
+specifications:
+  type: Lithium Ion 18650 cylindrical
+  voltage_input_range: 
+  voltage_output_range: 2.5 V – 4.2 V
+  current_output_continuous: 570 mA (0.2 C)
+  current_output_peak: 10 A
+  efficiency: 
+  capacity: 2,850 mAh
+  discharge_rate: 0.2 C (570 mA)
+  charging_current: 1,425 mA (0.5 C)
+  protection_features:
+  operating_temperature: Charge: 0–45 °C, Discharge: –20 to 60 °C
+  dimensions: Diameter 18.3 mm (max 18.4 mm), Height 65 mm (max 65.2 mm)
+  weight: 46 g
+power:
+  vin_max: 4.2 V
+  vout_max: 4.2 V
+  consumption: 
+pinout:
+  input_pins:
+  output_pins:
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: 
+  example_usage: 
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: LG Chem
+  address: 20 YOIDO-DONG YOUNGDUNGPO-GU, SEOUL 150-721, KOREA
+revision_history:
+  - Item 1:
+    revision: 0
+    date: 2012-05-11
+    originator: Park, Han Sol
+    description: Original Release
+languages_available:
+source_document: BCY-PS-MG1-Rev0

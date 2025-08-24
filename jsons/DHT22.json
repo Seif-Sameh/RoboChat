@@ -1,0 +1,60 @@
+{
+  "component_name": "DHT22 (AM2302)",
+  "category": "Sensor",
+  "manufacturer": "Aosong Electronics Co.,Ltd",
+  "sku": "",
+  "description": "Digital-output capacitive relative humidity and temperature sensor/module with 4-pin package and long transmission distance.",
+  "application_examples": [],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Capacitive humidity & temperature sensor",
+    "measuring_range": "Humidity 0\u2011100%RH; Temperature \u201340\u202f\u00b0C to +80\u202f\u00b0C",
+    "accuracy": "Humidity \u00b12%RH (max \u00b15%RH); Temperature \u00b10.5\u202f\u00b0C",
+    "resolution": "Humidity 0.1%RH; Temperature 0.1\u202f\u00b0C",
+    "response_time": "Average 2\u202fs (sensing period)",
+    "operating_voltage": "3.3\u20116\u202fV DC",
+    "current_consumption": "Stand\u2011by 40\u201150\u202f\u00b5A; Collecting 1\u20111.5\u202fmA",
+    "interface": "Single\u2011bus digital (1\u2011wire)",
+    "operating_temperature": "-40\u202f\u00b0C to +80\u202f\u00b0C",
+    "dimensions": "Small: 14\u202fmm \u00d7 18\u202fmm \u00d7 5.5\u202fmm; Big: 22\u202fmm \u00d7 28\u202fmm \u00d7 5\u202fmm",
+    "other": [
+      "Long transmission distance up to 20\u202fm",
+      "Low power consumption",
+      "Fully interchangeable 4\u2011pin package"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "3.3\u20116\u202fV DC",
+    "max_current": "1.5\u202fmA",
+    "consumption": "Stand\u2011by 40\u201150\u202f\u00b5A; Collecting 1\u20111.5\u202fmA"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Pin\u202f1",
+      "GND": "Pin\u202f4",
+      "Data": "Pin\u202f2",
+      "Other": "Pin\u202f3 (NULL)"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 3.3\u20116\u202fV, GND to ground, and Data to a digital I/O pin. Place a 100\u202fnF capacitor between VCC and GND for filtering. Use a pull\u2011up resistor (4.7\u202fk\u03a9) on the data line if required.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <DHT.h>\nDHT dht(2, DHT22);\nvoid setup() { Serial.begin(9600); dht.begin(); }\nvoid loop() { float h = dht.readHumidity(); float t = dht.readTemperature(); if(isnan(h)||isnan(t)) { Serial.println(\"Failed to read from DHT22\"); } else { Serial.print(\"Humidity: \"); Serial.print(h); Serial.print(\" %\"); Serial.print(\"  Temperature: \"); Serial.print(t); Serial.println(\" *C\"); } delay(2000); }",
+        "explaination": "Arduino sketch using the DHT library to read humidity and temperature from the DHT22 every 2 seconds."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Aosong Electronics Co.,Ltd",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Aosong Electronics Co.,Ltd technical specification document for DHT22 (AM2302) sensor."
+}

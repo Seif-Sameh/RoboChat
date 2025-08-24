@@ -1,0 +1,45 @@
+component_name: Dual Shaft Mini DC Gear Motor
+category: Motor
+manufacturer: Handson Technology
+sku: FAM1029
+description: 3~6V DC geared motor suitable for robotics and small industrial applications. Runs at ~100‑RPM on a single Li‑Ion cell. Features dual shafts for wheel drive and position encoder.
+application_examples:
+  - Low‑voltage robotics
+  - Small industrial automation
+  - Position control with encoder
+related_products:
+specifications:
+  motor_type: Mini DC gear motor
+  voltage_rating: 3.0V ~ 6.0Vdc
+  current_rating: No load: 3V‑150mA, 6V‑200mA
+  torque: max. 0.8kg/cm
+  speed_rpm: No load: 3V‑90rpm±10%, 6V‑200rpm±10%
+  gear_ratio: 1:48
+  shaft_diameter: 8mm x 2mm
+  weight: 17.5 grams
+  operating_temperature: 
+  dimensions: 70mm x 37mm x 23mm
+power:
+  supply_voltage_range: 3.0V ~ 6.0Vdc
+  max_current: 6V‑200mA
+  consumption: 
+pinout:
+  wiring:
+    VCC: 
+    GND: 
+    Control_Signal: 
+    Other: 
+certifications:
+getting_started:
+  connection_guide: 
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - https://www.handsontec.com
+datasheet_url: 
+company_info:
+  name: Handson Technology
+  address: 
+revision_history:
+languages_available:
+source_document: www.handsontec.com

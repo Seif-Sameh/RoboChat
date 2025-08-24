@@ -1,0 +1,80 @@
+{
+  "component_name": "HC-05 Bluetooth Module",
+  "category": "Communication Module",
+  "manufacturer": "ITEAD Studio",
+  "sku": "",
+  "description": "Bluetooth SPP (Serial Port Protocol) module based on CSR Bluecore 04, supporting Bluetooth V2.0+EDR with 3\u202fMbps data rate. Features integrated antenna, low\u2011power 1.8\u202fV operation, and UART interface with programmable baud rate.",
+  "application_examples": [],
+  "related_products": [],
+  "specifications": {
+    "communication_type": "Bluetooth SPP (Serial Port Protocol)",
+    "frequency_range": "2.4\u202fGHz",
+    "data_rate": "Up to 3\u202fMbps (Bluetooth V2.0+EDR)",
+    "protocols_supported": [
+      "Bluetooth SPP",
+      "UART"
+    ],
+    "operating_voltage": "1.8\u202fV to 3.6\u202fV (I/O)",
+    "current_consumption": "",
+    "transmit_power": "+4\u202fdBm",
+    "receiver_sensitivity": "-80\u202fdBm",
+    "range": "",
+    "antenna_type": "Integrated",
+    "operating_temperature": "",
+    "dimensions": "12.7\u202fmm \u00d7 27\u202fmm (footprint)"
+  },
+  "power": {
+    "supply_voltage_range": "1.8\u202fV \u2013 3.6\u202fV",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "communication_pins": {
+      "TXD": "UART Transmit",
+      "RXD": "UART Receive",
+      "PIO0": "Disconnect (rising pulse)",
+      "PIO1": "Status (low\u2011disconnected, high\u2011connected)",
+      "PIO10": "LED control (red)",
+      "PIO11": "LED control (blue)"
+    },
+    "power_pins": {
+      "VCC": "Power supply (1.8\u202fV \u2013 3.6\u202fV)",
+      "GND": "Ground"
+    },
+    "control_pins": {
+      "PIO0": "Disconnect trigger",
+      "PIO1": "Connection status",
+      "PIO10": "LED control",
+      "PIO11": "LED control"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 3.3\u202fV (or 1.8\u202fV), GND to ground, TXD to MCU RX, RXD to MCU TX. Use PIO0 to trigger disconnect, PIO1 to read connection status. PIO10 and PIO11 can drive status LEDs.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://iteadstudio.com"
+  ],
+  "datasheet_url": "https://iteadstudio.com",
+  "company_info": {
+    "name": "ITEAD Studio",
+    "address": ""
+  },
+  "revision_history": [
+    {
+      "rev": "v1.0",
+      "description": "Initial version",
+      "release_date": "7/18/2010"
+    }
+  ],
+  "languages_available": [],
+  "source_document": "HC-05 Bluetooth module datasheet (iteadstudio.com, 06.18.2010)",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

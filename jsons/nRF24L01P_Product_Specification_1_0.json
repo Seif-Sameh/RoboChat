@@ -1,0 +1,93 @@
+{
+  "component_name": "nRF24L01+",
+  "category": "Communication Module",
+  "manufacturer": "Nordic Semiconductor ASA",
+  "sku": "",
+  "description": "Single\u2011chip 2.4\u202fGHz transceiver with embedded Enhanced ShockBurst\u2122 baseband engine, ultra\u2011low power operation, 250\u202fkbps\u20132\u202fMbps data rates, 1.9\u20133.6\u202fV supply, QFN20 4\u202f\u00d7\u202f4\u202fmm package.",
+  "application_examples": [
+    "Wireless PC peripherals (mouse, keyboard, remote)",
+    "Advanced media\u2011center remote controls",
+    "VoIP headsets",
+    "Game controllers",
+    "Sports watches and sensors",
+    "RF remote controls for consumer electronics",
+    "Home and commercial automation",
+    "Ultra\u2011low\u2011power sensor networks",
+    "Active RFID",
+    "Asset tracking systems",
+    "Toys"
+  ],
+  "related_products": [
+    "nRF24L01",
+    "nRF2401A",
+    "nRF2402",
+    "nRF24E1",
+    "nRF24E2"
+  ],
+  "specifications": {
+    "communication_type": "GFSK modulation, 2.4\u202fGHz ISM band",
+    "frequency_range": "2.400\u202f\u2013\u202f2.4835\u202fGHz",
+    "data_rate": "250\u202fkbps, 1\u202fMbps, 2\u202fMbps",
+    "protocols_supported": [
+      "Enhanced ShockBurst\u2122",
+      "Auto Acknowledgement",
+      "Auto Retransmission",
+      "MultiCeiver\u2122 (6 data pipes)"
+    ],
+    "operating_voltage": "1.9\u202f\u2013\u202f3.6\u202fV",
+    "current_consumption": "Idle: 900\u202fnA (power\u2011down), 26\u202f\u00b5A (standby\u2011I), 13.5\u202fmA (RX 2\u202fMbps), 11.3\u202fmA (TX 0\u202fdBm)",
+    "transmit_power": "0\u202fdBm, \u20136\u202fdBm, \u201312\u202fdBm, \u201318\u202fdBm",
+    "receiver_sensitivity": "-82\u202fdBm (2\u202fMbps), \u201385\u202fdBm (1\u202fMbps), \u201394\u202fdBm (250\u202fkbps)",
+    "range": "",
+    "antenna_type": "Balanced RF output via ANT1/ANT2, requires 15\u202f\u03a9\u202f+\u202fj88\u202f\u03a9 load",
+    "operating_temperature": "-40\u202f\u00b0C\u202f\u2013\u202f+85\u202f\u00b0C",
+    "dimensions": "QFN20 4\u202f\u00d7\u202f4\u202fmm"
+  },
+  "power": {
+    "supply_voltage_range": "1.9\u202f\u2013\u202f3.6\u202fV",
+    "max_current": "13.5\u202fmA (RX 2\u202fMbps)",
+    "consumption": "900\u202fnA (power\u2011down)"
+  },
+  "pinout": {
+    "communication_pins": {
+      "CE": "Chip Enable \u2013 activates RX or TX mode",
+      "CSN": "SPI Chip Select",
+      "SCK": "SPI Clock",
+      "MOSI": "SPI Master Out Slave In",
+      "MISO": "SPI Master In Slave Out",
+      "IRQ": "Maskable interrupt pin (active low)"
+    },
+    "power_pins": {
+      "VDD": "Main supply (1.9\u202f\u2013\u202f3.6\u202fV)",
+      "VSS": "Ground",
+      "VDD_PA": "Power supply for internal PA (1.8\u202fV)",
+      "DVDD": "Digital supply output for decoupling",
+      "IREF": "Reference current (22\u202fk\u03a9 to ground)"
+    },
+    "control_pins": {}
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect CE, CSN, SCK, MOSI, MISO, IRQ to MCU SPI. Supply VDD 1.9\u20133.6\u202fV, connect VDD_PA to ANT1/ANT2 with 15\u202f\u03a9\u202f+\u202fj88\u202f\u03a9 load. Use 5\u202fV tolerant inputs. Configure via SPI registers.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF24L01%2B",
+    "https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF24L01%2B/Documentation"
+  ],
+  "datasheet_url": "https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF24L01%2B",
+  "company_info": {
+    "name": "Nordic Semiconductor ASA",
+    "address": "Otto Nielsens vei 12, 7004 Trondheim, Norway"
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "nRF24L01+ Product Specification v1.0, September 2008",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

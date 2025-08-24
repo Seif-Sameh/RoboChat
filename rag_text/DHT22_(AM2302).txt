@@ -1,0 +1,52 @@
+component_name: DHT22 (AM2302)
+category: Sensor
+manufacturer: Aosong Electronics Co.,Ltd
+sku: 
+description: Digital-output capacitive relative humidity and temperature sensor/module with 4-pin package and long transmission distance.
+application_examples:
+related_products:
+specifications:
+  sensor_type: Capacitive humidity & temperature sensor
+  measuring_range: Humidity 0‑100%RH; Temperature –40 °C to +80 °C
+  accuracy: Humidity ±2%RH (max ±5%RH); Temperature ±0.5 °C
+  resolution: Humidity 0.1%RH; Temperature 0.1 °C
+  response_time: Average 2 s (sensing period)
+  operating_voltage: 3.3‑6 V DC
+  current_consumption: Stand‑by 40‑50 µA; Collecting 1‑1.5 mA
+  interface: Single‑bus digital (1‑wire)
+  operating_temperature: -40 °C to +80 °C
+  dimensions: Small: 14 mm × 18 mm × 5.5 mm; Big: 22 mm × 28 mm × 5 mm
+  other:
+    - Long transmission distance up to 20 m
+    - Low power consumption
+    - Fully interchangeable 4‑pin package
+power:
+  supply_voltage_range: 3.3‑6 V DC
+  max_current: 1.5 mA
+  consumption: Stand‑by 40‑50 µA; Collecting 1‑1.5 mA
+pinout:
+  pins:
+    VCC: Pin 1
+    GND: Pin 4
+    Data: Pin 2
+    Other: Pin 3 (NULL)
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 3.3‑6 V, GND to ground, and Data to a digital I/O pin. Place a 100 nF capacitor between VCC and GND for filtering. Use a pull‑up resistor (4.7 kΩ) on the data line if required.
+  example_code_url: 
+  example_code:
+    - Item 1:
+      code: #include <DHT.h>
+DHT dht(2, DHT22);
+void setup() { Serial.begin(9600); dht.begin(); }
+void loop() { float h = dht.readHumidity(); float t = dht.readTemperature(); if(isnan(h)||isnan(t)) { Serial.println("Failed to read from DHT22"); } else { Serial.print("Humidity: "); Serial.print(h); Serial.print(" %"); Serial.print("  Temperature: "); Serial.print(t); Serial.println(" *C"); } delay(2000); }
+      explaination: Arduino sketch using the DHT library to read humidity and temperature from the DHT22 every 2 seconds.
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: Aosong Electronics Co.,Ltd
+  address: 
+revision_history:
+languages_available:
+source_document: Aosong Electronics Co.,Ltd technical specification document for DHT22 (AM2302) sensor.

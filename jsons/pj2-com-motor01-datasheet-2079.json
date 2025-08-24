@@ -1,0 +1,49 @@
+{
+  "component_name": "Gear Motor including Wheel",
+  "category": "Motor",
+  "manufacturer": "",
+  "sku": "COM-Motor01",
+  "description": "Gear motor with integrated wheel, suitable for low\u2011voltage DC applications.",
+  "application_examples": [],
+  "related_products": [],
+  "specifications": {
+    "motor_type": "Gear Motor",
+    "voltage_rating": "4.5\u20139 V DC (recommended 4.5 V)",
+    "current_rating": "160\u2013200 mA (idle)",
+    "torque": "800\u20131200 gf/cm",
+    "speed_rpm": "90\u2013300 rpm (idle)",
+    "gear_ratio": "",
+    "shaft_diameter": "3.6 mm (two\u2011sided) with 1.9 mm opening",
+    "weight": "",
+    "operating_temperature": "",
+    "dimensions": "Motor: 37.6 \u00d7 64.2 \u00d7 22.5 mm; Wheel: 65 mm diameter \u00d7 27 mm width"
+  },
+  "power": {
+    "supply_voltage_range": "3\u20139 V DC (recommended 4.5 V)",
+    "max_current": "200 mA (idle)",
+    "consumption": ""
+  },
+  "pinout": {
+    "wiring": {
+      "VCC": "",
+      "GND": "",
+      "Control_Signal": "",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "http://www.joy-it.net",
+  "company_info": {
+    "name": "",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Model Gear Motor including Wheel Article No. COM-Motor01 Shaft 3.6mm two-sided with opening 1.9mm Power Supply 3 - 9V DC (recommended: 4.5V) Dimensions (Wheel) Diameter: 65mm Width: 27mm Dimensions (Motor) 37.6 x 64.2 x 22.5mm Scope of Delivery Motor, Wheel EAN 4250236815503 3 Gear Motor including Wheel Technical Specifications Time for more www.joy-it.net Published: 23.04.2018 Voltage DC (V) 4.5 6 7.2 9 Current in Idle (mA) 190 160 180 200 Revs per min. in idle (\u00b1 10%) 90 190 230 300 Torque (gf/cm) 800 800 1000 1200"
+}

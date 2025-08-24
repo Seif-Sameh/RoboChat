@@ -1,0 +1,52 @@
+component_name: Lithium Battery Charging & Protection Module (TP4056)
+category: Power Component
+sub_category: Battery Charger
+manufacturer: 
+sku: 
+description: A compact module that charges single or two parallel Li‑ion cells using CC/CV method while providing over‑discharge, over‑charge, over‑current, short‑circuit, soft‑start, and trickle charge protection. Powered via 5V USB or external supply.
+application_examples:
+  - Charging single Li‑ion cells in portable electronics
+  - Charging two parallel Li‑ion cells for higher capacity
+  - USB powered battery chargers for DIY projects
+related_products:
+specifications:
+  type: Lithium‑ion battery charger with protection
+  voltage_input_range: 5V
+  voltage_output_range: 4.2V ±1%
+  current_output_continuous: 1A
+  current_output_peak: 3A
+  efficiency: 
+  capacity: 
+  discharge_rate: 
+  charging_current: 1A
+  protection_features:
+    - Over‑discharge protection (2.4V)
+    - Over‑charge protection (4.2V)
+    - Over‑current protection (3A)
+    - Short‑circuit protection
+    - Soft‑start protection
+    - Trickle charge (130mA)
+  operating_temperature: 
+  dimensions: 26mm x 17mm
+  weight: 1.6g
+power:
+  vin_max: 5V
+  vout_max: 4.2V
+  consumption: 
+pinout:
+  input_pins:
+  output_pins:
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect 5V USB or external 5V supply to the module’s input. Attach the Li‑ion cell(s) to the battery terminals. Observe the red LED for charging and blue LED for charge completion.
+  example_usage: Use the module to charge a single 3.7V Li‑ion cell or two cells in parallel for double capacity. Ensure the input supply can deliver at least 1A.
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: 
+  address: 
+revision_history:
+languages_available:
+source_document: Lithium Battery Charging & Protection Module description and specifications provided in the user prompt.

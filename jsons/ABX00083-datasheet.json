@@ -1,0 +1,160 @@
+{
+  "component_name": "Arduino Nano ESP32",
+  "category": "Control Board",
+  "manufacturer": "Arduino S.r.l.",
+  "sku": "ABX00083",
+  "description": "The Arduino Nano ESP32 is a Nano\u2011form factor development board based on the ESP32\u2011S3 SoC (NORA\u2011W106\u201110B from u\u2011blox). It supports Wi\u2011Fi and Bluetooth LE, offers 3.3\u202fV operation, 6\u201321\u202fV input, and is ideal for IoT, MicroPython, and low\u2011power applications.",
+  "application_examples": [
+    "Home automation \u2013 smart switches, automatic lighting, motor control",
+    "IoT sensors \u2013 monitoring sensor values with ADC, I2C/SPI buses",
+    "Low\u2011power designs \u2013 battery powered, deep sleep mode"
+  ],
+  "related_products": [],
+  "specifications": {
+    "main_processor": "ESP32\u2011S3 (Xtensa LX7 dual\u2011core)",
+    "memory_main": {
+      "flash": "16\u202fMB (external QSPI flash)",
+      "sram": "512\u202fkB",
+      "eeprom": ""
+    },
+    "secondary_processor": "",
+    "memory_secondary": {
+      "flash": "",
+      "sram": "",
+      "eeprom": ""
+    },
+    "operating_voltage": "3.3\u202fV",
+    "input_voltage_recommended": "6\u201321\u202fV",
+    "input_voltage_limits": "6\u201321\u202fV",
+    "operating_temperature": "-40\u202f\u00b0C to 105\u202f\u00b0C",
+    "digital_io_pins": "14 (21 including analog)",
+    "pwm_pins": "",
+    "analog_input_pins": "8",
+    "dc_current_per_io_pin": "Source 40\u202fmA, Sink 28\u202fmA",
+    "flash_memory_for_bootloader": ""
+  },
+  "power": {
+    "vin_max": "21\u202fV",
+    "vusb_max": "5.5\u202fV",
+    "consumption": ""
+  },
+  "pinout": {
+    "analog_pins": {
+      "1": "D13 / SCK",
+      "2": "+3V3",
+      "3": "BOOT0",
+      "4": "A0",
+      "5": "A1",
+      "6": "A2",
+      "7": "A3",
+      "8": "A4 (SDA)",
+      "9": "A5 (SCL)",
+      "10": "A6",
+      "11": "A7",
+      "12": "VBUS",
+      "13": "BOOT1",
+      "14": "GND",
+      "15": "VIN"
+    },
+    "digital_pins": {
+      "1": "D12 / CIPO",
+      "2": "D11 / COPI",
+      "3": "D10 / CS",
+      "4": "D9",
+      "5": "D8",
+      "6": "D7",
+      "7": "D6",
+      "8": "D5",
+      "9": "D4",
+      "10": "D3",
+      "11": "D2",
+      "12": "GND",
+      "13": "RST",
+      "14": "D0 / RX",
+      "15": "D1 / TX"
+    },
+    "power_pins": {
+      "3.3V": "3.3\u202fV rail",
+      "GND": "Ground",
+      "VIN": "Input voltage (6\u201321\u202fV)",
+      "VBUS": "5\u202fV from USB\u2011C (when powered via USB)"
+    }
+  },
+  "certifications": [
+    "CE",
+    "RoHS",
+    "FCC",
+    "SRRC"
+  ],
+  "getting_started": {
+    "ide": "Arduino IDE",
+    "cloud_editor": "Arduino Cloud Editor"
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.arduino.cc/en/Main/Software",
+    "https://create.arduino.cc/editor",
+    "https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor",
+    "https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending",
+    "https://github.com/arduino-libraries/",
+    "https://store.arduino.cc/"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Arduino S.r.l.",
+    "address": "Via Andrea Appiani, 25 Monza, MB, 20900 Italy"
+  },
+  "revision_history": [
+    {
+      "date": "2023/08/06",
+      "changes": "Release"
+    },
+    {
+      "date": "2023/09/01",
+      "changes": "Updated power tree flowchart"
+    },
+    {
+      "date": "2023/09/11",
+      "changes": "Updated SPI section, analog/digital pin section"
+    },
+    {
+      "date": "2023/11/06",
+      "changes": "Corrected company name, VBUS/VUSB"
+    },
+    {
+      "date": "2023/11/09",
+      "changes": "Block diagram update, antenna specifications"
+    },
+    {
+      "date": "2023/11/15",
+      "changes": "Ambient temperature update"
+    },
+    {
+      "date": "2023/11/23",
+      "changes": "Added LP mode labels"
+    },
+    {
+      "date": "2024/02/23",
+      "changes": "Added antenna frequency to block diagram"
+    },
+    {
+      "date": "2024/08/23",
+      "changes": "SRRC certification"
+    },
+    {
+      "date": "2024/09/05",
+      "changes": "Updated Cloud Editor from Web Editor"
+    }
+  ],
+  "languages_available": [
+    "English",
+    "Chinese"
+  ],
+  "source_document": "User Manual \u2013 Arduino Nano ESP32",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

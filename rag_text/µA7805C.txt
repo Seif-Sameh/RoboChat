@@ -1,0 +1,60 @@
+component_name: µA7805C
+category: Power Component
+sub_category: Fixed-Voltage Regulator
+manufacturer: Texas Instruments
+sku: µA7805C
+description: 5 V fixed‑output linear regulator capable of delivering up to 1.5 A with internal short‑circuit and thermal overload protection.
+application_examples:
+  - On‑card regulation to reduce noise and distribution problems
+  - Precision regulator with external components
+  - Adjustable output voltage/current with external resistors
+related_products:
+  - µA7808C
+  - µA7810C
+  - µA7812C
+  - µA7815C
+  - µA7824C
+specifications:
+  type: Linear regulator
+  voltage_input_range: 7 V to 20 V
+  voltage_output_range: 5 V
+  current_output_continuous: 1.5 A
+  current_output_peak: 2.2 A
+  efficiency: 
+  capacity: 
+  discharge_rate: 
+  charging_current: 
+  protection_features:
+    - Internal short‑circuit current limiting
+    - Internal thermal overload protection
+    - Output transistor safe‑area compensation
+  operating_temperature: 0 °C to 125 °C
+  dimensions: 
+  weight: 
+power:
+  vin_max: 20 V
+  vout_max: 5 V
+  consumption: 
+pinout:
+  input_pins:
+    1: VIN
+  output_pins:
+    2: VOUT
+  control_pins:
+    3: GND
+certifications:
+getting_started:
+  connection_guide: Connect VIN to the input supply, VOUT to the load, and GND to common ground.
+  example_usage: Use as a 5 V regulator for microcontroller or digital logic power supply.
+sample_sketches: 
+online_resources:
+  - https://www.ti.com/product/µA7805C
+  - https://www.ti.com/lit/ds/symlink/µa7805c.pdf
+datasheet_url: https://www.ti.com/lit/ds/symlink/µa7805c.pdf
+company_info:
+  name: Texas Instruments
+  address: Post Office Box 655303 Dallas, Texas 75265
+revision_history:
+languages_available:
+  - English
+source_document: µA7800 SERIES POSITIVE-VOLTAGE REGULATORS SLVS056J – MAY 1976 – REVISED MAY 2003

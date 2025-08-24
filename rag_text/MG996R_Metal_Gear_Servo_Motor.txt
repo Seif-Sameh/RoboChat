@@ -1,0 +1,45 @@
+component_name: MG996R Metal Gear Servo Motor
+category: Motor
+manufacturer: Handson Technology
+sku: EMH-1056
+description: High-torque digital servo featuring metal gearing for extra high torque (up to 11 kgf·cm at 6 V). Includes upgraded shock-proofing, redesigned PCB/IC control, and double ball bearing design. Rotates approximately 120° (±60°).
+application_examples:
+  - Robotic arm control
+  - RC vehicle steering
+  - Servo-based hobby projects
+  - Arduino servo projects
+related_products:
+specifications:
+  motor_type: Digital Servo
+  voltage_rating: 4.8 V to 7.2 V
+  current_rating: Running: 500 mA, Stall: 2.5 A (6 V)
+  torque: 9.4 kgf·cm (4.8 V), 11 kgf·cm (6 V)
+  speed_rpm: ≈88 rpm (4.8 V), ≈107 rpm (6 V)
+  gear_ratio: 
+  shaft_diameter: 
+  weight: 55 g
+  operating_temperature: 
+  dimensions: 40.7 × 19.7 × 42.9 mm
+power:
+  supply_voltage_range: 4.8 V to 7.2 V
+  max_current: 2.5 A (stall)
+  consumption: 500 mA (running)
+pinout:
+  wiring:
+    VCC: 4.8 V–7.2 V (typically 5 V from Arduino)
+    GND: Ground
+    Control_Signal: PWM pulse width 1 ms–2 ms (1.5 ms = center)
+    Other: 
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 5 V (or 4.8–7.2 V), GND to Arduino GND, and signal to a PWM-capable pin (e.g., pin 9).
+  example_code_url: 
+sample_sketches: Arduino Servo Sweep example (File > Examples > Servo > Sweep).
+online_resources:
+datasheet_url: 
+company_info:
+  name: Handson Technology
+  address: 
+revision_history:
+languages_available:
+source_document: Handson Technology User Guide – MG996R Metal Gear Servo Motor

@@ -1,0 +1,59 @@
+{
+  "component_name": "18650 MG1 2900mAh Lithium Ion Battery",
+  "category": "Power Component",
+  "sub_category": "Battery",
+  "manufacturer": "LG Chem",
+  "sku": "",
+  "description": "Rechargeable cylindrical lithium ion battery, 18650 form factor, nominal capacity 2,850\u202fmAh, nominal voltage 3.62\u202fV, max charge voltage 4.2\u202fV, max discharge current 10\u202fA, weight 46\u202fg, dimensions 18.3\u202fmm diameter (max 18.4\u202fmm) by 65\u202fmm height (max 65.2\u202fmm). Operates at charge temperatures 0\u201345\u202f\u00b0C and discharge temperatures \u201320 to 60\u202f\u00b0C.",
+  "application_examples": [
+    "Light Electric Vehicle"
+  ],
+  "related_products": [],
+  "specifications": {
+    "type": "Lithium Ion 18650 cylindrical",
+    "voltage_input_range": "",
+    "voltage_output_range": "2.5\u202fV \u2013 4.2\u202fV",
+    "current_output_continuous": "570\u202fmA (0.2\u202fC)",
+    "current_output_peak": "10\u202fA",
+    "efficiency": "",
+    "capacity": "2,850\u202fmAh",
+    "discharge_rate": "0.2\u202fC (570\u202fmA)",
+    "charging_current": "1,425\u202fmA (0.5\u202fC)",
+    "protection_features": [],
+    "operating_temperature": "Charge: 0\u201345\u202f\u00b0C, Discharge: \u201320 to 60\u202f\u00b0C",
+    "dimensions": "Diameter 18.3\u202fmm (max 18.4\u202fmm), Height 65\u202fmm (max 65.2\u202fmm)",
+    "weight": "46\u202fg"
+  },
+  "power": {
+    "vin_max": "4.2\u202fV",
+    "vout_max": "4.2\u202fV",
+    "consumption": ""
+  },
+  "pinout": {
+    "input_pins": {},
+    "output_pins": {},
+    "control_pins": {}
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "",
+    "example_usage": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "LG Chem",
+    "address": "20 YOIDO-DONG YOUNGDUNGPO-GU, SEOUL 150-721, KOREA"
+  },
+  "revision_history": [
+    {
+      "revision": "0",
+      "date": "2012-05-11",
+      "originator": "Park, Han Sol",
+      "description": "Original Release"
+    }
+  ],
+  "languages_available": [],
+  "source_document": "BCY-PS-MG1-Rev0"
+}

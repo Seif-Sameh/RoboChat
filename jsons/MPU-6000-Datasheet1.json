@@ -1,0 +1,95 @@
+{
+  "component_name": "MPU-6000/MPU-6050",
+  "category": "Sensor",
+  "manufacturer": "InvenSense Inc.",
+  "sku": "",
+  "description": "The MPU\u20116000/MPU\u20116050 is a 6\u2011axis motion\u2011tracking device that integrates a 3\u2011axis MEMS gyroscope, a 3\u2011axis MEMS accelerometer, and an on\u2011chip Digital Motion Processor (DMP) in a 4\u202f\u00d7\u202f4\u202f\u00d7\u202f0.9\u202fmm QFN package. It supports I\u00b2C (400\u202fkHz) and, for the MPU\u20116000, SPI (1\u202fMHz) interfaces, and offers programmable full\u2011scale ranges, low\u2011power modes, and a 1024\u2011byte FIFO buffer.",
+  "application_examples": [
+    "Gesture recognition in smartphones and tablets",
+    "Video and image stabilization (BlurFree\u2122)",
+    "Security and authentication (AirSign\u2122)",
+    "Motion\u2011based game controllers",
+    "Wearable health and fitness sensors",
+    "3\u2011D remote controls for set\u2011top boxes",
+    "Pedestrian and vehicle navigation"
+  ],
+  "related_products": [
+    "MPU\u20116050 (I\u00b2C only version)",
+    "MPU\u20116050 with external magnetometer via auxiliary I\u00b2C",
+    "MPU\u20116050 with DMP firmware"
+  ],
+  "specifications": {
+    "sensor_type": "3\u2011axis MEMS gyroscope + 3\u2011axis MEMS accelerometer + on\u2011chip DMP",
+    "measuring_range": "Gyroscope: \u00b1250, \u00b1500, \u00b11000, \u00b12000\u202f\u00b0/s; Accelerometer: \u00b12\u202fg, \u00b14\u202fg, \u00b18\u202fg, \u00b116\u202fg",
+    "accuracy": "",
+    "resolution": "16\u2011bit ADC for both gyro and accel",
+    "response_time": "",
+    "operating_voltage": "2.375\u202fV \u2013 3.46\u202fV (VDD); VLOGIC 1.71\u202fV \u2013 VDD for MPU\u20116050",
+    "current_consumption": "Normal: 3.9\u202fmA (gyro + accel + DMP); Gyro only: 3.6\u202fmA; Accel only: 500\u202f\u00b5A; Low\u2011power accel: 10\u202f\u00b5A (1.25\u202fHz) \u2013 140\u202f\u00b5A (40\u202fHz)",
+    "interface": "I\u00b2C (400\u202fkHz) and SPI (1\u202fMHz, MPU\u20116000 only)",
+    "operating_temperature": "-40\u202f\u00b0C to +105\u202f\u00b0C",
+    "dimensions": "4\u202f\u00d7\u202f4\u202f\u00d7\u202f0.9\u202fmm QFN (24\u2011pin)",
+    "other": [
+      "10,000\u202fg shock tolerance",
+      "1024\u2011byte FIFO buffer",
+      "Digital Motion Processor (DMP) for motion fusion",
+      "On\u2011chip temperature sensor",
+      "Programmable low\u2011pass filters for gyro, accel, and temp",
+      "Self\u2011test capability for gyro and accel"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "2.375\u202fV \u2013 3.46\u202fV",
+    "max_current": "3.9\u202fmA (normal operation)",
+    "consumption": "3.9\u202fmA (normal), 3.6\u202fmA (gyro only), 500\u202f\u00b5A (accel only)"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "VDD (2.375\u202fV \u2013 3.46\u202fV)",
+      "GND": "GND",
+      "Data": "I\u00b2C SDA/SCL (or SPI SDI/SDO)",
+      "Other": "/CS (SPI chip select), VLOGIC (MPU\u20116050 only), AD0/SDO (I\u00b2C address LSB), FSYNC, INT, AUX_DA, AUX_CL, CLKIN, REGOUT, CPOUT, C3, C1, C2, C4 (capacitors)"
+    }
+  },
+  "certifications": [
+    "RoHS",
+    "Green compliant"
+  ],
+  "getting_started": {
+    "connection_guide": "Connect VDD to 2.375\u20133.46\u202fV, GND to ground, SDA to I\u00b2C data line, SCL to I\u00b2C clock line, AD0 to set I\u00b2C address (0 or 1). For MPU\u20116050, also connect VLOGIC to 1.71\u202fV\u2013VDD. Pull\u2011up resistors on SDA/SCL to VDD. For SPI (MPU\u20116000), connect /CS low, SCLK, SDI, SDO, and optionally pull\u2011ups on I\u00b2C lines if using auxiliary bus.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <Wire.h>\n\nvoid setup() {\n  Wire.begin();\n  Serial.begin(115200);\n  // MPU\u20116050 default address 0x68\n  Wire.beginTransmission(0x68);\n  Wire.write(0x6B); // PWR_MGMT_1 register\n  Wire.write(0x00); // wake up\n  Wire.endTransmission();\n}\n\nvoid loop() {\n  Wire.beginTransmission(0x68);\n  Wire.write(0x3B); // ACCEL_XOUT_H\n  Wire.endTransmission(false);\n  Wire.requestFrom(0x68, 14, true);\n  int16_t ax = Wire.read()<<8 | Wire.read();\n  int16_t ay = Wire.read()<<8 | Wire.read();\n  int16_t az = Wire.read()<<8 | Wire.read();\n  int16_t gx = Wire.read()<<8 | Wire.read();\n  int16_t gy = Wire.read()<<8 | Wire.read();\n  int16_t gz = Wire.read()<<8 | Wire.read();\n  Serial.print(\"Accel: \"); Serial.print(ax); Serial.print(\", \"); Serial.print(ay); Serial.print(\", \"); Serial.println(az);\n  Serial.print(\"Gyro: \"); Serial.print(gx); Serial.print(\", \"); Serial.print(gy); Serial.print(\", \"); Serial.println(gz);\n  delay(500);\n}\n",
+        "explaination": "Basic Arduino sketch that wakes the MPU\u20116050, reads 14 bytes of sensor data (3\u2011axis accel, 3\u2011axis gyro, temp), and prints them to the serial monitor."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "InvenSense website: https://www.invensense.com",
+    "MPU\u20116000/MPU\u20116050 datasheet (PDF)",
+    "MPU\u20116000/MPU\u20116050 register map and descriptions"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "InvenSense Inc.",
+    "address": "1197 Borregas Ave, Sunnyvale, CA 94089 U.S.A."
+  },
+  "revision_history": [
+    "11/24/2010 \u2013 1.0 \u2013 Initial Release",
+    "05/19/2011 \u2013 2.0 \u2013 Clarified wording in several sections",
+    "07/28/2011 \u2013 2.1 \u2013 Edited supply current numbers for different modes",
+    "08/05/2011 \u2013 2.2 \u2013 Unit of measure for accelerometer sensitivity changed",
+    "10/12/2011 \u2013 2.3 \u2013 Updated accelerometer self\u2011test specifications",
+    "10/18/2011 \u2013 3.0 \u2013 Updated accelerometer specifications for Rev\u202fD parts",
+    "10/24/2011 \u2013 3.1 \u2013 Edits for clarity, updated operating voltage range",
+    "11/16/2011 \u2013 3.2 \u2013 Updated self\u2011test response specifications",
+    "05/16/2012 \u2013 3.3 \u2013 Updated self\u2011test, latch\u2011up, and interrupt information",
+    "08/19/2013 \u2013 3.4 \u2013 Updates to section\u202f4"
+  ],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "PS\u2011MPU\u20116000A\u201100 Revision\u202f3.4, Release\u202f08/19/2013"
+}

@@ -1,0 +1,74 @@
+{
+  "component_name": "DHT22",
+  "category": "Sensor",
+  "manufacturer": "Adafruit Industries",
+  "sku": "385",
+  "description": "Low-cost digital temperature and humidity sensor featuring a capacitive humidity sensor and a thermistor. Operates on 3\u20135\u202fV, uses a single digital pin for data output, and includes a 10\u202fk\u03a9 pull\u2011up resistor on the data line.",
+  "application_examples": [
+    "Hobbyist data logging",
+    "Environmental monitoring",
+    "Home automation",
+    "Weather stations"
+  ],
+  "related_products": [
+    "DHT11",
+    "AM2302",
+    "AHT20"
+  ],
+  "specifications": {
+    "sensor_type": "Digital temperature & humidity sensor",
+    "measuring_range": "Humidity 0\u2013100\u202f%, Temperature \u201340\u202f\u00b0C to 80\u202f\u00b0C",
+    "accuracy": "Humidity 2\u20135\u202f%, Temperature \u00b10.5\u202f\u00b0C",
+    "resolution": "",
+    "response_time": "\u22482\u202fs (0.5\u202fHz sampling rate)",
+    "operating_voltage": "3\u20135\u202fV",
+    "current_consumption": "2.5\u202fmA max during conversion",
+    "interface": "Single\u2011wire digital",
+    "operating_temperature": "-40\u202f\u00b0C to 80\u202f\u00b0C",
+    "dimensions": "15.1\u202fmm \u00d7 25\u202fmm \u00d7 7.7\u202fmm",
+    "other": [
+      "10\u202fk\u03a9 pull\u2011up resistor recommended on data line"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "3\u20135\u202fV",
+    "max_current": "2.5\u202fmA",
+    "consumption": "2.5\u202fmA max during conversion"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Pin\u202f1",
+      "GND": "Pin\u202f4",
+      "Data": "Pin\u202f2",
+      "Other": "Pin\u202f3 (not used)"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 3.3\u20135\u202fV, GND to ground, Data to a digital pin with a 10\u202fk\u03a9 pull\u2011up to VCC. Pin\u202f3 is unused. Use a microcontroller that can handle microsecond timing (e.g., Arduino, CircuitPython).",
+    "example_code_url": "https://learn.adafruit.com/dht",
+    "example_code": [
+      {
+        "code": "#include <DHT.h>\n\n#define DHTPIN 2\n#define DHTTYPE DHT22\n\nDHT dht(DHTPIN, DHTTYPE);\n\nvoid setup() {\n  Serial.begin(9600);\n  dht.begin();\n}\n\nvoid loop() {\n  float h = dht.readHumidity();\n  float t = dht.readTemperature();\n  if (isnan(h) || isnan(t)) {\n    Serial.println(\"Failed to read from DHT sensor!\");\n    return;\n  }\n  Serial.print(\"Humidity: \");\n  Serial.print(h);\n  Serial.print(\" %\tTemperature: \");\n  Serial.print(t);\n  Serial.println(\" *C\");\n  delay(2000);\n}",
+        "explaination": "Arduino sketch that initializes the DHT22, reads humidity and temperature, and prints the values to the serial monitor every 2 seconds."
+      }
+    ]
+  },
+  "sample_sketches": "DHTtester (Arduino example from Adafruit library)",
+  "online_resources": [
+    "Adafruit DHT library (Arduino)",
+    "Adafruit CircuitPython DHT library",
+    "Wokwi DHT simulator"
+  ],
+  "datasheet_url": "https://adafru.it/aJZ",
+  "company_info": {
+    "name": "Adafruit Industries",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "C++",
+    "Python"
+  ],
+  "source_document": "DHT11, DHT22 and AM2302 Sensors \u2013 Adafruit tutorial (https://learn.adafruit.com/dht)"
+}

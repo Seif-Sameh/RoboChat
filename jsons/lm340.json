@@ -1,0 +1,88 @@
+{
+  "component_name": "LM7805",
+  "category": "Power Component",
+  "sub_category": "Fixed Voltage Regulator",
+  "manufacturer": "Texas Instruments",
+  "sku": "LM7805 (TO-220)",
+  "description": "The LM7805 is a 5\u2011V fixed\u2011output linear regulator capable of delivering up to 1.5\u202fA of output current. It features internal current limiting, thermal shutdown, short\u2011circuit protection, and safe\u2011area compensation, making it suitable for a wide range of power\u2011management applications.",
+  "application_examples": [
+    "Industrial power supplies",
+    "SMPS post\u2011regulation",
+    "HVAC systems",
+    "AC inventors",
+    "Test and measurement equipment",
+    "Brushed and brushless DC motor drivers",
+    "Solar energy string inverters"
+  ],
+  "related_products": [
+    "LM340",
+    "LM340A",
+    "LM7812",
+    "LM7815"
+  ],
+  "specifications": {
+    "type": "Fixed voltage regulator",
+    "voltage_input_range": "Up to 35\u202fV",
+    "voltage_output_range": "5\u202fV (fixed)",
+    "current_output_continuous": "1.5\u202fA",
+    "current_output_peak": "2.4\u202fA",
+    "efficiency": "",
+    "capacity": "",
+    "discharge_rate": "",
+    "charging_current": "",
+    "protection_features": [
+      "Internal current limiting",
+      "Thermal shutdown",
+      "Short\u2011circuit protection",
+      "Safe\u2011area compensation"
+    ],
+    "operating_temperature": "0\u202f\u00b0C to 125\u202f\u00b0C",
+    "dimensions": "14.986\u202fmm \u00d7 10.16\u202fmm (TO\u2011220)",
+    "weight": ""
+  },
+  "power": {
+    "vin_max": "35\u202fV",
+    "vout_max": "5\u202fV",
+    "consumption": ""
+  },
+  "pinout": {
+    "input_pins": {
+      "1": "VIN"
+    },
+    "output_pins": {
+      "3": "VOUT"
+    },
+    "control_pins": {}
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Pin\u202f1 connects to the input voltage source, pin\u202f2 to ground, and pin\u202f3 to the load. Place a 0.1\u202f\u00b5F bypass capacitor between VIN and GND and a 0.1\u202f\u00b5F capacitor between VOUT and GND for stability.",
+    "example_usage": "Typical fixed\u2011voltage regulator circuit: VIN \u2192 LM7805 \u2192 VOUT, with the recommended bypass capacitors."
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.ti.com/product/LM7805",
+    "https://www.ti.com/lit/ds/symlink/lm7805.pdf"
+  ],
+  "datasheet_url": "https://www.ti.com/lit/ds/symlink/lm7805.pdf",
+  "company_info": {
+    "name": "Texas Instruments",
+    "address": "1200 S. Mathilda Ave., Dallas, TX 75235"
+  },
+  "revision_history": [
+    {
+      "revision": "K",
+      "date": "November 2015",
+      "changes": "Changed pinout number order for the TO\u2011220 and SOT\u2011223 packages from 2, 3, 1 to 1, 2, 3."
+    },
+    {
+      "revision": "L",
+      "date": "September 2016",
+      "changes": "Revised datasheet to include updated electrical characteristics and thermal information."
+    }
+  ],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "LM340, LM340A, LM7805, LM7812, LM7815 datasheet, February 2000 \u2013 Revised September 2016"
+}

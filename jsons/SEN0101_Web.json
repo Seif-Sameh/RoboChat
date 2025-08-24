@@ -1,0 +1,72 @@
+{
+  "component_name": "TCS3200 Color Sensor",
+  "category": "Sensor",
+  "manufacturer": "DFRobot",
+  "sku": "SEN0101",
+  "description": "The TCS3200 Color Sensor is a complete color detector that includes a TAOS TCS3200 RGB sensor chip and four white LEDs. It can detect and measure a nearly limitless range of visible colors, converting light intensity into a frequency output proportional to the intensity of the selected color.",
+  "application_examples": [
+    "Test strip reading",
+    "Sorting by color",
+    "Ambient light sensing",
+    "Calibration",
+    "Color matching"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Color sensor (RGB + clear)",
+    "measuring_range": "Output frequency 2\u202fHz \u2013 500\u202fkHz",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "2.7\u202fV \u2013 5.5\u202fV",
+    "current_consumption": "",
+    "interface": "Square\u2011wave frequency output (OUT pin)",
+    "operating_temperature": "",
+    "dimensions": "28.4\u202fmm \u00d7 28.4\u202fmm",
+    "other": [
+      "Single\u2011supply operation",
+      "High\u2011resolution conversion of light intensity to frequency",
+      "Programmable color and full\u2011scale output frequency",
+      "Power\u2011down feature",
+      "Direct communication to microcontroller",
+      "LED lamp light supplement control"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "2.7\u202fV \u2013 5.5\u202fV",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "VDD (pin 5)",
+      "GND": "GND (pin 4)",
+      "Data": "OUT (pin 2)",
+      "Other": "OE (pin 3), S0 (pin 1), S1 (pin 2), S2 (pin 7), S3 (pin 8)"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "VCC to 5\u202fV, GND to GND, S0 to D3, S1 to D4, S2 to D5, S3 to D6, OUT to D2. OE is active low and can be tied to GND for always enabled.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "int s0=3,s1=4,s2=5,s3=6; \nint out=2; \nint flag=0; \nbyte counter=0; \nbyte countR=0,countG=0,countB=0; \nvoid setup() \n{ \n  Serial.begin(115200); \n  pinMode(s0,OUTPUT); \n  pinMode(s1,OUTPUT);  \n  pinMode(s2,OUTPUT); \n  pinMode(s3,OUTPUT); \n}\nvoid TCS() \n{ \n  flag=0;   \n  digitalWrite(s1,HIGH); \n  digitalWrite(s0,HIGH); \n  digitalWrite(s2,LOW); \n  digitalWrite(s3,LOW); \n  attachInterrupt(0, ISR_INTO, CHANGE); \n  timer0_init(); \n}\nvoid ISR_INTO() \n{ \n  counter++; \n}\nvoid timer0_init(void) \n{ \n  TCCR2A=0x00; \n  TCCR2B=0x07;   //clock frequency source 1024\n  TCNT2= 100;    //10 ms overflow\n  TIMSK2 = 0x01; //allow interrupt\n}\nISR(TIMER2_OVF_vect)\n{ \n  TCNT2=100; \n  flag++; \n  if(flag==1) \n  { \n    countR=counter; \n    Serial.print(\"red=\"); \n    Serial.println(countR,DEC); \n    digitalWrite(s2,HIGH); \n    digitalWrite(s3,HIGH); \n  } \n  else if(flag==2) \n  { \n    countG=counter; \n    Serial.print(\"green=\"); \n    Serial.println(countG,DEC); \n    digitalWrite(s2,LOW); \n    digitalWrite(s3,HIGH); \n  } \n  else if(flag==3) \n  { \n    countB=counter; \n    Serial.print(\"blue=\"); \n    Serial.println(countB,DEC); \n    Serial.println(\"\\n\");  \n    digitalWrite(s2,LOW); \n    digitalWrite(s3,LOW); \n  } \n  else if(flag==4) \n  { \n    flag=0; \n  } \n  counter=0; \n}\nvoid loop() \n{ \n  TCS(); \n  while(1); \n}",
+        "explaination": "The sketch configures the sensor to output frequency for each color by selecting the appropriate photodiode filter via S2/S3. It counts pulses on the OUT pin using an interrupt and prints the counts for red, green, and blue."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "DFRobot forum",
+    "DFRobot product page"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "DFRobot",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "TCS3200 Color Sensor datasheet (DFRobot) \u2013 provided text"
+}

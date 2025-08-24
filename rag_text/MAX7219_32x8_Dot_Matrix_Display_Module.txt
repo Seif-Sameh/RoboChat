@@ -1,0 +1,53 @@
+component_name: MAX7219 32x8 Dot Matrix Display Module
+category: Display / Output Device
+manufacturer: Handson Technology
+sku: DSP-1172
+description: A 32x8 (256‑dot) red LED dot‑matrix display module based on the MAX7219 IC. It features a 3‑wire serial interface (CLK, DIN, CS) and can be daisy‑chained to create larger scrolling message boards. The module measures 128 × 33 × 15 mm and operates at 4.5–5 V.
+application_examples:
+  - Scrolling message boards
+  - LED matrix text displays
+  - Custom display panels
+related_products:
+specifications:
+  display_type: Dot Matrix LED
+  resolution: 32x8 (256 dots)
+  color_support: Red
+  interface: 3‑Wire Serial Interface
+  operating_voltage: 4.5 ~ 5V
+  current_consumption: 
+  viewing_angle: 
+  brightness: 
+  refresh_rate: 
+  sound_level: 
+  dimensions: 128 x 33 x 15 mm (L x W x H)
+  operating_temperature: 
+power:
+  supply_voltage_range: 4.5 ~ 5V
+  max_current: 
+  consumption: 
+pinout:
+  signal_pins:
+    CLK: Arduino D13
+    DIN: Arduino D11
+    CS: Arduino D10
+  power_pins:
+    VCC: 4.5–5V
+    GND: Ground
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect CLK to Arduino D13, DIN to D11, CS to D10, VCC to 5V, and GND to GND. Use the MD_MAX72XX library for control.
+  example_code_url: https://github.com/MajicDesigns/MD_MAX72XX
+sample_sketches: Parola_Scrolling sketch from the MD_MAX72XX library demonstrates scrolling text across the 32x8 matrix.
+online_resources:
+  - https://www.arduinolibraries.info/libraries/md_parola
+  - https://github.com/MajicDesigns/MD_MAX72XX
+  - https://youtu.be/r-bAHqyaKvA
+  - https://youtu.be/9DuqYFv3NO0
+datasheet_url: 
+company_info:
+  name: Handson Technology
+  address: 
+revision_history:
+languages_available:
+source_document: Handson Technology User Guide for MAX7219 32x8 Dot Matrix Display Module

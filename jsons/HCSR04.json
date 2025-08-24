@@ -1,0 +1,69 @@
+{
+  "component_name": "Ultrasonic Ranging Module HC-SR04",
+  "category": "Sensor",
+  "manufacturer": "Elecfreaks",
+  "sku": "",
+  "description": "A compact ultrasonic distance sensor module capable of measuring distances from 2\u202fcm to 400\u202fcm with an accuracy of 3\u202fmm. It includes an ultrasonic transmitter, receiver, and control circuitry. The module operates on a 5\u202fV supply and uses a 10\u202f\u00b5s TTL trigger pulse to initiate ranging, returning a TTL echo pulse whose width is proportional to the measured distance.",
+  "application_examples": [
+    "Obstacle detection in robotics",
+    "Distance measurement in automation",
+    "Proximity sensing for consumer electronics"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Ultrasonic distance sensor",
+    "measuring_range": "2\u202fcm \u2013 400\u202fcm",
+    "accuracy": "3\u202fmm",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "5\u202fV DC",
+    "current_consumption": "15\u202fmA",
+    "interface": "TTL digital (Trigger input, Echo output)",
+    "operating_temperature": "",
+    "dimensions": "45\u202fmm \u00d7 20\u202fmm \u00d7 15\u202fmm",
+    "other": [
+      "Measuring angle: 15\u00b0",
+      "Working frequency: 40\u202fHz",
+      "Max range: 4\u202fm",
+      "Min range: 2\u202fcm",
+      "Trigger input: 10\u202f\u00b5s TTL pulse",
+      "Echo output: TTL pulse width proportional to distance"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "5\u202fV",
+    "max_current": "15\u202fmA",
+    "consumption": "15\u202fmA"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "5\u202fV",
+      "GND": "0\u202fV",
+      "Data": "",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5\u202fV, GND to ground, Trig to a microcontroller digital pin, and Echo to another digital pin. Ensure GND is connected before VCC to avoid malfunction.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <Arduino.h>\n\nconst int trigPin = 9;\nconst int echoPin = 10;\n\nvoid setup() {\n  pinMode(trigPin, OUTPUT);\n  pinMode(echoPin, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  // Send 10\u00b5s trigger pulse\n  digitalWrite(trigPin, LOW);\n  delayMicroseconds(2);\n  digitalWrite(trigPin, HIGH);\n  delayMicroseconds(10);\n  digitalWrite(trigPin, LOW);\n\n  // Read echo pulse width\n  long duration = pulseIn(echoPin, HIGH);\n  // Convert to distance in cm\n  float distance = duration / 58.0;\n\n  Serial.print(\"Distance: \");\n  Serial.print(distance);\n  Serial.println(\" cm\");\n  delay(100);\n}\n",
+        "explaination": "This Arduino sketch triggers the HC\u2011SR04, measures the echo pulse width, converts it to distance in centimeters, and prints the result to the serial monitor."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.elecfreaks.com"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Elecfreaks",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Tech Support: services@elecfreaks.com\nUltrasonic Ranging Module HC - SR04\nProduct features: ... (provided source text)"
+}

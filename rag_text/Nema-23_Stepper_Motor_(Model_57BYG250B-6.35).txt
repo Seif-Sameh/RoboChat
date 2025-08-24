@@ -1,0 +1,44 @@
+component_name: Nema-23 Stepper Motor (Model 57BYG250B-6.35)
+category: Motor
+manufacturer: Handson Technology
+sku: FAM1040
+description: 4‑wire uni‑polar/bipolar Nema‑23 stepper motor with 1.8° step angle, rated 3A per phase, 12‑24V DC, holding torque 1.2 N·m, shaft diameter Ø6.35 mm, suitable for 3D‑printer, robotics, and linear motion applications.
+application_examples:
+  - 3D printer
+  - Robotics
+  - Linear motion projects
+related_products:
+specifications:
+  motor_type: Stepper Motor (Nema‑23)
+  voltage_rating: 12V~24V DC
+  current_rating: 3A per phase
+  torque: 1.2 N·m (holding)
+  speed_rpm: 
+  gear_ratio: 
+  shaft_diameter: Ø6.35 mm
+  weight: 770 g
+  operating_temperature: 
+  dimensions: 56 mm × 56 mm (frame) × 56 mm (body length)
+power:
+  supply_voltage_range: 12‑24 V DC
+  max_current: 3 A per phase
+  consumption: 
+pinout:
+  wiring:
+    VCC: A+
+    GND: A-
+    Control_Signal: B+
+    Other: B-
+certifications:
+getting_started:
+  connection_guide: Connect the motor wires to the driver terminals: A+ to A+, A- to A-, B+ to B+, B- to B-.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: Handson Technology
+  address: 
+revision_history:
+languages_available:
+source_document: www.handsontec.com

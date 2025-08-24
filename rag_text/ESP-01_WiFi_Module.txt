@@ -1,0 +1,57 @@
+component_name: ESP-01 WiFi Module
+category: Communication Module
+manufacturer: AI-Thinker
+sku: 
+description: ESP-01 is a compact Wi‑Fi module based on the ESP8266EX SoC, supporting 802.11 b/g/n, integrated 32‑bit MCU, 10‑bit ADC, TCP/IP stack, and multiple interfaces (UART, SPI, I2C, SDIO). It offers low‑power modes, on‑board PCB antenna, and operates from 3.3 V.
+application_examples:
+related_products:
+specifications:
+  communication_type: Wi-Fi (802.11 b/g/n)
+  frequency_range: 2.4 GHz (2.4–2.5 GHz)
+  data_rate: 
+  protocols_supported:
+    - TCP/IP
+  operating_voltage: 3.3 V
+  current_consumption: 
+  transmit_power: +20 dBm
+  receiver_sensitivity: 
+  range: 
+  antenna_type: PCB‑on‑board antenna
+  operating_temperature: -40 °C to +125 °C
+  dimensions: 14.3 mm × 24.8 mm × 3 mm
+power:
+  supply_voltage_range: 3.3 V
+  max_current: 
+  consumption: 
+pinout:
+  communication_pins:
+    TXD: UART transmit
+    RXD: UART receive
+    GPIO0: General purpose I/O (boot mode selection)
+    GPIO2: General purpose I/O (boot mode selection)
+  power_pins:
+    VCC: 3.3 V supply
+    GND: Ground
+  control_pins:
+    RST: Reset (active low)
+    CH_PD: Chip enable (active high)
+    GPIO0: Boot mode selection
+    GPIO2: Boot mode selection
+certifications:
+getting_started:
+  connection_guide: 
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - http://www.ai-thinker.com
+datasheet_url: 
+company_info:
+  name: AI-Thinker
+  address: 
+revision_history:
+languages_available:
+source_document: ESP-01 WiFi Module Manual (2015 AI-Thinker)
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

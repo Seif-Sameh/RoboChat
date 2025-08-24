@@ -1,0 +1,79 @@
+{
+  "component_name": "Adafruit 2.8\" TFT Touch Shield v2",
+  "category": "Display / Output Device",
+  "manufacturer": "Adafruit Industries",
+  "sku": "",
+  "description": "A 2.8\" TFT LCD shield with 240x320 pixel resolution, 18\u2011bit color (262,000 shades), 4\u2011LED backlight, and either resistive or capacitive touch. Includes a microSD slot, SPI interface for the ILI9341 controller, I2C touch controller, and optional backlight control.",
+  "application_examples": [
+    "Arduino graphics projects",
+    "Touch\u2011controlled UI",
+    "Image display from microSD",
+    "Embedded display for robotics",
+    "Interactive demos"
+  ],
+  "related_products": [],
+  "specifications": {
+    "display_type": "TFT LCD",
+    "resolution": "240x320 pixels",
+    "color_support": "18\u2011bit (262,000 colors)",
+    "interface": "SPI (display) + I2C (touch)",
+    "operating_voltage": "3.3V or 5V (via VddIO jumper)",
+    "current_consumption": "",
+    "viewing_angle": "",
+    "brightness": "",
+    "refresh_rate": "",
+    "sound_level": "",
+    "dimensions": "",
+    "operating_temperature": ""
+  },
+  "power": {
+    "supply_voltage_range": "3.3V\u20135V",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "signal_pins": {
+      "SCLK": "D13 / ICSP",
+      "MISO": "D12 / ICSP",
+      "MOSI": "D11 / ICSP",
+      "TFT_CS": "D10",
+      "TFT_DC": "D9",
+      "SD_CS": "D4",
+      "Touch_CS": "D8 (resistive)",
+      "SDA": "A4 / D4 (capacitive)",
+      "SCL": "A5 / D5 (capacitive)"
+    },
+    "power_pins": {
+      "VddIO": "3.3V or 5V via jumper",
+      "GND": "Ground"
+    },
+    "control_pins": {
+      "Backlight": "D3 (resistive) or D5 (capacitive) \u2013 jumper LITE",
+      "Touch_IRQ": "D7 (optional interrupt)",
+      "Reset": "Reset button"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Plug the shield into an Arduino or compatible board, ensure SPI pins are connected (default ICSP), optionally set VddIO jumper for 3.3V or 5V, install Adafruit ILI9341 and GFX libraries, then upload example sketches.",
+    "example_code_url": "https://learn.adafruit.com/adafruit-2-8-tft-touch-shield-v2"
+  },
+  "sample_sketches": "graphicstest, touchpaint, CapTouchPaint",
+  "online_resources": [
+    "https://github.com/adafruit/Adafruit_ILI9341",
+    "https://github.com/adafruit/Adafruit_GFX_Library",
+    "https://github.com/adafruit/Adafruit_TSC2007",
+    "https://github.com/adafruit/Adafruit_FT6206"
+  ],
+  "datasheet_url": "https://adafru.it/d4l",
+  "company_info": {
+    "name": "Adafruit Industries",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "C++ (Arduino)",
+    "CircuitPython"
+  ],
+  "source_document": "https://learn.adafruit.com/adafruit-2-8-tft-touch-shield-v2"
+}

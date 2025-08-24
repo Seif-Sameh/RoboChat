@@ -1,0 +1,124 @@
+component_name: Voltage Sensor / 170640
+category: Sensor
+manufacturer: Shenzhen City, Guangdong Science and Technology Co., Ltd.
+sku: 170640
+description: A voltage sensor based on a resistor divider that reduces the input voltage by a factor of five, allowing measurement of up to 25V DC on an Arduino. The module outputs an analog voltage proportional to the input, compatible with the Arduino's 10‑bit ADC (resolution 0.00489V).
+application_examples:
+  - Arduino voltage measurement
+  - Battery monitoring
+  - Power supply monitoring
+related_products:
+specifications:
+  sensor_type: Voltage sensor (resistor divider)
+  measuring_range: 0.02445V – 25V
+  accuracy: 
+  resolution: 0.00489V
+  response_time: 
+  operating_voltage: 5V or 3.3V
+  current_consumption: 
+  interface: Analog output to Arduino A0
+  operating_temperature: 
+  dimensions: 
+  other:
+    - Input voltage max 25V
+    - Input range DC0–25V
+power:
+  supply_voltage_range: 5V or 3.3V
+  max_current: 
+  consumption: 
+pinout:
+  pins:
+    VCC: Positive terminal connected to VCC (5V or 3.3V)
+    GND: Negative terminal connected to GND
+    Data: s pin connected to Arduino A0
+    Other: 
+certifications:
+getting_started:
+  connection_guide: Connect the VCC pin to the Arduino 5V (or 3.3V) supply, GND to Arduino GND, and the s pin to the Arduino analog input A0.
+  example_code_url: 
+  example_code:
+    - Item 1:
+      code: #include <Arduino.h>
+int val11;
+int val2;
+void setup() {
+  pinMode(LED1, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Emartee.Com");
+  Serial.println("Voltage: ");
+  Serial.print("V");
+}
+void loop() {
+  float temp;
+  val11 = analogRead(0);
+  temp = val11 / 4.092;
+  val11 = (int)temp;
+  val2 = ((val11 % 100) / 10);
+  Serial.println(val2);
+  delay(1000);
+}
+      explaination: Reads the analog voltage from pin A0, converts it to a voltage value using the divider ratio, and prints the result to the serial monitor.
+sample_sketches: #include <Arduino.h>
+int val11;
+int val2;
+void setup() {
+  pinMode(LED1, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Emartee.Com");
+  Serial.println("Voltage: ");
+  Serial.print("V");
+}
+void loop() {
+  float temp;
+  val11 = analogRead(0);
+  temp = val11 / 4.092;
+  val11 = (int)temp;
+  val2 = ((val11 % 100) / 10);
+  Serial.println(val2);
+  delay(1000);
+}
+online_resources:
+datasheet_url: 
+company_info:
+  name: Shenzhen City, Guangdong Science and Technology Co., Ltd.
+  address: China's Shenzhen Futian District, Shenzhen Huaqiang North Road
+revision_history:
+languages_available:
+source_document: Model: Voltage Sensor / 170640
+Description:
+Reference Code:
+#include 
+int val11; 
+int val2; 
+void setup() 
+{   
+ pinMode(LED1,OUTPUT);   
+ Serial.begin(9600);   
+ Serial.println("Emartee.Com");   
+ Serial.println("Voltage: ");   
+ Serial.print("V"); 
+} 
+void loop() 
+{       
+ float temp;       
+ val11=analogRead(0);       
+ temp=val11/4.092;       
+ val11=(int)temp;//       
+ val2=((val11%100)/10);       
+ Serial.println(val2);          
+ delay(1000); 
+} 
+Voltage Sensor / Divider Board for ARDUINO developments
+Shenzhen City, Guangdong Science and Technology Co., Ltd. Address: China's Shenzhen Futian District, Shenzhen Huaqiang North Road
+Copyright © 2010-2015 1688.com All rights reserved. Copyright and Trademark Notices
+This module is designed based on the principle of resistor divider to reduce the input voltage of the terminal interface by 5 times. 
+The maximum input voltage of the Arduino is 5V. The input voltage of the voltage detection module cannot be greater than 5V × 
+5 = 25V (if 3.3V is used) System, the input voltage can not be greater than 3.3Vx5 = 16.5V). Because the AVR chip used by 
+Arduino is 10-bit AD, the analog resolution of this module is 0.00489V (5V/1023), so the voltage detection module detects that 
+the input minimum voltage is 0.00489V×5=0.02445V.
+parameter:
+Voltage input range max: DC0-25V
+Voltage detection range: DC0.02445V - 25V
+Voltage simulation resolution: 0.00489V
+DC input interface: terminal positive terminal is connected to VCC, negative terminal is connected to GND
+Output interface: "+" is connected to 5/3.3V, "-" is connected to GND, and "s" is connected to the A0 pin of Arduino.

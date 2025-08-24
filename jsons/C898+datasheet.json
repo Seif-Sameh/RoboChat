@@ -1,0 +1,71 @@
+{
+  "component_name": "YF-S201 black flow sensor",
+  "category": "Sensor",
+  "manufacturer": "Foshan Shunde Zhongjiang Energy Saving Electronics Co., Ltd.",
+  "sku": "",
+  "description": "A compact water flow sensor featuring a stainless steel bead\u2011coated impeller and a Hall effect sensor. It outputs a digital pulse signal proportional to flow rate, suitable for automatic gas water heaters and other water flow monitoring applications.",
+  "application_examples": [
+    "Automatic gas water heater flow control",
+    "Water flow monitoring in HVAC systems",
+    "Industrial water usage measurement"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Water flow sensor (Hall effect)",
+    "measuring_range": "1 \u2013 30 L/min",
+    "accuracy": "\u00b15% (flow rate \u2013 pulse output)",
+    "resolution": "",
+    "response_time": "Rise time 0.04\u202f\u00b5s, Fall time 0.18\u202f\u00b5s",
+    "operating_voltage": "5 \u2013 18\u202fV DC",
+    "current_consumption": "\u226410\u202fmA (DC 5\u202fV)",
+    "interface": "Digital pulse output",
+    "operating_temperature": "\u226480\u202f\u00b0C (operating), storage \u201325\u202f\u00b0C to +80\u202f\u00b0C",
+    "dimensions": "",
+    "other": [
+      "Output pulse duty cycle 50\u202f% \u00b110\u202f%",
+      "Output high level >4.5\u202fV, low level <0.5\u202fV (at 5\u202fV supply)",
+      "Output frequency 7.5\u202f\u00d7\u202fQ\u202fHz \u00b13\u202f% (Q in L/min)",
+      "Pressure tolerance \u22641.75\u202fMPa",
+      "Humidity tolerance 35\u202f%\u201390\u202f% RH",
+      "Impact resistance: drop 50\u202fcm from any direction",
+      "Insulation resistance >100\u202fM\u03a9 (DC 500\u202fV)",
+      "Waterproof seal (upper/lower force structure)"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "5 \u2013 18\u202fV DC",
+    "max_current": "15\u202fmA (at 5\u202fV)",
+    "consumption": "\u226410\u202fmA (at 5\u202fV)"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "1 IN (red)",
+      "GND": "3 (black)",
+      "Data": "2 OUT (yellow)",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5\u201324\u202fV DC, GND to ground, and OUT to a digital input pin of the controller. Ensure the sensor is installed vertically with less than 5\u00b0 inclination.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "",
+        "explaination": ""
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.fssdyifa.com.cn"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Foshan Shunde Zhongjiang Energy Saving Electronics Co., Ltd.",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Foshan Shunde Zhongjiang Energy Saving Electronics Co., Ltd. product introduction and technical parameters for YF-S201 black flow sensor."
+}

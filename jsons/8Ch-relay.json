@@ -1,0 +1,76 @@
+{
+  "component_name": "8 Channel 5V Optical Isolated Relay Module",
+  "category": "Miscellaneous Module",
+  "sub_category": "Relay Module",
+  "manufacturer": "Handson Technology",
+  "sku": "MDU1064",
+  "description": "Low\u2011level 5V 8\u2011channel relay interface board with opto\u2011isolated inputs. Each channel requires 15\u201120mA driver current and drives high\u2011current relays rated for AC250V/10A or DC30V/10A. The module is compatible with Arduino and other microcontrollers, featuring SPDT low\u2011noise relays, opto\u2011coupler isolation, and a standard 5V logic interface.",
+  "application_examples": [
+    "Control household appliances or industrial equipment with high current loads",
+    "Arduino or Raspberry Pi projects requiring isolated relay control",
+    "Switching AC or DC loads up to 250V/10A or 30V/10A"
+  ],
+  "related_products": [],
+  "specifications": {
+    "type": "8\u2011channel relay module",
+    "operating_voltage": "5V (logic input)",
+    "current_consumption": "",
+    "input_trigger_voltage": "Low\u2011level (active LOW) 5V logic",
+    "switching_capacity": "AC 250V/10A or DC 30V/10A",
+    "timing_accuracy": "",
+    "storage_support": "",
+    "frequency_range": "",
+    "sound_level": "",
+    "special_features": [
+      "Opto\u2011coupler isolation",
+      "Low\u2011noise SPDT relays",
+      "Common, Normally Open, Normally Closed contacts",
+      "Separate JD\u2011VCC for relay coil power"
+    ],
+    "operating_temperature": "",
+    "dimensions": "138 x 56 mm",
+    "weight": ""
+  },
+  "power": {
+    "supply_voltage_range": "4.5V \u2013 5.5V (recommended 5V)",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "signal_pins": {
+      "IN1": "Relay channel 1 trigger",
+      "IN2": "Relay channel 2 trigger",
+      "IN3": "Relay channel 3 trigger",
+      "IN4": "Relay channel 4 trigger",
+      "IN5": "Relay channel 5 trigger",
+      "IN6": "Relay channel 6 trigger",
+      "IN7": "Relay channel 7 trigger",
+      "IN8": "Relay channel 8 trigger"
+    },
+    "power_pins": {
+      "VCC": "Logic supply (5V)",
+      "GND": "Logic ground",
+      "JD-VCC": "Relay coil supply (5V, optional separate supply)"
+    },
+    "control_pins": {}
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5V, GND to ground, IN1\u2011IN8 to microcontroller digital pins. For full isolation, supply JD\u2011VCC from a separate 5V source and leave the VCC\u2011JD\u2011VCC jumper removed.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "// Arduino example for 8\u2011channel relay\nint RelayControl1 = 4;\nint RelayControl2 = 5;\nint RelayControl3 = 6;\nint RelayControl4 = 7;\nint RelayControl5 = 8;\nint RelayControl6 = 9;\nint RelayControl7 = 10;\nint RelayControl8 = 11;\n\nvoid setup() {\n  Serial.begin(9600);\n  pinMode(RelayControl1, OUTPUT);\n  pinMode(RelayControl2, OUTPUT);\n  pinMode(RelayControl3, OUTPUT);\n  pinMode(RelayControl4, OUTPUT);\n  pinMode(RelayControl5, OUTPUT);\n  pinMode(RelayControl6, OUTPUT);\n  pinMode(RelayControl7, OUTPUT);\n  pinMode(RelayControl8, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(RelayControl1, LOW); // activate channel 1\n  delay(1000);\n  digitalWrite(RelayControl1, HIGH); // deactivate\n  delay(1000);\n  // repeat for other channels as needed\n}\n",
+  "online_resources": [
+    "https://www.handsontec.com"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "User Guide for 8 Channel 5V Optical Isolated Relay Module (Handson Technology)"
+}

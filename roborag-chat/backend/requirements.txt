@@ -1,0 +1,21 @@
+PyMuPDF 
+python-dotenv
+requests
+serpapi
+bs4
+langchain
+langchain_chroma
+langchain_community 
+langchain_huggingface 
+langchain-openai
+langchain_core "langchain[experimental]" 
+langgraph
+langchain_tavily
+pypdf 
+unstructured 
+lark 
+chromadb
+fastapi
+pydantic
+uvicorn
+pygraphviz

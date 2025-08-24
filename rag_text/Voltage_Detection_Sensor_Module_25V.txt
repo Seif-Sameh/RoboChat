@@ -1,0 +1,71 @@
+component_name: Voltage Detection Sensor Module 25V
+category: Sensor
+manufacturer: 
+sku: 
+description: A simple voltage detection module that uses a 5:1 voltage divider (30kΩ and 7.5kΩ resistors) to measure input voltages up to 25V and outputs an analog voltage (0–5V) suitable for Arduino analog inputs.
+application_examples:
+  - Battery voltage monitoring
+  - Power supply voltage measurement
+  - Voltage level detection in embedded systems
+related_products:
+specifications:
+  sensor_type: Analog voltage divider
+  measuring_range: 0–25 V
+  accuracy: 
+  resolution: 
+  response_time: 
+  operating_voltage: 0–5 V (output)
+  current_consumption: 
+  interface: Analog output to Arduino analog input
+  operating_temperature: 
+  dimensions: 
+  other:
+    - Uses 30kΩ and 7.5kΩ resistors for a 5:1 voltage division
+    - Output voltage is scaled to 0–5 V for Arduino compatibility
+power:
+  supply_voltage_range: 0–25 V (input voltage range)
+  max_current: 
+  consumption: 
+pinout:
+  pins:
+    VCC: High side of the voltage being measured (input)
+    GND: Low side of the voltage being measured (ground)
+    Data: S – analog output to Arduino analog input
+    Other: Unused + pin
+certifications:
+getting_started:
+  connection_guide: Connect the high side of the voltage to VCC, the low side to GND (common ground with Arduino). Connect the S pin to an Arduino analog input (e.g., A1). The + pin is not used.
+  example_code_url: 
+  example_code:
+    - Item 1:
+      code: //Robu.in
+int analogInput = A1;
+float vout = 0.0;
+float vin = 0.0;
+float R1 = 30000.0; // 30kΩ
+float R2 = 7500.0;  // 7.5kΩ
+int value = 0;
+void setup(){
+   pinMode(analogInput, INPUT);
+   Serial.begin(9600);
+   Serial.print("DC VOLTMETER");
+}
+void loop(){
+   // read the value at analog input
+   value = analogRead(analogInput);
+   vout = (value * 5.0) / 1024.0; // convert ADC value to voltage
+   vin = vout / (R2/(R1+R2));  // calculate input voltage
+   Serial.print("INPUT V= ");
+   Serial.println(vin,2);
+   delay(500);
+}
+      explaination: The sketch reads the analog input, converts the ADC value to a voltage (0–5V), then scales it back to the original input voltage using the known resistor ratio. The result is printed to the serial monitor.
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: 
+  address: 
+revision_history:
+languages_available:
+source_document: Voltage Detection Sensor Module 25V description and Arduino example sketch provided in the source text.

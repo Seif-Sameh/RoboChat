@@ -1,0 +1,64 @@
+component_name: L293D Arduino Motor Shield
+category: Motor Driver
+manufacturer: Rajguru Electronics
+sku: 
+description: A shield for Arduino boards that uses the L293D H‑bridge chip to drive up to four bi‑directional DC motors, two stepper motors, and two hobby servos. It offers 8‑bit PWM speed control, 0.6 A continuous per channel with 1.2 A peak, 4.5‑12 V motor supply, 4.5‑5.5 V logic supply, and built‑in thermal shutdown and pull‑down protection.
+application_examples:
+  - Robotics projects requiring DC motor control
+  - Stepper motor applications
+  - Servo control in hobby electronics
+related_products:
+specifications:
+  driver_type: L293D H‑bridge
+  motor_channels: 4 DC motor channels (plus 2 stepper channels)
+  voltage_range_motor: 4.5 V to 12 V
+  voltage_range_logic: 4.5 V to 5.5 V
+  continuous_current_per_channel: 0.6 A
+  peak_current_per_channel: 1.2 A
+  control_interface: Arduino digital pins (PWM)
+  operating_frequency: up to 5 kHz
+  operating_temperature: 
+  dimensions: 69 mm × 53 mm × 14.3 mm
+  protection_features:
+    - Thermal shutdown protection
+    - Pull‑down resistors
+    - Internal clamp diodes
+power:
+  vin_max: 12 V
+  vlogic_max: 5.5 V
+  consumption: 
+pinout:
+  motor_outputs:
+    M1: Motor 1 terminals
+    M2: Motor 2 terminals
+    M3: Motor 3 terminals
+    M4: Motor 4 terminals
+  control_pins:
+    IN1: Arduino pin
+    IN2: Arduino pin
+    IN3: Arduino pin
+    IN4: Arduino pin
+    ENA: Arduino pin
+    ENB: Arduino pin
+  power_pins:
+    logic_supply: VCC (5 V)
+    motor_supply: VSS (4.5 V–12 V)
+    ground: GND
+certifications:
+getting_started:
+  connection_guide: Connect motors to the terminal blocks M1–M4, supply motor voltage via the 2‑pin terminal block (4.5–12 V), and connect logic supply to VCC (5 V). Use Arduino digital pins for IN1–IN4, ENA, and ENB to control motor direction and speed via PWM.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - https://www.rajguruelectronics.com
+datasheet_url: 
+company_info:
+  name: Rajguru Electronics
+  address: 
+revision_history:
+languages_available:
+source_document: Rajguru Electronics L293D Based Arduino Motor Shield product description
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

@@ -1,0 +1,117 @@
+/* Dark elegant theme for RoboChat */
+:root{
+  --bg:#191b1d;
+  --panel:#0b1720;
+  --muted:#9aa8b6;
+  --text:#eaf2fb;
+  --accent:#6ee7b7;
+  --accent-2:#7c3aed;
+  --glass: rgba(255,255,255,0.03);
+  --card:#0e0e0e;
+  --shadow: rgba(49, 49, 49, 0.7);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body,#app{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+body{background:linear-gradient(180deg,#2f2f2f 0%, #0e0e0e 100%);color:var(--text);-webkit-font-smoothing:antialiased;background-attachment: fixed;background-size: cover;background-repeat: no-repeat;}
+
+/* Welcome screen */
+.welcome-screen{
+  position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:60;height: 80%;top: 0;padding-left: 20%;
+}
+.welcome-bg{
+  position:absolute;inset:0;background:
+    radial-gradient(600px 300px at 10% 20%, rgba(124,58,237,0.12), transparent 10%),
+    radial-gradient(500px 250px at 90% 80%, rgba(99,102,241,0.10), transparent 10%);
+  filter:blur(36px);opacity:0.9;
+}
+.welcome-card{
+  position:relative;z-index:62;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.04);padding:44px 56px;border-radius:18px;box-shadow:0 8px 40px var(--shadow);text-align:center;
+  max-width:760px;width:90%;
+}
+.welcome-title{font-size:48px;margin:0 0 8px;color:white;letter-spacing:-0.02em}
+.welcome-sub{margin:0 0 18px;color:var(--muted);font-size:16px}
+.welcome-actions .btn-primary{padding:12px 20px;border-radius:12px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041018;font-weight:700;box-shadow:0 6px 18px rgba(124,58,237,0.18);cursor:pointer}
+
+/* Layout */
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:transparent;border-bottom:1px solid rgba(255,255,255,0.02);
+  position:sticky;top:0;backdrop-filter: blur(6px);z-index:20;
+}
+.brand{font-weight:700;font-size:18px}
+.meta{display:flex;gap:8px;align-items:center}
+.meta label{font-size:12px;color:var(--muted);margin-right:6px}
+.meta select, .meta button{background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--text);padding:6px 8px;border-radius:8px;font-size:13px}
+.meta button{cursor:pointer}
+
+/* Main area */
+.main{display:grid;grid-template-columns:260px 1fr;gap:18px;padding:18px;min-height:calc(100vh - 120px)}
+.sidebar{padding-top:6px}
+.sidebar-card{background:var(--card);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.02);box-shadow:0 6px 20px rgba(2,6,23,0.4)}
+.sidebar-card h3{margin:0 0 6px}
+.small-note{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* Chat area */
+.chat-area{display:flex;flex-direction:column;gap:12px}
+.messages{
+  flex:1;overflow:auto;padding:22px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+  border:1px solid rgba(255,255,255,0.02);box-shadow: inset 0 1px 0 rgba(255,255,255,0.01)
+}
+.composer{display:flex;gap:12px;align-items:flex-center;padding-top:6px}
+#input{
+  flex:1;min-height:48px;max-height:200px;resize:none;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text);
+  font-size:15px;line-height:1.4;outline:none;box-shadow: none;font-family: Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+}
+.controls{display:flex;gap:8px}
+.btn-accent{background:linear-gradient(90deg,var(--accent-2),var(--accent));border:0;color:#041018;padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:0 8px 22px rgba(99,102,241,0.12)}
+
+/* Messages */
+.msg-row{display:flex;margin-bottom:14px;align-items:flex-end}
+.msg{max-width:78ch;padding:14px 16px;border-radius:12px;white-space:pre-wrap;word-break:break-word;line-height:1.45}
+.msg.user{font-size:20px;align-self:flex-end;background-color:rgb(21, 21, 21) ;border:1rgb(14, 14, 14)d rgba(255,255,255,0.02);color:var(--text);border-bottom-right-radius:6px}
+.msg.assistant{display:contents;align-self:flex-start;border:1px solid rgba(255,255,255,0.02);color:var(--text);border-bottom-left-radius:6px}
+.msg .meta{display:block;font-size:12px;color:var(--muted);margin-bottom:8px}
+.context{font-size:13px;color:var(--muted);margin-top:10px;padding-top:10px;border-top:1px dashed rgba(255,255,255,0.03)}
+.message p {
+  margin: 6px 0;
+}
+
+.message code {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.message pre {
+  background: rgba(255,255,255,0.07);
+  padding: 8px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* Typing/stream animation */
+.typing { display:inline-block; border-right:2px solid rgba(255,255,255,0.18); animation: caret 1s steps(1) infinite; padding-right:2px; }
+@keyframes caret { 50% { border-color: transparent; } }
+
+/* Colorful loader (fancy) */
+.loader {
+  display:inline-block;width:36px;height:36px;border-radius:50%;
+  background: conic-gradient(#6ee7b7, #7c3aed, #60a5fa, #f472b6, #6ee7b7);
+  animation: spinGradient 1.25s linear infinite;
+  box-shadow: 0 6px 18px rgba(124,58,237,0.14);
+}
+@keyframes spinGradient { to { transform: rotate(360deg); } }
+
+/* Footer */
+.footer{padding:12px 18px;font-size:13px;color:var(--muted);background:transparent;border-top:1px solid rgba(255,255,255,0.01)}
+
+/* small screens */
+@media (max-width:920px){
+  .main{grid-template-columns:1fr;padding:12px}
+  .sidebar{display:none}
+  .welcome-card{padding:30px}
+  .welcome-title{font-size:36px}
+}

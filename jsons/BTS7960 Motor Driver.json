@@ -1,0 +1,84 @@
+{
+  "component_name": "BTS7960 High Current 43A H-Bridge Motor Driver",
+  "category": "Motor Driver",
+  "manufacturer": "Handson Technology",
+  "sku": "DRV-1012",
+  "description": "The BTS7960 is a fully integrated high current H bridge module for motor drive applications. Interfacing to a microcontroller is made easy by the integrated driver IC which features logic level inputs, diagnosis with current sense, slew rate adjustment, dead time generation and protection against overtemperature, overvoltage, undervoltage, overcurrent and short circuit. The BTS7960 provides a cost optimized solution for protected high current PWM motor drives with very low board space consumption.",
+  "application_examples": [
+    "Control DC motor with Arduino using a potentiometer for speed and direction",
+    "High current PWM motor drives"
+  ],
+  "related_products": [],
+  "specifications": {
+    "driver_type": "H-Bridge",
+    "motor_channels": "2",
+    "voltage_range_motor": "6 ~ 27 Vdc",
+    "voltage_range_logic": "3.3 ~ 5 V",
+    "continuous_current_per_channel": "",
+    "peak_current_per_channel": "43 A",
+    "control_interface": "PWM or level",
+    "operating_frequency": "up to 25 kHz",
+    "operating_temperature": "",
+    "dimensions": "50 mm x 50 mm x 43 mm",
+    "protection_features": [
+      "overtemperature",
+      "overvoltage",
+      "undervoltage",
+      "overcurrent",
+      "short circuit",
+      "dead time generation",
+      "slew rate adjustment"
+    ]
+  },
+  "power": {
+    "vin_max": "27 V",
+    "vlogic_max": "5 V",
+    "consumption": ""
+  },
+  "pinout": {
+    "motor_outputs": {
+      "M+": "Pin 3",
+      "M-": "Pin 4"
+    },
+    "control_pins": {
+      "RPWM": "Pin 1",
+      "LPWM": "Pin 2",
+      "R_EN": "Pin 3",
+      "L_EN": "Pin 4",
+      "R_IS": "Pin 5",
+      "L_IS": "Pin 6"
+    },
+    "power_pins": {
+      "Vcc": "Pin 7",
+      "Gnd": "Pin 8",
+      "B+": "Pin 1",
+      "B-": "Pin 2"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect RPWM to Arduino PWM pin, LPWM to another PWM pin, R_EN and L_EN to 5V, Vcc to 5V, Gnd to GND. Connect B+ to motor supply 6-27V, B- to ground, M+ and M- to motor terminals.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "/*==========================================================================\n//  Author      : Handson Technology\n//  Project     : BTD7960 Motor Control Board driven by Arduino.\n//  Description : Speed and direction controlled by a potentiometer attached\n//      to analog input A0. One side pin of the potentiometer (either one) to\n//      ground; the other side pin to +5V\n//  Source-Code : BTS7960.ino\n//  Program: Control DC motors using BTS7960 H Bridge Driver.\n//==========================================================================\n//  Connection to the BTS7960 board:\n//  BTS7960 Pin 1 (RPWM) to Arduino pin 5(PWM)\n//  BTS7960 Pin 2 (LPWM) to Arduino pin 6(PWM)\n//  BTS7960 Pin 3 (R_EN), 4 (L_EN), 7 (VCC) to Arduino 5V pin\n//  BTS7960 Pin 8 (GND) to Arduino GND\n//  BTS7960 Pin 5 (R_IS) and 6 (L_IS) not connected\n*/\n\nint SENSOR_PIN = 0; // center pin of the potentiometer\nint RPWM_Output = 5; // Arduino PWM output pin 5; connect to IBT-2 pin 1 (RPWM)\nint LPWM_Output = 6; // Arduino PWM output pin 6; connect to IBT-2 pin 2 (LPWM)\n\nvoid setup() {\n  pinMode(RPWM_Output, OUTPUT);\n  pinMode(LPWM_Output, OUTPUT);\n}\n\nvoid loop() {\n  int sensorValue = analogRead(SENSOR_PIN);\n  // sensor value is in the range 0 to 1023\n  // the lower half of it we use for reverse rotation; the upper half for forward\n  if (sensorValue < 512) {\n    // reverse rotation\n    int reversePWM = -(sensorValue - 511) / 2;\n    analogWrite(LPWM_Output, 0);\n    analogWrite(RPWM_Output, reversePWM);\n  } else {\n    // forward rotation\n    int forwardPWM = (sensorValue - 512) / 2;\n    analogWrite(LPWM_Output, forwardPWM);\n    analogWrite(RPWM_Output, 0);\n  }\n}",
+  "online_resources": [
+    "https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/",
+    "http://www.labelektronika.com/2016/09/high-current-motor-driver-Ibt-2-arduino.html"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "Handson Technology User Guide BTS7960",
+  "example_code": [
+    {
+      "code": "int SENSOR_PIN = 0; // center pin of the potentiometer\nint RPWM_Output = 5; // Arduino PWM output pin 5; connect to IBT-2 pin 1 (RPWM)\nint LPWM_Output = 6; // Arduino PWM output pin 6; connect to IBT-2 pin 2 (LPWM)\n\nvoid setup() {\n  pinMode(RPWM_Output, OUTPUT);\n  pinMode(LPWM_Output, OUTPUT);\n}\n\nvoid loop() {\n  int sensorValue = analogRead(SENSOR_PIN);\n  if (sensorValue < 512) {\n    int reversePWM = -(sensorValue - 511) / 2;\n    analogWrite(LPWM_Output, 0);\n    analogWrite(RPWM_Output, reversePWM);\n  } else {\n    int forwardPWM = (sensorValue - 512) / 2;\n    analogWrite(LPWM_Output, forwardPWM);\n    analogWrite(RPWM_Output, 0);\n  }\n}",
+      "explaination": "This Arduino sketch reads a potentiometer value on analog pin A0 to control the speed and direction of a DC motor via the BTS7960 H-Bridge. The potentiometer position determines whether the motor runs forward or reverse, and the PWM duty cycle sets the speed."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+component_name: LM7805
+category: Power Component
+sub_category: Fixed Voltage Regulator
+manufacturer: Texas Instruments
+sku: LM7805 (TO-220)
+description: The LM7805 is a 5‑V fixed‑output linear regulator capable of delivering up to 1.5 A of output current. It features internal current limiting, thermal shutdown, short‑circuit protection, and safe‑area compensation, making it suitable for a wide range of power‑management applications.
+application_examples:
+  - Industrial power supplies
+  - SMPS post‑regulation
+  - HVAC systems
+  - AC inventors
+  - Test and measurement equipment
+  - Brushed and brushless DC motor drivers
+  - Solar energy string inverters
+related_products:
+  - LM340
+  - LM340A
+  - LM7812
+  - LM7815
+specifications:
+  type: Fixed voltage regulator
+  voltage_input_range: Up to 35 V
+  voltage_output_range: 5 V (fixed)
+  current_output_continuous: 1.5 A
+  current_output_peak: 2.4 A
+  efficiency: 
+  capacity: 
+  discharge_rate: 
+  charging_current: 
+  protection_features:
+    - Internal current limiting
+    - Thermal shutdown
+    - Short‑circuit protection
+    - Safe‑area compensation
+  operating_temperature: 0 °C to 125 °C
+  dimensions: 14.986 mm × 10.16 mm (TO‑220)
+  weight: 
+power:
+  vin_max: 35 V
+  vout_max: 5 V
+  consumption: 
+pinout:
+  input_pins:
+    1: VIN
+  output_pins:
+    3: VOUT
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Pin 1 connects to the input voltage source, pin 2 to ground, and pin 3 to the load. Place a 0.1 µF bypass capacitor between VIN and GND and a 0.1 µF capacitor between VOUT and GND for stability.
+  example_usage: Typical fixed‑voltage regulator circuit: VIN → LM7805 → VOUT, with the recommended bypass capacitors.
+sample_sketches: 
+online_resources:
+  - https://www.ti.com/product/LM7805
+  - https://www.ti.com/lit/ds/symlink/lm7805.pdf
+datasheet_url: https://www.ti.com/lit/ds/symlink/lm7805.pdf
+company_info:
+  name: Texas Instruments
+  address: 1200 S. Mathilda Ave., Dallas, TX 75235
+revision_history:
+  - Item 1:
+    revision: K
+    date: November 2015
+    changes: Changed pinout number order for the TO‑220 and SOT‑223 packages from 2, 3, 1 to 1, 2, 3.
+  - Item 2:
+    revision: L
+    date: September 2016
+    changes: Revised datasheet to include updated electrical characteristics and thermal information.
+languages_available:
+  - English
+source_document: LM340, LM340A, LM7805, LM7812, LM7815 datasheet, February 2000 – Revised September 2016

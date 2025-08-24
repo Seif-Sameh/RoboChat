@@ -1,0 +1,82 @@
+{
+  "component_name": "L293D Motor Driver Module",
+  "category": "Motor Driver",
+  "manufacturer": "",
+  "sku": "",
+  "description": "The L293D is a dual H\u2011bridge motor driver IC that can control two DC motors independently. It accepts 5V logic inputs and can drive motors up to 36V with a maximum of 600mA per channel.",
+  "application_examples": [
+    "Robotic platforms for DC motor control",
+    "Small hobby robots",
+    "Educational projects involving motor control"
+  ],
+  "related_products": [],
+  "specifications": {
+    "driver_type": "Dual H\u2011bridge",
+    "motor_channels": "2",
+    "voltage_range_motor": "0\u201336V",
+    "voltage_range_logic": "5V",
+    "continuous_current_per_channel": "600mA",
+    "peak_current_per_channel": "",
+    "control_interface": "Digital logic inputs (pins 2,7,15,10) with enable pins (1,9)",
+    "operating_frequency": "",
+    "operating_temperature": "",
+    "dimensions": "",
+    "protection_features": []
+  },
+  "power": {
+    "vin_max": "36V",
+    "vlogic_max": "5V",
+    "consumption": ""
+  },
+  "pinout": {
+    "motor_outputs": {
+      "left_motor": [
+        "pin 3",
+        "pin 6"
+      ],
+      "right_motor": [
+        "pin 11",
+        "pin 14"
+      ]
+    },
+    "control_pins": {
+      "input_left": [
+        "pin 2",
+        "pin 7"
+      ],
+      "input_right": [
+        "pin 15",
+        "pin 10"
+      ],
+      "enable_left": "pin 1",
+      "enable_right": "pin 9"
+    },
+    "power_pins": {
+      "VCC": "pin 16",
+      "VSS": "pin 4"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5V logic supply, VSS to motor supply (up to 36V). Set enable pins high to activate each H\u2011bridge. Drive the motor inputs with logic signals to control direction and speed (via PWM).",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "http://www.engineersgarage.com/sites/default/files/L293D.pdf"
+  ],
+  "datasheet_url": "http://www.engineersgarage.com/sites/default/files/L293D.pdf",
+  "company_info": {
+    "name": "",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "L293D MOTOR DRIVER MODULE description provided in the prompt",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

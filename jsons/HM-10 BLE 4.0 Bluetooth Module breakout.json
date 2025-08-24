@@ -1,0 +1,71 @@
+{
+  "component_name": "HM-10 BLE 4.0 Bluetooth Module",
+  "category": "Communication Module",
+  "manufacturer": "Jinan Huamao",
+  "sku": "",
+  "description": "A small 3.3V SMD Bluetooth 4.0 BLE module based on TI CC2540/CC2541, featuring a UART serial interface and AT command control, suitable for hobbyist and IoT projects.",
+  "application_examples": [
+    "Arduino wireless communication",
+    "IoT sensor nodes",
+    "Bluetooth Low Energy data transfer"
+  ],
+  "related_products": [
+    "HM-11"
+  ],
+  "specifications": {
+    "communication_type": "Bluetooth Low Energy (BLE)",
+    "frequency_range": "2.4 GHz",
+    "data_rate": "",
+    "protocols_supported": [
+      "Bluetooth 4.0 BLE"
+    ],
+    "operating_voltage": "2.5V to 3.3V",
+    "current_consumption": "up to 50mA (active), 9mA active, 50-200\u00b5A sleep",
+    "transmit_power": "-23 dBm, -6 dBm, 0 dBm, 6 dBm",
+    "receiver_sensitivity": "",
+    "range": "",
+    "antenna_type": "",
+    "operating_temperature": "",
+    "dimensions": ""
+  },
+  "power": {
+    "supply_voltage_range": "3.6V to 6V (VCC)",
+    "max_current": "50mA",
+    "consumption": "9mA active, 50-200\u00b5A sleep"
+  },
+  "pinout": {
+    "communication_pins": {
+      "TXD": "Serial UART transmit",
+      "RXD": "Serial UART receive"
+    },
+    "power_pins": {
+      "VCC": "Power input (3.6V to 6V)",
+      "GND": "Common ground"
+    },
+    "control_pins": {
+      "STATE": "Connection status (LOW when not connected, HIGH when connected)",
+      "BRK": "Break pin (LOW to cancel connection)"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 3.3V (or 5V via onboard regulator), GND to ground, TXD to Arduino RX, RXD to Arduino TX (3.3V level). Use UART at 9600 baud. Default PIN is 000000 and default name is HMSoft.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Jinan Huamao",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Source text provided",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

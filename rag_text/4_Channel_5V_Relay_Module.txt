@@ -1,0 +1,75 @@
+component_name: 4 Channel 5V Relay Module
+category: Miscellaneous Module
+sub_category: Relay Module
+manufacturer: SunFounder
+sku: 
+description: A low-level 5V 4-channel relay interface board with SPDT relays capable of handling AC250V 10A or DC30V 10A loads. Each channel requires 15-20mA driver current and can be powered by 5V or 12V supply. Features optocoupler isolation and anti‑interference protection.
+application_examples:
+  - Control household appliances from an Arduino or Raspberry Pi
+  - Switch high‑current AC or DC loads
+  - Automated lighting or motor control
+related_products:
+specifications:
+  type: Single Pole Double Throw (SPDT)
+  operating_voltage: 5VDC (input trigger), 5VDC/12VDC (power supply)
+  current_consumption: >100mA
+  input_trigger_voltage: Low‑level (0–5V)
+  switching_capacity: 250V 10A AC or 30V 10A DC
+  timing_accuracy: 
+  storage_support: 
+  frequency_range: 
+  sound_level: 
+  special_features:
+    - Optocoupler isolation
+    - Anti‑interference capability
+    - Low‑level trigger operation
+    - Standard interface for microcontrollers (8051, AVR, PIC, DSP, ARM, MSP430, TTL logic)
+  operating_temperature: 
+  dimensions: 73mm x 54mm x 19.5mm
+  weight: 
+power:
+  supply_voltage_range: 5VDC–12VDC
+  max_current: 100mA
+  consumption: 100mA
+pinout:
+  signal_pins:
+    IN1: 
+    IN2: 
+    IN3: 
+    IN4: 
+  power_pins:
+    VCC: 
+    GND: 
+    JD-VCC: 
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 5V (or 12V) of the MCU, GND to ground, IN1‑IN4 to digital output pins, and JD‑VCC to an external 5V supply if using separate power. For Arduino, use pins 12, 11, 10, 9. For Raspberry Pi, use GPIO 22, 27, 17, 18.
+  example_code_url: 
+sample_sketches: // Arduino example
+const int relayPins[] = {12, 11, 10, 9};
+const int numRelays = sizeof(relayPins) / sizeof(relayPins[0]);
+void setup() {
+  for (int i = 0; i < numRelays; i++) {
+    pinMode(relayPins[i], OUTPUT);
+    digitalWrite(relayPins[i], HIGH); // relays off
+  }
+}
+void loop() {
+  for (int i = 0; i < numRelays; i++) {
+    digitalWrite(relayPins[i], LOW);  // activate
+    delay(1000);
+    digitalWrite(relayPins[i], HIGH); // deactivate
+    delay(2000);
+  }
+}
+online_resources:
+  - https://www.sunfounder.com
+datasheet_url: 
+company_info:
+  name: SunFounder
+  address: 
+revision_history:
+languages_available:
+  - English
+source_document: www.sunfounder.com

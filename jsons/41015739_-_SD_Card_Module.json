@@ -1,0 +1,78 @@
+{
+  "component_name": "SD Card Reader Module",
+  "category": "Miscellaneous Module",
+  "sub_category": "Storage Module",
+  "manufacturer": "",
+  "sku": "",
+  "description": "A compact module that adds SD card storage capability to Arduino projects. It includes a holder for standard SD cards, a voltage regulator, and the necessary capacitors and resistors for SPI bus operation.",
+  "application_examples": [
+    "Logging sensor data to an SD card",
+    "Storing configuration files for an embedded system",
+    "Reading and executing scripts from an SD card",
+    "Storing media files for playback"
+  ],
+  "related_products": [
+    "Arduino SD Library",
+    "SPI Interface Shield"
+  ],
+  "specifications": {
+    "type": "SD Card Reader",
+    "operating_voltage": "3.3V (regulated from 5V input)",
+    "current_consumption": "",
+    "input_trigger_voltage": "",
+    "switching_capacity": "",
+    "timing_accuracy": "",
+    "storage_support": "Standard SD/SDHC cards up to 8\u202fGB (FAT32)",
+    "frequency_range": "",
+    "sound_level": "",
+    "special_features": [
+      "Built\u2011in voltage regulator",
+      "SPI bus level shifting resistors",
+      "SD card holder",
+      "Automatic card detection via SD.begin()"
+    ],
+    "operating_temperature": "",
+    "dimensions": "",
+    "weight": ""
+  },
+  "power": {
+    "supply_voltage_range": "4.75\u202fV \u2013 5.25\u202fV (input to regulator)",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "signal_pins": {
+      "CS": "Chip Select (connect to Arduino pin 10)",
+      "MOSI": "Master Out Slave In (connect to Arduino pin 11)",
+      "MISO": "Master In Slave Out (connect to Arduino pin 12)",
+      "SCK": "Serial Clock (connect to Arduino pin 13)"
+    },
+    "power_pins": {
+      "VCC": "5\u202fV (input to regulator)",
+      "GND": "Ground"
+    },
+    "control_pins": {
+      "CS": "Chip Select"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5\u202fV, GND to GND, CS to pin 10, MOSI to pin 11, MISO to pin 12, and SCK to pin 13 on the Arduino. Include a pull\u2011up resistor on CS if required by the card.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "See the provided Arduino examples for initializing the SD card, writing to a file, and reading from a file.",
+  "online_resources": [
+    "Arduino SD Library Documentation",
+    "SD Card Formatting Guide"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "Provided text description of the SD Card Reader Module."
+}

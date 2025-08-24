@@ -1,0 +1,64 @@
+component_name: HC-05 Bluetooth Module
+category: Communication Module
+manufacturer: ITEAD Studio
+sku: 
+description: Bluetooth SPP (Serial Port Protocol) module based on CSR Bluecore 04, supporting Bluetooth V2.0+EDR with 3 Mbps data rate. Features integrated antenna, low‑power 1.8 V operation, and UART interface with programmable baud rate.
+application_examples:
+related_products:
+specifications:
+  communication_type: Bluetooth SPP (Serial Port Protocol)
+  frequency_range: 2.4 GHz
+  data_rate: Up to 3 Mbps (Bluetooth V2.0+EDR)
+  protocols_supported:
+    - Bluetooth SPP
+    - UART
+  operating_voltage: 1.8 V to 3.6 V (I/O)
+  current_consumption: 
+  transmit_power: +4 dBm
+  receiver_sensitivity: -80 dBm
+  range: 
+  antenna_type: Integrated
+  operating_temperature: 
+  dimensions: 12.7 mm × 27 mm (footprint)
+power:
+  supply_voltage_range: 1.8 V – 3.6 V
+  max_current: 
+  consumption: 
+pinout:
+  communication_pins:
+    TXD: UART Transmit
+    RXD: UART Receive
+    PIO0: Disconnect (rising pulse)
+    PIO1: Status (low‑disconnected, high‑connected)
+    PIO10: LED control (red)
+    PIO11: LED control (blue)
+  power_pins:
+    VCC: Power supply (1.8 V – 3.6 V)
+    GND: Ground
+  control_pins:
+    PIO0: Disconnect trigger
+    PIO1: Connection status
+    PIO10: LED control
+    PIO11: LED control
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 3.3 V (or 1.8 V), GND to ground, TXD to MCU RX, RXD to MCU TX. Use PIO0 to trigger disconnect, PIO1 to read connection status. PIO10 and PIO11 can drive status LEDs.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - https://iteadstudio.com
+datasheet_url: https://iteadstudio.com
+company_info:
+  name: ITEAD Studio
+  address: 
+revision_history:
+  - Item 1:
+    rev: v1.0
+    description: Initial version
+    release_date: 7/18/2010
+languages_available:
+source_document: HC-05 Bluetooth module datasheet (iteadstudio.com, 06.18.2010)
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

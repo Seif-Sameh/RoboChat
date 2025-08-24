@@ -1,0 +1,63 @@
+{
+  "component_name": "Voltage Sensor / 170640",
+  "category": "Sensor",
+  "manufacturer": "Shenzhen City, Guangdong Science and Technology Co., Ltd.",
+  "sku": "170640",
+  "description": "A voltage sensor based on a resistor divider that reduces the input voltage by a factor of five, allowing measurement of up to 25V DC on an Arduino. The module outputs an analog voltage proportional to the input, compatible with the Arduino's 10\u2011bit ADC (resolution 0.00489V).",
+  "application_examples": [
+    "Arduino voltage measurement",
+    "Battery monitoring",
+    "Power supply monitoring"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Voltage sensor (resistor divider)",
+    "measuring_range": "0.02445V \u2013 25V",
+    "accuracy": "",
+    "resolution": "0.00489V",
+    "response_time": "",
+    "operating_voltage": "5V or 3.3V",
+    "current_consumption": "",
+    "interface": "Analog output to Arduino A0",
+    "operating_temperature": "",
+    "dimensions": "",
+    "other": [
+      "Input voltage max 25V",
+      "Input range DC0\u201325V"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "5V or 3.3V",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Positive terminal connected to VCC (5V or 3.3V)",
+      "GND": "Negative terminal connected to GND",
+      "Data": "s pin connected to Arduino A0",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect the VCC pin to the Arduino 5V (or 3.3V) supply, GND to Arduino GND, and the s pin to the Arduino analog input A0.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <Arduino.h>\nint val11;\nint val2;\nvoid setup() {\n  pinMode(LED1, OUTPUT);\n  Serial.begin(9600);\n  Serial.println(\"Emartee.Com\");\n  Serial.println(\"Voltage: \");\n  Serial.print(\"V\");\n}\nvoid loop() {\n  float temp;\n  val11 = analogRead(0);\n  temp = val11 / 4.092;\n  val11 = (int)temp;\n  val2 = ((val11 % 100) / 10);\n  Serial.println(val2);\n  delay(1000);\n}",
+        "explaination": "Reads the analog voltage from pin A0, converts it to a voltage value using the divider ratio, and prints the result to the serial monitor."
+      }
+    ]
+  },
+  "sample_sketches": "#include <Arduino.h>\nint val11;\nint val2;\nvoid setup() {\n  pinMode(LED1, OUTPUT);\n  Serial.begin(9600);\n  Serial.println(\"Emartee.Com\");\n  Serial.println(\"Voltage: \");\n  Serial.print(\"V\");\n}\nvoid loop() {\n  float temp;\n  val11 = analogRead(0);\n  temp = val11 / 4.092;\n  val11 = (int)temp;\n  val2 = ((val11 % 100) / 10);\n  Serial.println(val2);\n  delay(1000);\n}",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Shenzhen City, Guangdong Science and Technology Co., Ltd.",
+    "address": "China's Shenzhen Futian District, Shenzhen Huaqiang North Road"
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Model: Voltage Sensor / 170640\nDescription:\nReference Code:\n#include\u00a0\nint\u00a0val11;\u00a0\nint\u00a0val2;\u00a0\nvoid\u00a0setup()\u00a0\n{\u00a0\u00a0\u00a0\n\u00a0pinMode(LED1,OUTPUT);\u00a0\u00a0\u00a0\n\u00a0Serial.begin(9600);\u00a0\u00a0\u00a0\n\u00a0Serial.println(\"Emartee.Com\");\u00a0\u00a0\u00a0\n\u00a0Serial.println(\"Voltage:\u00a0\");\u00a0\u00a0\u00a0\n\u00a0Serial.print(\"V\");\u00a0\n}\u00a0\nvoid\u00a0loop()\u00a0\n{\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0float\u00a0temp;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0val11=analogRead(0);\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0temp=val11/4.092;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0val11=(int)temp;//\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0val2=((val11%100)/10);\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0Serial.println(val2);\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0delay(1000);\u00a0\n}\u00a0\nVoltage Sensor / Divider Board for ARDUINO developments\nShenzhen City, Guangdong Science and Technology Co., Ltd. Address: China's Shenzhen Futian District, Shenzhen Huaqiang North Road\nCopyright \u00a9 2010-2015 1688.com All rights reserved. Copyright and Trademark Notices\nThis module is designed based on the principle of resistor divider to reduce the input voltage of the terminal interface by 5 times. \nThe maximum input voltage of the Arduino is 5V. The input voltage of the voltage detection module cannot be greater than 5V \u00d7 \n5 = 25V (if 3.3V is used) System, the input voltage can not be greater than 3.3Vx5 = 16.5V). Because the AVR chip used by \nArduino is 10-bit AD, the analog resolution of this module is 0.00489V (5V/1023), so the voltage detection module detects that \nthe input minimum voltage is 0.00489V\u00d75=0.02445V.\nparameter:\nVoltage input range max: DC0-25V\nVoltage detection range: DC0.02445V - 25V\nVoltage simulation resolution: 0.00489V\nDC input interface: terminal positive terminal is connected to VCC, negative terminal is connected to GND\nOutput interface: \"+\" is connected to 5/3.3V, \"-\" is connected to GND, and \"s\" is connected to the A0 pin of Arduino."
+}

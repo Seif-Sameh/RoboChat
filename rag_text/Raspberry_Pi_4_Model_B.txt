@@ -1,0 +1,56 @@
+component_name: Raspberry Pi 4 Model B
+category: Single-board computer
+manufacturer: Raspberry Pi Ltd
+sku: 
+description: High-performance 64‑bit quad‑core processor, up to 8GB LPDDR4 RAM, dual‑display support up to 4K via micro HDMI, Gigabit Ethernet, USB 3.0, dual‑band Wi‑Fi, Bluetooth 5.0, PoE capability (via HAT), and a 40‑pin GPIO header.
+application_examples:
+  - Desktop computing
+  - Media center
+  - IoT gateway
+  - Robotics control
+related_products:
+specifications:
+  main_processor: Broadcom BCM2711, quad‑core Cortex‑A72 (ARM v8) 64‑bit SoC @ 1.8GHz
+  memory_main:
+    flash: 
+    sram: 
+    eeprom: 
+  secondary_processor: 
+  memory_secondary:
+    flash: 
+    sram: 
+    eeprom: 
+  operating_voltage: 5V
+  input_voltage_recommended: 5V DC via USB‑C (minimum 3A1)
+  input_voltage_limits: 
+  operating_temperature: 0–50ºC
+  digital_io_pins: 40‑pin GPIO header
+  pwm_pins: 
+  analog_input_pins: 
+  dc_current_per_io_pin: 
+  flash_memory_for_bootloader: 
+power:
+  vin_max: 5V
+  vusb_max: 5V
+  consumption: 
+pinout:
+  analog_pins:
+  digital_pins:
+  power_pins:
+certifications:
+getting_started:
+  ide: 
+  cloud_editor: 
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: Raspberry Pi Ltd
+  address: 
+revision_history:
+languages_available:
+source_document: Raspberry Pi 4 Model B – Raspberry Pi Ltd
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

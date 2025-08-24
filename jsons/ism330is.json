@@ -1,0 +1,88 @@
+{
+  "component_name": "ISM330IS",
+  "category": "Sensor",
+  "manufacturer": "STMicroelectronics",
+  "sku": "ISM330IS",
+  "description": "The ISM330IS is a 6\u2011axis inertial measurement unit (IMU) system\u2011in\u2011package featuring a 3\u2011axis digital accelerometer and a 3\u2011axis digital gyroscope. It includes an ultra\u2011low\u2011power intelligent sensor processing unit (ISPU) for on\u2011edge AI and a sensor hub that can interface up to four external sensors. The device operates from 1.71\u202fV to 3.6\u202fV (analog) with an independent 1.62\u202fV to 3.6\u202fV IO supply, supports SPI and I\u00b2C serial interfaces, and is available in a compact LGA\u201114L package (2.5\u202f\u00d7\u202f3.0\u202f\u00d7\u202f0.83\u202fmm).",
+  "application_examples": [
+    "Industrial robots",
+    "Asset tracking",
+    "Anomaly detection and condition monitoring",
+    "Event detection in alarms and smart homes",
+    "Complex motion detection and gesture recognition for personal health",
+    "IoT and connected devices"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "6\u2011axis IMU (3\u2011axis accelerometer + 3\u2011axis gyroscope)",
+    "measuring_range": "Accelerometer: \u00b12\u202fg / \u00b14\u202fg / \u00b18\u202fg / \u00b116\u202fg; Gyroscope: \u00b1125\u202fdps / \u00b1250\u202fdps / \u00b1500\u202fdps / \u00b11000\u202fdps / \u00b12000\u202fdps",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "1.71\u202fV to 3.6\u202fV (analog), 1.62\u202fV to 3.6\u202fV (IO)",
+    "current_consumption": "",
+    "interface": "SPI (3\u2011 or 4\u2011wire) and I\u00b2C (fast mode 400\u202fkHz, fast\u2011mode\u2011plus 1\u202fMHz)",
+    "operating_temperature": "-40\u202f\u00b0C to +85\u202f\u00b0C",
+    "dimensions": "2.5\u202fmm \u00d7 3.0\u202fmm \u00d7 0.83\u202fmm (LGA\u201114L)",
+    "other": [
+      "Ultra\u2011low\u2011power ISPU for on\u2011edge AI",
+      "Sensor hub capable of reading up to four external sensors",
+      "Low\u2011noise: 70\u202f\u00b5g/\u221aHz (high\u2011performance mode)",
+      "Low\u2011power consumption: 0.59\u202fmA (high\u2011performance), 0.46\u202fmA (low\u2011power)",
+      "ECOPACK and RoHS compliant"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "1.71\u202fV to 3.6\u202fV (analog), 1.62\u202fV to 3.6\u202fV (IO)",
+    "max_current": "0.59\u202fmA (high\u2011performance mode)",
+    "consumption": "0.59\u202fmA (high\u2011performance), 0.46\u202fmA (low\u2011power)"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Vdd (1.71\u202fV to 3.6\u202fV)",
+      "GND": "Ground",
+      "Data": "I\u00b2C SDA/SCL or SPI SDI/SDO",
+      "Other": "CS, SCL, SDA, INT1, INT2, Vdd_IO, GND, GND, Vdd, INT1, INT2, RES, RES, CS, SCL, SDA"
+    }
+  },
+  "certifications": [
+    "ECOPACK",
+    "RoHS"
+  ],
+  "getting_started": {
+    "connection_guide": "Connect Vdd to 1.71\u20133.6\u202fV, Vdd_IO to 1.62\u20133.6\u202fV, GND to ground. For I\u00b2C, pull\u2011up the SDA and SCL lines to Vdd_IO. For SPI, connect CS, SCL (SPC), SDI, and SDO. INT1 and INT2 are programmable interrupt pins. The device supports both 3\u2011wire and 4\u2011wire SPI modes.",
+    "example_code_url": "https://www.st.com/resource/en/datasheet/ism330is.pdf",
+    "example_code": [
+      {
+        "code": "",
+        "explaination": ""
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.st.com/resource/en/datasheet/ism330is.pdf",
+    "https://www.st.com/en/mems-and-sensors/ism330is.html"
+  ],
+  "datasheet_url": "https://www.st.com/resource/en/datasheet/ism330is.pdf",
+  "company_info": {
+    "name": "STMicroelectronics",
+    "address": "1, rue de la R\u00e9publique, 75000 Paris, France"
+  },
+  "revision_history": [
+    {
+      "date": "01-Jun-2022",
+      "version": "1",
+      "changes": "Initial release"
+    },
+    {
+      "date": "09-Aug-2023",
+      "version": "2",
+      "changes": "Updated title, product resources, and description"
+    }
+  ],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "Source text provided in the prompt"
+}

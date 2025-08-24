@@ -1,0 +1,118 @@
+component_name: ESP8266EX
+category: Communication Module
+manufacturer: Espressif Systems
+sku: 
+description: ESP8266EX is a highly integrated Wi‑Fi SoC that supports 802.11b/g/n with up to 72.2 Mbps data rate. It features a Tensilica L106 processor, on‑chip SRAM, and a rich set of interfaces (UART, SPI, SDIO, I2C, I2S, PWM, IR). The module is designed for low power consumption, compact QFN32 packaging, and versatile application in IoT devices.
+application_examples:
+  - Home appliances
+  - Home automation
+  - Smart plugs and lights
+  - Industrial wireless control
+  - Baby monitors
+  - IP cameras
+  - Sensor networks
+  - Wearable electronics
+  - Wi‑Fi location‑aware devices
+  - Security ID tags
+  - Wi‑Fi position system beacons
+related_products:
+specifications:
+  communication_type: Wi‑Fi (802.11b/g/n)
+  frequency_range: 2.4 GHz ~ 2.5 GHz (2400 MHz ~ 2483.5 MHz)
+  data_rate: Up to 72.2 Mbps (802.11n MCS7)
+  protocols_supported:
+    - 802.11b
+    - 802.11g
+    - 802.11n
+  operating_voltage: 2.5 V ~ 3.6 V
+  current_consumption: Average 80 mA (typical)
+  transmit_power: 802.11b: +20 dBm, 802.11g: +17 dBm, 802.11n: +14 dBm
+  receiver_sensitivity: 802.11b: –91 dBm, 802.11g: –75 dBm, 802.11n: –72 dBm
+  range: 
+  antenna_type: PCB Trace, External, IPEX Connector, Ceramic Chip
+  operating_temperature: -40 °C ~ 125 °C
+  dimensions: QFN32‑pin (5 mm × 5 mm)
+power:
+  supply_voltage_range: 2.5 V ~ 3.6 V
+  max_current: 
+  consumption: Average 80 mA
+pinout:
+  communication_pins:
+    UART0:
+      - U0TXD (GPIO1)
+      - U0RXD (GPIO3)
+    SPI/HSPI:
+      - SPICLK (GPIO6)
+      - SPID/MOSI (GPIO8)
+      - SPIQ/MISO (GPIO7)
+      - SPICS0 (GPIO15)
+      - SPICS1 (GPIO1)
+      - SPICS2 (GPIO0)
+    SDIO:
+      - SD_CLK (GPIO6)
+      - SD_CMD (GPIO11)
+      - SD_DATA0 (GPIO7)
+      - SD_DATA1 (GPIO8)
+      - SD_DATA2 (GPIO9)
+      - SD_DATA3 (GPIO10)
+    I2C:
+      - I2C_SCL (GPIO14)
+      - I2C_SDA (GPIO2)
+    I2S:
+      - I2SI_BCK (GPIO13)
+      - I2SI_WS (GPIO14)
+      - I2SI_DATA (GPIO12)
+      - I2SO_BCK (GPIO15)
+      - I2SO_WS (GPIO2)
+      - I2SO_DATA (GPIO3)
+    PWM:
+      - PWM0 (GPIO12)
+      - PWM1 (GPIO15)
+      - PWM2 (GPIO14)
+      - PWM3 (GPIO4)
+    IR:
+      - IR_TX (GPIO5)
+      - IR_RX (GPIO5)
+  power_pins:
+    VDDA: Pin1
+    VDD3P3: Pin3 & Pin4
+    VDD_RTC: Pin5
+    VDDPST: Pin11 & Pin17
+    VDDD: Pin29
+    XTAL_IN: Pin28
+    XTAL_OUT: Pin27
+  control_pins:
+    CHIP_EN: Pin7
+    XPD_DCDC: Pin8
+    EXT_RSTB: Pin32
+    MTDO: Pin9
+    MTCK: Pin10
+    MTDI: Pin11
+    MTMS: Pin12
+certifications:
+getting_started:
+  connection_guide: Connect VDD3P3 to 3.3 V, GND, and use UART0 or SPI/SDIO for communication. Refer to the ESP8266 SDK for firmware flashing and AT command usage.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - ESP‑AT Instruction User Guide
+  - ESP8266 SDK Getting Started Guide
+  - ESP8266 Pin List
+  - ESP8266 Hardware Design Guideline
+  - ESP8266 Technical Reference
+  - ESP8266 Hardware Resources
+  - ESP8266 Certification and Test Guide
+  - ESP8266 BBS
+  - ESP8266 Resources
+datasheet_url: 
+company_info:
+  name: Espressif Systems
+  address: 
+revision_history:
+languages_available:
+  - English
+source_document: www.espressif.com
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

@@ -1,0 +1,63 @@
+{
+  "component_name": "Display OLED I2C 0.96\" SSD1306",
+  "category": "Display / Output Device",
+  "manufacturer": "",
+  "sku": "333099",
+  "description": "I2C OLED breakout board with a 0.96\" display, 128x64 pixel resolution, high contrast, low power consumption (~20\u202fmA), 5\u202fV ready with onboard regulator for 3.3\u202fV compatibility, and optional white or blue pixel colors.",
+  "application_examples": [
+    "Displaying simple information such as weather or humidity",
+    "Real\u2011time cryptocurrency price updates",
+    "General-purpose status displays for Arduino projects"
+  ],
+  "related_products": [],
+  "specifications": {
+    "display_type": "OLED",
+    "resolution": "128x64",
+    "color_support": "White, Blue",
+    "interface": "I2C (address 0x3C)",
+    "operating_voltage": "5\u202fV (onboard regulator for 3.3\u202fV)",
+    "current_consumption": "~20\u202fmA (depending on active pixels)",
+    "viewing_angle": "",
+    "brightness": "",
+    "refresh_rate": "",
+    "sound_level": "",
+    "dimensions": "30\u202f\u00d7\u202f30\u202fmm",
+    "operating_temperature": ""
+  },
+  "power": {
+    "supply_voltage_range": "5\u202fV (onboard regulator for 3.3\u202fV)",
+    "max_current": "~20\u202fmA",
+    "consumption": "~20\u202fmA"
+  },
+  "pinout": {
+    "signal_pins": {
+      "SDA": "I2C data",
+      "SCL": "I2C clock"
+    },
+    "power_pins": {
+      "VCC": "5\u202fV supply",
+      "GND": "Ground"
+    },
+    "control_pins": {}
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect SDA and SCL to the microcontroller\u2019s I2C pins, VCC to 5\u202fV (or 3.3\u202fV via the onboard regulator), and GND to ground. Use the I2C address 0x3C in your code.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "Arduino library",
+    "Datasheet SSD1306",
+    "Datasheet SSD1315",
+    "Open-Source Hardware files"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Solde.red",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "www.solde.red/333099"
+}

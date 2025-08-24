@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RoboChat — Robotics RAG Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="welcome" class="welcome-screen" role="dialog" aria-modal="true">
+    <div class="welcome-card">
+      <h1 class="welcome-title">Welcome to RoboChat</h1>
+      <p class="welcome-sub">Ask anything about robotics components !</p>
+      <div class="welcome-actions">
+        <button id="enterBtn" class="btn-primary">Start chatting</button>
+      </div>
+    </div>
+    <div class="welcome-bg"></div>
+  </div>
+
+  <div id="app" class="app">
+    <header class="topbar">
+      <div class="brand">RoboChat</div>
+      <div class="meta">
+        <label for="topk">Top K</label>
+        <select id="topk" title="Number of retrieved docs">
+          <option value="0">0 (no RAG)</option>
+          <option value="1">1</option>
+          <option value="3" selected>3</option>
+          <option value="5">5</option>
+        </select>
+        <button id="clear" title="Clear chat">Clear</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>RoboChat</h3>
+          <p class="muted">A smart robotics assistant that answers questions, retrieves datasheet details, and finds nearby stores to buy components. Always accurate, always by your side.</p>
+          <div class="small-note">Model: <strong>gpt-oss-120b</strong></div>
+        </div>
+      </aside>
+
+      <section class="chat-area">
+        <div id="messages" class="messages" role="log" aria-live="polite"></div>
+
+        <form id="composer" class="composer" autocomplete="off">
+          <textarea id="input" placeholder="Ask a question" rows="1" spellcheck="true"></textarea>
+          <div class="controls">
+            <button id="send" type="submit" aria-label="Send" class="btn-accent">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="note">Local backend: POST /ask · Connected</div>
+    </footer>
+  </div>
+
+  <template id="msg-template">
+    <div class="msg-row">
+      <div class="msg user"><div class="body"></div></div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

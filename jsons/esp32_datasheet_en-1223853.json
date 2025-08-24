@@ -1,0 +1,164 @@
+{
+  "component_name": "ESP32",
+  "category": "System-on-Chip (SoC) / MCU",
+  "manufacturer": "Espressif Systems",
+  "sku": "ESP32-D0WD",
+  "description": "The ESP32 is a single 2.4\u202fGHz Wi\u2011Fi\u2011and\u2011Bluetooth combo chip featuring a dual\u2011core Xtensa LX6 microprocessor, integrated RF, and a rich set of peripherals. It is designed for low\u2011power IoT, wearable, and embedded applications.",
+  "application_examples": [
+    "IoT sensor hubs",
+    "Data loggers",
+    "Video streaming cameras",
+    "Smart home devices (lights, plugs, door locks)",
+    "Industrial wireless control",
+    "Audio streaming devices",
+    "Wearable electronics",
+    "Robotics",
+    "POS machines"
+  ],
+  "related_products": [
+    "ESP32\u2011WROOM\u201132 module",
+    "ESP32\u2011WROVER module",
+    "ESP32\u2011S2 series",
+    "ESP32\u2011C3 series"
+  ],
+  "specifications": {
+    "main_processor": "Dual\u2011core Xtensa LX6 32\u2011bit (up to 240\u202fMHz)",
+    "memory_main": {
+      "flash": "448\u202fKB ROM (internal)",
+      "sram": "520\u202fKB SRAM (internal)",
+      "eeprom": ""
+    },
+    "secondary_processor": "Ultra\u2011Low\u2011Power (ULP) co\u2011processor",
+    "memory_secondary": {
+      "flash": "",
+      "sram": "8\u202fKB RTC FAST memory",
+      "eeprom": ""
+    },
+    "operating_voltage": "2.3\u202fV \u2013 3.6\u202fV",
+    "input_voltage_recommended": "3.3\u202fV",
+    "input_voltage_limits": "2.3\u202fV \u2013 3.6\u202fV",
+    "operating_temperature": "-40\u202f\u00b0C to 125\u202f\u00b0C",
+    "digital_io_pins": "34",
+    "pwm_pins": "16 (LED PWM channels)",
+    "analog_input_pins": "18 (12\u2011bit SAR ADC channels)",
+    "dc_current_per_io_pin": "\u226440\u202fmA (max per pin)",
+    "flash_memory_for_bootloader": ""
+  },
+  "power": {
+    "vin_max": "3.6\u202fV",
+    "vusb_max": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "analog_pins": {
+      "GPIO34": "ADC1_CH6",
+      "GPIO35": "ADC1_CH7",
+      "GPIO32": "ADC1_CH4",
+      "GPIO33": "ADC1_CH5",
+      "GPIO25": "ADC2_CH8",
+      "GPIO26": "ADC2_CH9",
+      "GPIO27": "ADC2_CH7",
+      "GPIO2": "ADC2_CH2",
+      "GPIO0": "ADC2_CH1",
+      "GPIO4": "ADC2_CH0"
+    },
+    "digital_pins": {
+      "GPIO0": "",
+      "GPIO1": "",
+      "GPIO2": "",
+      "GPIO3": "",
+      "GPIO4": "",
+      "GPIO5": "",
+      "GPIO6": "",
+      "GPIO7": "",
+      "GPIO8": "",
+      "GPIO9": "",
+      "GPIO10": "",
+      "GPIO11": "",
+      "GPIO12": "",
+      "GPIO13": "",
+      "GPIO14": "",
+      "GPIO15": "",
+      "GPIO16": "",
+      "GPIO17": "",
+      "GPIO18": "",
+      "GPIO19": "",
+      "GPIO21": "",
+      "GPIO22": "",
+      "GPIO23": "",
+      "GPIO25": "",
+      "GPIO26": "",
+      "GPIO27": "",
+      "GPIO32": "",
+      "GPIO33": "",
+      "GPIO34": "",
+      "GPIO35": "",
+      "GPIO36": "",
+      "GPIO37": "",
+      "GPIO38": "",
+      "GPIO39": ""
+    },
+    "power_pins": {
+      "VDD3P3_RTC": "",
+      "VDD3P3_CPU": "",
+      "VDD_SDIO": "",
+      "VDD3P3": "",
+      "VDDA": ""
+    }
+  },
+  "certifications": [
+    "Wi\u2011Fi Alliance",
+    "Bluetooth SIG"
+  ],
+  "getting_started": {
+    "ide": "ESP\u2011IDF (Espressif IoT Development Framework)",
+    "cloud_editor": "ESP\u2011IDF Web IDE (Espressif Cloud)"
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.espressif.com/en/support/download/documents",
+    "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/",
+    "https://github.com/espressif/esp-idf",
+    "https://www.espressif.com/en/support/faq"
+  ],
+  "datasheet_url": "https://www.espressif.com/en/support/download/documents",
+  "company_info": {
+    "name": "Espressif Systems (Shanghai) Co., Ltd.",
+    "address": "Shanghai, China"
+  },
+  "revision_history": [
+    "2020\u201104\u201127 V3.4 \u2013 Added ESP32\u2011U4WDH",
+    "2020\u201101 V3.3 \u2013 Added ESP32\u2011D0WD\u2011V3 and ESP32\u2011D0WDQ6\u2011V3",
+    "2019\u201110 V3.2 \u2013 Updated power\u2011up timing",
+    "2019\u201107 V3.1 \u2013 Added new chip variants",
+    "2019\u201104 V3.0 \u2013 Updated strapping pin notes",
+    "2019\u201102 V2.9 \u2013 Updated pin description formatting",
+    "2018\u201111 V2.7 \u2013 Updated pin status at reset",
+    "2018\u201108 V2.5 \u2013 Added power consumption table",
+    "2018\u201105 V2.2 \u2013 Updated voltage ranges and reliability tables",
+    "2018\u201101 V2.1 \u2013 Deleted software\u2011specific features",
+    "2017\u201112 V2.0 \u2013 Added pin sequence note",
+    "2017\u201110 V1.9 \u2013 Updated pin description and power scheme",
+    "2017\u201108 V1.7 \u2013 Updated RF parameters and power consumption",
+    "2017\u201106 V1.6 \u2013 Corrected typos",
+    "2017\u201105 V1.5 \u2013 Updated power supply range",
+    "2017\u201104 V1.4 \u2013 Added frequency note",
+    "2017\u201103 V1.3 \u2013 Added pin lists appendix",
+    "2017\u201102 V1.2 \u2013 Updated internal memory note",
+    "2017\u201101 V1.1 \u2013 Added part number section",
+    "2016\u201108 V1.0 \u2013 First release"
+  ],
+  "languages_available": [
+    "C",
+    "C++",
+    "Python (MicroPython)",
+    "Lua (NodeMCU)"
+  ],
+  "source_document": "ESP32 Datasheet V3.4 (provided source text)",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

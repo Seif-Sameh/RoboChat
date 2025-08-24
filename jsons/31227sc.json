@@ -1,0 +1,66 @@
+{
+  "component_name": "HC-SR501",
+  "category": "Sensor",
+  "manufacturer": "",
+  "sku": "HC-SR501",
+  "description": "A passive infrared (PIR) motion sensor module based on the LHI778 probe design. It offers high sensitivity, low power consumption, and a wide operating voltage range (4.5\u201320\u202fV). The module features adjustable delay and block times, dual\u2011probe detection, and a 3.3\u202fV TTL output.",
+  "application_examples": [
+    "Security and alarm systems",
+    "Automatic lighting control (floor, bathroom, basement, porch, warehouse, garage)",
+    "Industrial automation control",
+    "Body induction toys and lamps"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Passive Infrared (PIR) motion sensor",
+    "measuring_range": "Up to 7\u202fm",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "4.5\u201320\u202fV DC",
+    "current_consumption": "Quiescent <50\u202f\u00b5A, active ~65\u202fmA",
+    "interface": "TTL output (High 3.3\u202fV / Low 0\u202fV)",
+    "operating_temperature": "-15\u202f\u00b0C to +70\u202f\u00b0C",
+    "dimensions": "32\u202fmm \u00d7 24\u202fmm (board), lens diameter 23\u202fmm",
+    "other": [
+      "Sensing angle <110\u00b0",
+      "Block time 2.5\u202fs (default, adjustable 0\u2013tens\u202fs)",
+      "Delay time adjustable 0.3\u202fs to 5\u202fmin",
+      "Dual\u2011probe rectangular window for increased sensitivity"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "4.5\u201320\u202fV DC",
+    "max_current": "65\u202fmA",
+    "consumption": "Quiescent <50\u202f\u00b5A, active ~65\u202fmA"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Positive supply (4.5\u201320\u202fV DC)",
+      "GND": "Ground",
+      "Data": "TTL output (High 3.3\u202fV / Low 0\u202fV)",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to the supply voltage (4.5\u201320\u202fV DC), GND to ground, and Data to a microcontroller input pin. Ensure the input can tolerate 3.3\u202fV logic levels.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <Arduino.h>\n\nconst int pirPin = 2; // Data pin\n\nvoid setup() {\n  pinMode(pirPin, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  int state = digitalRead(pirPin);\n  if (state == HIGH) {\n    Serial.println(\"Motion detected\");\n  } else {\n    Serial.println(\"No motion\");\n  }\n  delay(500); // Poll every 0.5\u202fs\n}",
+        "explaination": "This simple Arduino sketch reads the PIR sensor output and prints a message to the serial monitor whenever motion is detected."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Product Discription and Specification text provided in the prompt."
+}

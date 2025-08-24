@@ -1,0 +1,62 @@
+component_name: LCD-016N002B-CFH-ET
+category: Display / Output Device
+manufacturer: Vishay Intertechnology, Inc.
+sku: LCD-016N002B-CFH-ET
+description: 16x2 character LCD with triple‑color LED backlight, FSTN positive, transflective, 5x8 dot characters, 1/16 duty cycle.
+application_examples:
+related_products:
+specifications:
+  display_type: Character
+  resolution: 16 x 2 characters
+  color_support: Triple‑color LED backlight (Red, Green, Blue)
+  interface: Parallel 8‑bit (RS, R/W, E, DB0‑DB7)
+  operating_voltage: VDD 5.0 V, V0 0–13 V
+  current_consumption: 1.0–1.5 mA (typical at 5 V)
+  viewing_angle: Vertical 30–60°, Horizontal –45° to +45°
+  brightness: 
+  refresh_rate: 
+  sound_level: 
+  dimensions: 80.0 × 36.0 × 13.2 mm (max.)
+  operating_temperature: -20 °C to +70 °C
+power:
+  supply_voltage_range: 5.0 V ±0.5 V
+  max_current: 1.5 mA
+  consumption: 1.0–1.5 mA
+pinout:
+  signal_pins:
+    RS: Register Select
+    R/W: Read/Write
+    E: Enable
+    DB0: Data Bus 0
+    DB1: Data Bus 1
+    DB2: Data Bus 2
+    DB3: Data Bus 3
+    DB4: Data Bus 4
+    DB5: Data Bus 5
+    DB6: Data Bus 6
+    DB7: Data Bus 7
+  power_pins:
+    VSS: Ground
+    VDD: Logic supply (5 V)
+    V0: LCD operating voltage (0–13 V)
+    A: LED+ supply
+    R: LED Red supply
+    G: LED Green supply
+    B: LED Blue supply
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect VDD to 5 V, VSS to GND, V0 to 0–13 V, RS/RW/E to MCU control lines, DB0‑DB7 to data bus, LED pins to appropriate driver or transistor circuit.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: Vishay Intertechnology, Inc.
+  address: 
+revision_history:
+  - Item 1:
+    revision: 18-Mar-13
+    notes: 
+languages_available:
+source_document: Document Number: 37484

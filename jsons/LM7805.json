@@ -1,0 +1,75 @@
+{
+  "component_name": "\u00b5A7805C",
+  "category": "Power Component",
+  "sub_category": "Fixed-Voltage Regulator",
+  "manufacturer": "Texas Instruments",
+  "sku": "\u00b5A7805C",
+  "description": "5\u202fV fixed\u2011output linear regulator capable of delivering up to 1.5\u202fA with internal short\u2011circuit and thermal overload protection.",
+  "application_examples": [
+    "On\u2011card regulation to reduce noise and distribution problems",
+    "Precision regulator with external components",
+    "Adjustable output voltage/current with external resistors"
+  ],
+  "related_products": [
+    "\u00b5A7808C",
+    "\u00b5A7810C",
+    "\u00b5A7812C",
+    "\u00b5A7815C",
+    "\u00b5A7824C"
+  ],
+  "specifications": {
+    "type": "Linear regulator",
+    "voltage_input_range": "7\u202fV to 20\u202fV",
+    "voltage_output_range": "5\u202fV",
+    "current_output_continuous": "1.5\u202fA",
+    "current_output_peak": "2.2\u202fA",
+    "efficiency": "",
+    "capacity": "",
+    "discharge_rate": "",
+    "charging_current": "",
+    "protection_features": [
+      "Internal short\u2011circuit current limiting",
+      "Internal thermal overload protection",
+      "Output transistor safe\u2011area compensation"
+    ],
+    "operating_temperature": "0\u202f\u00b0C to 125\u202f\u00b0C",
+    "dimensions": "",
+    "weight": ""
+  },
+  "power": {
+    "vin_max": "20\u202fV",
+    "vout_max": "5\u202fV",
+    "consumption": ""
+  },
+  "pinout": {
+    "input_pins": {
+      "1": "VIN"
+    },
+    "output_pins": {
+      "2": "VOUT"
+    },
+    "control_pins": {
+      "3": "GND"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VIN to the input supply, VOUT to the load, and GND to common ground.",
+    "example_usage": "Use as a 5\u202fV regulator for microcontroller or digital logic power supply."
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.ti.com/product/\u00b5A7805C",
+    "https://www.ti.com/lit/ds/symlink/\u00b5a7805c.pdf"
+  ],
+  "datasheet_url": "https://www.ti.com/lit/ds/symlink/\u00b5a7805c.pdf",
+  "company_info": {
+    "name": "Texas Instruments",
+    "address": "Post Office Box 655303 Dallas, Texas 75265"
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "\u00b5A7800 SERIES POSITIVE-VOLTAGE REGULATORS SLVS056J \u2013 MAY 1976 \u2013 REVISED MAY 2003"
+}

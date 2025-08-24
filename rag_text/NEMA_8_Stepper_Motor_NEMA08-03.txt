@@ -1,0 +1,46 @@
+component_name: NEMA 8 Stepper Motor NEMA08-03
+category: Motor
+manufacturer: SIMAC Electronics GmbH
+sku: NEMA08-03
+description: Small high‑torque NEMA 8 stepper motor capable of up to 3000 rpm, suitable for model making, maker projects, and industrial positioning applications.
+application_examples:
+  - Model making
+  - Maker scene
+  - Industrial positioning of optics
+  - Dosing pumps
+  - Interlocks
+related_products:
+specifications:
+  motor_type: Stepper
+  voltage_rating: 4.26 V
+  current_rating: 0.6 A
+  torque: 22 mNm (holding), 3 mNm (detent)
+  speed_rpm: Up to 3000 rpm
+  gear_ratio: 
+  shaft_diameter: Ø 4 x 8.5 mm
+  weight: 
+  operating_temperature: -10 °C to 50 °C
+  dimensions: 20 x 22 x 27.3 mm
+power:
+  supply_voltage_range: 4.26 V
+  max_current: 0.6 A
+  consumption: 
+pinout:
+  wiring:
+    VCC: 
+    GND: 
+    Control_Signal: 
+    Other: 
+certifications:
+getting_started:
+  connection_guide: Connect the motor to a 6‑pin JST socket using the supplied cable.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: SIMAC Electronics GmbH
+  address: Pascalstr. 8, 47506 Neukirchen‑Vluyn
+revision_history:
+languages_available:
+source_document: Published: 23.07.2021 www.joy-it.net SIMAC Electronics GmbH, Pascalstr. 8, 47506 Neukirchen-Vluyn NEMA8 STEPPER MOTOR NEMA08-03 ...

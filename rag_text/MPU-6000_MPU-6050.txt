@@ -1,0 +1,105 @@
+component_name: MPU-6000/MPU-6050
+category: Sensor
+manufacturer: InvenSense Inc.
+sku: 
+description: The MPU‑6000/MPU‑6050 is a 6‑axis motion‑tracking device that integrates a 3‑axis MEMS gyroscope, a 3‑axis MEMS accelerometer, and an on‑chip Digital Motion Processor (DMP) in a 4 × 4 × 0.9 mm QFN package. It supports I²C (400 kHz) and, for the MPU‑6000, SPI (1 MHz) interfaces, and offers programmable full‑scale ranges, low‑power modes, and a 1024‑byte FIFO buffer.
+application_examples:
+  - Gesture recognition in smartphones and tablets
+  - Video and image stabilization (BlurFree™)
+  - Security and authentication (AirSign™)
+  - Motion‑based game controllers
+  - Wearable health and fitness sensors
+  - 3‑D remote controls for set‑top boxes
+  - Pedestrian and vehicle navigation
+related_products:
+  - MPU‑6050 (I²C only version)
+  - MPU‑6050 with external magnetometer via auxiliary I²C
+  - MPU‑6050 with DMP firmware
+specifications:
+  sensor_type: 3‑axis MEMS gyroscope + 3‑axis MEMS accelerometer + on‑chip DMP
+  measuring_range: Gyroscope: ±250, ±500, ±1000, ±2000 °/s; Accelerometer: ±2 g, ±4 g, ±8 g, ±16 g
+  accuracy: 
+  resolution: 16‑bit ADC for both gyro and accel
+  response_time: 
+  operating_voltage: 2.375 V – 3.46 V (VDD); VLOGIC 1.71 V – VDD for MPU‑6050
+  current_consumption: Normal: 3.9 mA (gyro + accel + DMP); Gyro only: 3.6 mA; Accel only: 500 µA; Low‑power accel: 10 µA (1.25 Hz) – 140 µA (40 Hz)
+  interface: I²C (400 kHz) and SPI (1 MHz, MPU‑6000 only)
+  operating_temperature: -40 °C to +105 °C
+  dimensions: 4 × 4 × 0.9 mm QFN (24‑pin)
+  other:
+    - 10,000 g shock tolerance
+    - 1024‑byte FIFO buffer
+    - Digital Motion Processor (DMP) for motion fusion
+    - On‑chip temperature sensor
+    - Programmable low‑pass filters for gyro, accel, and temp
+    - Self‑test capability for gyro and accel
+power:
+  supply_voltage_range: 2.375 V – 3.46 V
+  max_current: 3.9 mA (normal operation)
+  consumption: 3.9 mA (normal), 3.6 mA (gyro only), 500 µA (accel only)
+pinout:
+  pins:
+    VCC: VDD (2.375 V – 3.46 V)
+    GND: GND
+    Data: I²C SDA/SCL (or SPI SDI/SDO)
+    Other: /CS (SPI chip select), VLOGIC (MPU‑6050 only), AD0/SDO (I²C address LSB), FSYNC, INT, AUX_DA, AUX_CL, CLKIN, REGOUT, CPOUT, C3, C1, C2, C4 (capacitors)
+certifications:
+  - RoHS
+  - Green compliant
+getting_started:
+  connection_guide: Connect VDD to 2.375–3.46 V, GND to ground, SDA to I²C data line, SCL to I²C clock line, AD0 to set I²C address (0 or 1). For MPU‑6050, also connect VLOGIC to 1.71 V–VDD. Pull‑up resistors on SDA/SCL to VDD. For SPI (MPU‑6000), connect /CS low, SCLK, SDI, SDO, and optionally pull‑ups on I²C lines if using auxiliary bus.
+  example_code_url: 
+  example_code:
+    - Item 1:
+      code: #include <Wire.h>
+
+void setup() {
+  Wire.begin();
+  Serial.begin(115200);
+  // MPU‑6050 default address 0x68
+  Wire.beginTransmission(0x68);
+  Wire.write(0x6B); // PWR_MGMT_1 register
+  Wire.write(0x00); // wake up
+  Wire.endTransmission();
+}
+
+void loop() {
+  Wire.beginTransmission(0x68);
+  Wire.write(0x3B); // ACCEL_XOUT_H
+  Wire.endTransmission(false);
+  Wire.requestFrom(0x68, 14, true);
+  int16_t ax = Wire.read()<<8 | Wire.read();
+  int16_t ay = Wire.read()<<8 | Wire.read();
+  int16_t az = Wire.read()<<8 | Wire.read();
+  int16_t gx = Wire.read()<<8 | Wire.read();
+  int16_t gy = Wire.read()<<8 | Wire.read();
+  int16_t gz = Wire.read()<<8 | Wire.read();
+  Serial.print("Accel: "); Serial.print(ax); Serial.print(", "); Serial.print(ay); Serial.print(", "); Serial.println(az);
+  Serial.print("Gyro: "); Serial.print(gx); Serial.print(", "); Serial.print(gy); Serial.print(", "); Serial.println(gz);
+  delay(500);
+}
+
+      explaination: Basic Arduino sketch that wakes the MPU‑6050, reads 14 bytes of sensor data (3‑axis accel, 3‑axis gyro, temp), and prints them to the serial monitor.
+sample_sketches: 
+online_resources:
+  - InvenSense website: https://www.invensense.com
+  - MPU‑6000/MPU‑6050 datasheet (PDF)
+  - MPU‑6000/MPU‑6050 register map and descriptions
+datasheet_url: 
+company_info:
+  name: InvenSense Inc.
+  address: 1197 Borregas Ave, Sunnyvale, CA 94089 U.S.A.
+revision_history:
+  - 11/24/2010 – 1.0 – Initial Release
+  - 05/19/2011 – 2.0 – Clarified wording in several sections
+  - 07/28/2011 – 2.1 – Edited supply current numbers for different modes
+  - 08/05/2011 – 2.2 – Unit of measure for accelerometer sensitivity changed
+  - 10/12/2011 – 2.3 – Updated accelerometer self‑test specifications
+  - 10/18/2011 – 3.0 – Updated accelerometer specifications for Rev D parts
+  - 10/24/2011 – 3.1 – Edits for clarity, updated operating voltage range
+  - 11/16/2011 – 3.2 – Updated self‑test response specifications
+  - 05/16/2012 – 3.3 – Updated self‑test, latch‑up, and interrupt information
+  - 08/19/2013 – 3.4 – Updates to section 4
+languages_available:
+  - English
+source_document: PS‑MPU‑6000A‑00 Revision 3.4, Release 08/19/2013

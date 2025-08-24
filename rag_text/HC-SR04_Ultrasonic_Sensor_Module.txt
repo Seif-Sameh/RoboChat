@@ -1,0 +1,89 @@
+component_name: HC-SR04 Ultrasonic Sensor Module
+category: Sensor
+manufacturer: Handson Technology
+sku: MDU-1014
+description: HC-SR04 Ultrasonic Sensor is a very affordable proximity/distance sensor that has been used mainly for object avoidance in various robotics projects. It has also been used in turret applications, water level sensing, and even as a parking sensor.
+application_examples:
+  - Car parking reverse sensors
+  - Liquid level detection
+related_products:
+specifications:
+  sensor_type: Ultrasonic distance sensor
+  measuring_range: 2cm ~ 400cm (1in ~ 13ft)
+  accuracy: ±3mm
+  resolution: 
+  response_time: 
+  operating_voltage: 3.3Vdc ~ 5Vdc
+  current_consumption: Quiescent <2mA, Operating 15mA
+  interface: 4-pin header with 2.54mm pitch
+  operating_temperature: 
+  dimensions: 45mm x 20mm x 15mm
+  other:
+    - Operating Frequency: 40KHz
+    - Sensitivity: -65dB min
+    - Sound Pressure: 112dB
+    - Effective Angle: 15°
+    - Weight: 9g
+    - Connector: 4-pins header
+power:
+  supply_voltage_range: 3.3V ~ 5V
+  max_current: 15mA
+  consumption: Quiescent <2mA
+pinout:
+  pins:
+    VCC: VCC
+    GND: GND
+    Data: TRIG
+    Other: ECHO
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 5V or 3.3V, TRIG to a digital pin, ECHO to a digital pin, and GND to ground.
+  example_code_url: 
+  example_code:
+    - Item 1:
+      code: #include <Arduino.h>
+int trig=9;  
+int echo=8; 
+int duration;         
+float distance;   
+float meter;        
+void setup() 
+{ 
+  Serial.begin(9600); 
+  pinMode(trig, OUTPUT); 
+  digitalWrite(trig, LOW); 
+  delayMicroseconds(2);  
+  pinMode(echo, INPUT); 
+  delay(6000); 
+  Serial.println("Distance:"); 
+}  
+void loop() 
+{   
+  digitalWrite(trig, HIGH);     
+  delayMicroseconds(10);                
+  digitalWrite(trig, LOW);     
+  duration = pulseIn(echo, HIGH);  
+  if(duration>=38000){ 
+      Serial.print("Out range");   
+      }  
+  else{ 
+      distance = duration/58;    
+      Serial.print(distance);     
+      Serial.print("cm");  
+      meter=distance/100; 
+      Serial.print("\t"); 
+      Serial.print(meter);  
+      Serial.println("m"); 
+      }  
+  delay(1000);    
+}
+      explaination: This Arduino sketch triggers the HC-SR04 sensor, measures the echo pulse width, calculates distance in centimeters and meters, and prints the result to the Serial Monitor.
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: Handson Technology
+  address: 
+revision_history:
+languages_available:
+source_document: Handson Technology User Guide for HC-SR04 Ultrasonic Sensor Module (pages 1-10 of the provided text).

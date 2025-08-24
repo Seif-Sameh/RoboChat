@@ -1,0 +1,224 @@
+{
+  "component_name": "ESP-WROOM-32",
+  "category": "Wi-Fi + Bluetooth + BLE Module",
+  "manufacturer": "Espressif Systems",
+  "sku": "",
+  "description": "ESP-WROOM-32 is a compact Wi\u2011Fi, Bluetooth Classic, and Bluetooth Low Energy (BLE) module based on the ESP32-D0WDQ6 chip. It features dual Xtensa LX6 cores, 520\u202fKB on\u2011chip SRAM, 4\u202fMB external SPI flash, and a rich set of peripherals including capacitive touch, ADC, DAC, UART, I2C, SPI, I2S, SDIO, Ethernet MAC, and more. Designed for low\u2011power sensor networks, voice encoding, music streaming, and MP3 decoding.",
+  "application_examples": [
+    "Low\u2011power sensor networks",
+    "Voice encoding and music streaming",
+    "MP3 decoding",
+    "IoT gateways",
+    "Wireless data logging",
+    "Bluetooth beacon and device control"
+  ],
+  "related_products": [
+    "ESP32 DevKitC",
+    "ESP32",
+    "ESP-WROOM-32U",
+    "ESP32-C3"
+  ],
+  "specifications": {
+    "main_processor": "ESP32-D0WDQ6 (dual Xtensa LX6 cores)",
+    "memory_main": {
+      "flash": "4\u202fMB external SPI flash (integrated)",
+      "sram": "520\u202fKB on\u2011chip SRAM (including 8\u202fKB RTC FAST and 8\u202fKB RTC SLOW)",
+      "eeprom": ""
+    },
+    "secondary_processor": "",
+    "memory_secondary": {
+      "flash": "",
+      "sram": "",
+      "eeprom": ""
+    },
+    "operating_voltage": "2.7\u202fV \u2013 3.6\u202fV",
+    "input_voltage_recommended": "3.3\u202fV",
+    "input_voltage_limits": "2.7\u202fV \u2013 3.6\u202fV",
+    "operating_temperature": "-40\u202f\u00b0C to +85\u202f\u00b0C",
+    "digital_io_pins": "38 (GPIO0\u2013GPIO39, excluding reserved pins)",
+    "pwm_pins": "19 (16 LED PWM channels + 3 motor PWM channels)",
+    "analog_input_pins": "18 (10 ADC1 channels + 10 ADC2 channels, some shared)",
+    "dc_current_per_io_pin": "40\u202fmA (max)",
+    "flash_memory_for_bootloader": "4\u202fMB external SPI flash"
+  },
+  "power": {
+    "vin_max": "3.6\u202fV",
+    "vusb_max": "",
+    "consumption": "Average: 80\u202fmA (typical 3.3\u202fV supply)"
+  },
+  "pinout": {
+    "analog_pins": {
+      "SENSOR_VP": "GPIO36",
+      "SENSOR_VN": "GPIO39",
+      "IO32": "GPIO32",
+      "IO33": "GPIO33",
+      "IO25": "GPIO25",
+      "IO26": "GPIO26",
+      "IO27": "GPIO27",
+      "IO14": "GPIO14",
+      "IO12": "GPIO12",
+      "IO15": "GPIO15",
+      "IO13": "GPIO13",
+      "IO2": "GPIO2",
+      "IO0": "GPIO0",
+      "IO4": "GPIO4",
+      "IO5": "GPIO5",
+      "IO18": "GPIO18",
+      "IO19": "GPIO19",
+      "IO21": "GPIO21",
+      "IO22": "GPIO22",
+      "IO23": "GPIO23",
+      "IO34": "GPIO34",
+      "IO35": "GPIO35"
+    },
+    "digital_pins": {
+      "EN": "GPIO3",
+      "RXD0": "GPIO3",
+      "TXD0": "GPIO1",
+      "SD2": "GPIO9",
+      "SD3": "GPIO10",
+      "CMD": "GPIO11",
+      "CLK": "GPIO6",
+      "SD0": "GPIO7",
+      "SD1": "GPIO8",
+      "IO14": "GPIO14",
+      "IO12": "GPIO12",
+      "IO13": "GPIO13",
+      "IO15": "GPIO15",
+      "IO2": "GPIO2",
+      "IO0": "GPIO0",
+      "IO4": "GPIO4",
+      "IO16": "GPIO16",
+      "IO17": "GPIO17",
+      "IO5": "GPIO5",
+      "IO18": "GPIO18",
+      "IO19": "GPIO19",
+      "IO21": "GPIO21",
+      "IO22": "GPIO22",
+      "IO23": "GPIO23",
+      "IO24": "",
+      "IO25": "GPIO25",
+      "IO26": "GPIO26",
+      "IO27": "GPIO27",
+      "IO28": "",
+      "IO29": "",
+      "IO30": "",
+      "IO31": "",
+      "IO32": "GPIO32",
+      "IO33": "GPIO33",
+      "IO34": "GPIO34",
+      "IO35": "GPIO35",
+      "NC": "Pin 32"
+    },
+    "power_pins": {
+      "3V3": "Pin 2",
+      "GND": "Pins 1, 15, 38, 39",
+      "EN": "Pin 3",
+      "VDD_SDIO": "Pin 24 (internal)",
+      "VDD33": "Pin 2 (3.3\u202fV supply)"
+    }
+  },
+  "certifications": [
+    "FCC",
+    "CE",
+    "IC",
+    "TELEC",
+    "KCC",
+    "SRRC",
+    "NCC"
+  ],
+  "getting_started": {
+    "ide": "ESP-IDF, Arduino IDE",
+    "cloud_editor": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "ESP32 Datasheet",
+    "ESP32 Technical Reference Manual",
+    "ESP32 Hardware Resources",
+    "ESP32 Hardware Design Guidelines",
+    "ESP32 AT Instruction Set and Examples",
+    "ESP32 BBS",
+    "ESP32 Github",
+    "ESP32 Tools",
+    "ESP32 IDF",
+    "ESP32 Resources"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Espressif Systems",
+    "address": ""
+  },
+  "revision_history": [
+    {
+      "date": "2016.08",
+      "version": "V1.0",
+      "notes": "First release."
+    },
+    {
+      "date": "2016.11",
+      "version": "V1.1",
+      "notes": "Updated Chapter 6 Schematics."
+    },
+    {
+      "date": "2016.11",
+      "version": "V1.2",
+      "notes": "Added Figure 7 Peripheral Schematics."
+    },
+    {
+      "date": "2016.12",
+      "version": "V1.3",
+      "notes": "Updated Section 2.1 Pin Layout."
+    },
+    {
+      "date": "2017.03",
+      "version": "V1.4",
+      "notes": "Updated Chapter 1 Preface; Updated Chapter 2 Pin Definitions; Updated Chapter 3 Functional Description; Updated Table Recommended Operating Conditions; Updated Table 9 Wi\u2011Fi Radio Characteristics; Updated Section 5.4 Reflow Profile; Added Chapter 9 Learning Resources."
+    },
+    {
+      "date": "2017.03",
+      "version": "V1.5",
+      "notes": "Updated Section 2.2 Pin Description; Updated Section 3.2 External Flash and SRAM; Updated Section 4.1 Peripherals and Sensors Description."
+    },
+    {
+      "date": "2017.04",
+      "version": "V1.6",
+      "notes": "Added Figure 2 Reflow Profile."
+    },
+    {
+      "date": "2017.04",
+      "version": "V1.7",
+      "notes": "Added the module\u2019s dimensional tolerance; Changed the input impedance value of 50\u2126 in Table 9 Wi\u2011Fi Radio Characteristics to output impedance value of 30+j10 \u2126."
+    },
+    {
+      "date": "2017.05",
+      "version": "V1.8",
+      "notes": "Updated Figure 1 Top and Side View of ESP-WROOM-32."
+    },
+    {
+      "date": "2017.06",
+      "version": "V1.9",
+      "notes": "Added a note to Section 2.1 Pin Layout; Updated Section 3.3 Crystal Oscillators; Updated Figure 3 ESP-WROOM-32 Schematics; Added Documentation Change Notification."
+    },
+    {
+      "date": "2017.08",
+      "version": "V2.0",
+      "notes": "Changed the sensitivity of NZIF receiver to -97\u202fdBm in Table 2; Updated the dimensions of the module; Updated Table 6 Power Consumption by Power Modes, and added two notes to it; Updated Table 8, 9, 10, 11; Added Chapter 8; Added the link to certification download."
+    },
+    {
+      "date": "2017.09",
+      "version": "V2.1",
+      "notes": "Updated operating voltage/power supply range updated to 2.7 ~ 3.6\u202fV; Updated Chapter 7."
+    }
+  ],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "ESP-WROOM-32 Datasheet V2.1",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

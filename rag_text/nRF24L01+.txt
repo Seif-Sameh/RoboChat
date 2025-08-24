@@ -1,0 +1,78 @@
+component_name: nRF24L01+
+category: Communication Module
+manufacturer: Nordic Semiconductor ASA
+sku: 
+description: Single‑chip 2.4 GHz transceiver with embedded Enhanced ShockBurst™ baseband engine, ultra‑low power operation, 250 kbps–2 Mbps data rates, 1.9–3.6 V supply, QFN20 4 × 4 mm package.
+application_examples:
+  - Wireless PC peripherals (mouse, keyboard, remote)
+  - Advanced media‑center remote controls
+  - VoIP headsets
+  - Game controllers
+  - Sports watches and sensors
+  - RF remote controls for consumer electronics
+  - Home and commercial automation
+  - Ultra‑low‑power sensor networks
+  - Active RFID
+  - Asset tracking systems
+  - Toys
+related_products:
+  - nRF24L01
+  - nRF2401A
+  - nRF2402
+  - nRF24E1
+  - nRF24E2
+specifications:
+  communication_type: GFSK modulation, 2.4 GHz ISM band
+  frequency_range: 2.400 – 2.4835 GHz
+  data_rate: 250 kbps, 1 Mbps, 2 Mbps
+  protocols_supported:
+    - Enhanced ShockBurst™
+    - Auto Acknowledgement
+    - Auto Retransmission
+    - MultiCeiver™ (6 data pipes)
+  operating_voltage: 1.9 – 3.6 V
+  current_consumption: Idle: 900 nA (power‑down), 26 µA (standby‑I), 13.5 mA (RX 2 Mbps), 11.3 mA (TX 0 dBm)
+  transmit_power: 0 dBm, –6 dBm, –12 dBm, –18 dBm
+  receiver_sensitivity: -82 dBm (2 Mbps), –85 dBm (1 Mbps), –94 dBm (250 kbps)
+  range: 
+  antenna_type: Balanced RF output via ANT1/ANT2, requires 15 Ω + j88 Ω load
+  operating_temperature: -40 °C – +85 °C
+  dimensions: QFN20 4 × 4 mm
+power:
+  supply_voltage_range: 1.9 – 3.6 V
+  max_current: 13.5 mA (RX 2 Mbps)
+  consumption: 900 nA (power‑down)
+pinout:
+  communication_pins:
+    CE: Chip Enable – activates RX or TX mode
+    CSN: SPI Chip Select
+    SCK: SPI Clock
+    MOSI: SPI Master Out Slave In
+    MISO: SPI Master In Slave Out
+    IRQ: Maskable interrupt pin (active low)
+  power_pins:
+    VDD: Main supply (1.9 – 3.6 V)
+    VSS: Ground
+    VDD_PA: Power supply for internal PA (1.8 V)
+    DVDD: Digital supply output for decoupling
+    IREF: Reference current (22 kΩ to ground)
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect CE, CSN, SCK, MOSI, MISO, IRQ to MCU SPI. Supply VDD 1.9–3.6 V, connect VDD_PA to ANT1/ANT2 with 15 Ω + j88 Ω load. Use 5 V tolerant inputs. Configure via SPI registers.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF24L01%2B
+  - https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF24L01%2B/Documentation
+datasheet_url: https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF24L01%2B
+company_info:
+  name: Nordic Semiconductor ASA
+  address: Otto Nielsens vei 12, 7004 Trondheim, Norway
+revision_history:
+languages_available:
+source_document: nRF24L01+ Product Specification v1.0, September 2008
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

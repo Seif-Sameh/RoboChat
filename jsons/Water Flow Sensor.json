@@ -1,0 +1,75 @@
+{
+  "component_name": "YF-S201B Water Flow Sensor",
+  "category": "Sensor",
+  "manufacturer": "Handson Technology",
+  "sku": "SSR1024",
+  "description": "A Hall Effect water flow sensor that measures the rate of liquid flow through a plastic valve body and flow rotor. It outputs a digital pulse for each revolution of the rotor, allowing calculation of flow rate and volume.",
+  "application_examples": [
+    "Coffee maker flow monitoring",
+    "Sprinkler system control",
+    "Gardening water usage measurement",
+    "Water tap flow measurement",
+    "Industrial pipe flow monitoring",
+    "River or tunnel flow measurement"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Hall Effect Water Flow Sensor",
+    "measuring_range": "1\u201330 L/min",
+    "accuracy": "\u00b15% (2\u201330 L/min)",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "3.5\u201312 VDC",
+    "current_consumption": "15 mA @ 5 V",
+    "interface": "Digital pulse output",
+    "operating_temperature": "Humidity 25%\u201395% RH",
+    "dimensions": "62 \u00d7 36 \u00d7 35 mm",
+    "other": [
+      "Inner diameter: \u00d811 mm",
+      "Outer diameter: \u00d820 mm",
+      "Proof water pressure: <1.75 MPa",
+      "Weight: 52 g",
+      "Output pulse high level: >4.7 VDC @ 5 V",
+      "Output pulse low level: <0.5 VDC @ 5 V",
+      "Output pulse duty ratio: 50% \u00b110%",
+      "Water\u2011flow formula: 1 L = 450 pulses",
+      "Pulse volume: ~2.25 mL per pulse"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "3.5\u201312 VDC",
+    "max_current": "15 mA @ 5 V",
+    "consumption": "15 mA @ 5 V"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Red wire (3.5\u201312 VDC)",
+      "GND": "Black wire (Ground)",
+      "Data": "Yellow wire (Digital pulse output)",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect the red wire to a 5\u201312 VDC supply, black wire to ground, and yellow wire to a digital input pin (e.g., A0) on the microcontroller.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <LiquidCrystal.h>\n\nLiquidCrystal lcd(8, 9, 4, 5, 6, 7);\n\nint input = A0;\nfloat total = 0;\n\nvoid setup() {\n  Serial.begin(9600);\n  lcd.begin(16, 2);\n  pinMode(input, INPUT);\n}\n\nvoid loop() {\n  unsigned long high = pulseIn(input, HIGH);\n  unsigned long low = pulseIn(input, LOW);\n  unsigned long time = high + low;\n  float frequency = 1000000.0 / time;\n  float water = frequency / 7.5; // L/min\n  float liters = water / 60.0;   // L/hr\n  total += liters;\n  lcd.clear();\n  lcd.setCursor(0,0);\n  lcd.print(\"VOL: \"); lcd.print(water, 2); lcd.print(\" L/M\");\n  lcd.setCursor(0,1);\n  lcd.print(\"TOTAL: \"); lcd.print(total, 2); lcd.print(\" L\");\n  delay(1000);\n}",
+        "explaination": "The sketch counts pulses from the sensor, calculates frequency, converts to flow rate (L/min) using the sensor\u2019s calibration (7.5 pulses per L/min), and accumulates total volume. Results are displayed on an LCD."
+      }
+    ]
+  },
+  "sample_sketches": "See example_code in getting_started.",
+  "online_resources": [
+    "https://www.handsontec.com"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Handson Technology User Guide for YF-S201B Water Flow Sensor (pages 1\u20136 of the provided text)."
+}

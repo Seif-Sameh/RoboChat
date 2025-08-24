@@ -1,0 +1,54 @@
+{
+  "component_name": "MG996R Metal Gear Servo Motor",
+  "category": "Motor",
+  "manufacturer": "Handson Technology",
+  "sku": "EMH-1056",
+  "description": "High-torque digital servo featuring metal gearing for extra high torque (up to 11\u202fkgf\u00b7cm at 6\u202fV). Includes upgraded shock-proofing, redesigned PCB/IC control, and double ball bearing design. Rotates approximately 120\u00b0 (\u00b160\u00b0).",
+  "application_examples": [
+    "Robotic arm control",
+    "RC vehicle steering",
+    "Servo-based hobby projects",
+    "Arduino servo projects"
+  ],
+  "related_products": [],
+  "specifications": {
+    "motor_type": "Digital Servo",
+    "voltage_rating": "4.8\u202fV to 7.2\u202fV",
+    "current_rating": "Running: 500\u202fmA, Stall: 2.5\u202fA (6\u202fV)",
+    "torque": "9.4\u202fkgf\u00b7cm (4.8\u202fV), 11\u202fkgf\u00b7cm (6\u202fV)",
+    "speed_rpm": "\u224888\u202frpm (4.8\u202fV), \u2248107\u202frpm (6\u202fV)",
+    "gear_ratio": "",
+    "shaft_diameter": "",
+    "weight": "55\u202fg",
+    "operating_temperature": "",
+    "dimensions": "40.7\u202f\u00d7\u202f19.7\u202f\u00d7\u202f42.9\u202fmm"
+  },
+  "power": {
+    "supply_voltage_range": "4.8\u202fV to 7.2\u202fV",
+    "max_current": "2.5\u202fA (stall)",
+    "consumption": "500\u202fmA (running)"
+  },
+  "pinout": {
+    "wiring": {
+      "VCC": "4.8\u202fV\u20137.2\u202fV (typically 5\u202fV from Arduino)",
+      "GND": "Ground",
+      "Control_Signal": "PWM pulse width 1\u202fms\u20132\u202fms (1.5\u202fms = center)",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5\u202fV (or 4.8\u20137.2\u202fV), GND to Arduino GND, and signal to a PWM-capable pin (e.g., pin\u202f9).",
+    "example_code_url": ""
+  },
+  "sample_sketches": "Arduino Servo Sweep example (File > Examples > Servo > Sweep).",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Handson Technology User Guide \u2013 MG996R Metal Gear Servo Motor"
+}

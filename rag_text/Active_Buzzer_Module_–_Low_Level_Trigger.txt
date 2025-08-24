@@ -1,0 +1,47 @@
+component_name: Active Buzzer Module – Low Level Trigger
+category: Miscellaneous Module
+sub_category: Buzzer
+manufacturer: Handson Technology
+sku: MDU1095
+description: Active Buzzer module produces a single-tone sound when triggered. It consists of a piezoelectric buzzer with a built-in oscillator and generates a sound of approximately 2.5 kHz when activated.
+application_examples:
+related_products:
+specifications:
+  type: Active Buzzer
+  operating_voltage: 3.5V ~ 5.5V
+  current_consumption: 30mA @5VDC
+  input_trigger_voltage: Active Low
+  switching_capacity: 
+  timing_accuracy: 
+  storage_support: 
+  frequency_range: 2500Hz ±300Hz
+  sound_level: 85dB @10cm
+  special_features:
+    - Built-in oscillator
+  operating_temperature: 
+  dimensions: 32mm x 13mm x 11mm
+  weight: 
+power:
+  supply_voltage_range: 3.5V ~ 5.5V
+  max_current: 30mA @5VDC
+  consumption: 30mA @5VDC
+pinout:
+  signal_pins:
+    I/O: Activation pin (connect to ground to activate)
+  power_pins:
+    VCC: Power Supply Input +3Vdc ~ +5Vdc
+    GND: Power Supply ground
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect VCC to +3V-5V, GND to ground, and I/O to ground to activate the buzzer.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: Handson Technology
+  address: 
+revision_history:
+languages_available:
+source_document: Handson Technology User Guide – Active Buzzer Module – Low Level Trigger

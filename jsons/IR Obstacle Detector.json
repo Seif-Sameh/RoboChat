@@ -1,0 +1,68 @@
+{
+  "component_name": "InfraRed IR Obstacle Detector",
+  "category": "Sensor",
+  "manufacturer": "Handson Technology",
+  "sku": "SSR1017",
+  "description": "Infrared obstacle sensor with a pair of IR emitter and receiver LEDs. Provides a digital low-level output when an obstacle is detected within 2\u201330\u202fcm, adjustable via a potentiometer.",
+  "application_examples": [
+    "Obstacle detection for robotics",
+    "Collision avoidance in drones",
+    "Line following with obstacle avoidance"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Infrared obstacle detection",
+    "measuring_range": "2\u201330\u202fcm",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "3\u20135\u202fVDC",
+    "current_consumption": "",
+    "interface": "Digital (0/1)",
+    "operating_temperature": "",
+    "dimensions": "3.2\u202f\u00d7\u202f1.4\u202fcm board, mounting hole \u00d83\u202fmm",
+    "other": [
+      "Power LED",
+      "Obstacle LED",
+      "Distance adjustment potentiometer",
+      "IR emitter LED",
+      "IR receiver"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "3\u20135\u202fVDC",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Vcc (3.3\u20135\u202fV)",
+      "GND": "GND",
+      "Data": "Out (digital low when obstacle detected)",
+      "Other": "Power LED, Obstacle LED, Distance Adjust, IR Emitter, IR Receiver"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect Vcc to 3.3\u20135\u202fV, GND to ground, and OUT to a digital input pin on your microcontroller. The module also has a potentiometer to adjust detection distance.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "// IR Obstacle Collision Detection Module\n// =======================================\nint LED = 13; // Use the onboard Uno LED\nint isObstaclePin = 7;  // This is our input pin\nint isObstacle = HIGH;  // HIGH MEANS NO OBSTACLE\n\nvoid setup() {\n  pinMode(LED, OUTPUT);\n  pinMode(isObstaclePin, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  isObstacle = digitalRead(isObstaclePin);\n  if (isObstacle == LOW) {\n    Serial.println(\"OBSTACLE!!, OBSTACLE!!\");\n    digitalWrite(LED, HIGH);\n  } else {\n    Serial.println(\"clear\");\n    digitalWrite(LED, LOW);\n  }\n  delay(200);\n}",
+        "explaination": "Reads the digital output from the IR obstacle sensor. When an obstacle is detected (output LOW), it prints a message and lights an LED."
+      }
+    ]
+  },
+  "sample_sketches": "// IR Obstacle Collision Detection Module\n// =======================================\nint LED = 13; // Use the onboard Uno LED\nint isObstaclePin = 7;  // This is our input pin\nint isObstacle = HIGH;  // HIGH MEANS NO OBSTACLE\n\nvoid setup() {\n  pinMode(LED, OUTPUT);\n  pinMode(isObstaclePin, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  isObstacle = digitalRead(isObstaclePin);\n  if (isObstacle == LOW) {\n    Serial.println(\"OBSTACLE!!, OBSTACLE!!\");\n    digitalWrite(LED, HIGH);\n  } else {\n    Serial.println(\"clear\");\n    digitalWrite(LED, LOW);\n  }\n  delay(200);\n}",
+  "online_resources": [
+    "https://www.handsontec.com"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Handson Technology User Guide InfraRed IR Obstacle Detector"
+}

@@ -1,0 +1,418 @@
+ {
+    "Control Board": {
+        "component_name": "",
+        "category": "",
+        "manufacturer": "",
+        "sku": "",
+        "description": "",
+        "application_examples": [],
+        "related_products": [],
+        "specifications": {
+          "main_processor": "",
+          "memory_main": {
+            "flash": "",
+            "sram": "",
+            "eeprom": ""
+          },
+          "secondary_processor": "",
+          "memory_secondary": {
+            "flash": "",
+            "sram": "",
+            "eeprom": ""
+          },
+          "operating_voltage": "",
+          "input_voltage_recommended": "",
+          "input_voltage_limits": "",
+          "operating_temperature": "",
+          "digital_io_pins": "",
+          "pwm_pins": "",
+          "analog_input_pins": "",
+          "dc_current_per_io_pin": "",
+          "flash_memory_for_bootloader": ""
+        },
+        "power": {
+          "vin_max": "",
+          "vusb_max": "",
+          "consumption": ""
+        },
+        "pinout": {
+          "analog_pins": {},
+          "digital_pins": {},
+          "power_pins": {}
+        },
+        "certifications": [],
+        "getting_started": {
+          "ide": "",
+          "cloud_editor": ""
+        },
+        "sample_sketches": "",
+        "online_resources": [],
+        "datasheet_url": "",
+        "company_info": {
+          "name": "",
+          "address": ""
+        },
+        "revision_history": [],
+        "languages_available": [],
+        "source_document": "",
+        "example_code": [{
+            "code": "",
+            "explaination": ""
+        }]
+      },
+    "Sensor": {
+        "component_name": "",
+        "category": "Sensor",
+        "manufacturer": "",
+        "sku": "",
+        "description": "",
+        "application_examples": [],
+        "related_products": [],
+        "specifications": {
+          "sensor_type": "",
+          "measuring_range": "",
+          "accuracy": "",
+          "resolution": "",
+          "response_time": "",
+          "operating_voltage": "",
+          "current_consumption": "",
+          "interface": "",
+          "operating_temperature": "",
+          "dimensions": "",
+          "other": []
+        },
+        "power": {
+          "supply_voltage_range": "",
+          "max_current": "",
+          "consumption": ""
+        },
+        "pinout": {
+          "pins": {
+            "VCC": "",
+            "GND": "",
+            "Data": "",
+            "Other": ""
+          }
+        },
+        "certifications": [],
+        "getting_started": {
+          "connection_guide": "",
+          "example_code_url": "",
+          "example_code": [{
+              "code": "",
+              "explaination": ""
+              }]
+        },
+        "sample_sketches": "",
+        "online_resources": [],
+        "datasheet_url": "",
+        "company_info": {
+          "name": "",
+          "address": ""
+        },
+        "revision_history": [],
+        "languages_available": [],
+        "source_document": ""
+      },
+    "Motor": {
+        "component_name": "",
+        "category": "Motor",
+        "manufacturer": "",
+        "sku": "",
+        "description": "",
+        "application_examples": [],
+        "related_products": [],
+        "specifications": {
+          "motor_type": "",
+          "voltage_rating": "",
+          "current_rating": "",
+          "torque": "",
+          "speed_rpm": "",
+          "gear_ratio": "",
+          "shaft_diameter": "",
+          "weight": "",
+          "operating_temperature": "",
+          "dimensions": ""
+        },
+        "power": {
+          "supply_voltage_range": "",
+          "max_current": "",
+          "consumption": ""
+        },
+        "pinout": {
+          "wiring": {
+            "VCC": "",
+            "GND": "",
+            "Control_Signal": "",
+            "Other": ""
+          }
+        },
+        "certifications": [],
+        "getting_started": {
+          "connection_guide": "",
+          "example_code_url": ""
+        },
+        "sample_sketches": "",
+        "online_resources": [],
+        "datasheet_url": "",
+        "company_info": {
+          "name": "",
+          "address": ""
+        },
+        "revision_history": [],
+        "languages_available": [],
+        "source_document": ""
+      },
+    "Motor Driver": {
+        "component_name": "",
+        "category": "Motor Driver",
+        "manufacturer": "",
+        "sku": "",
+        "description": "",
+        "application_examples": [],
+        "related_products": [],
+        "specifications": {
+          "driver_type": "",
+          "motor_channels": "",
+          "voltage_range_motor": "",
+          "voltage_range_logic": "",
+          "continuous_current_per_channel": "",
+          "peak_current_per_channel": "",
+          "control_interface": "",
+          "operating_frequency": "",
+          "operating_temperature": "",
+          "dimensions": "",
+          "protection_features": []
+        },
+        "power": {
+          "vin_max": "",
+          "vlogic_max": "",
+          "consumption": ""
+        },
+        "pinout": {
+          "motor_outputs": {},
+          "control_pins": {},
+          "power_pins": {}
+        },
+        "certifications": [],
+        "getting_started": {
+          "connection_guide": "",
+          "example_code_url": ""
+        },
+        "sample_sketches": "",
+        "online_resources": [],
+        "datasheet_url": "",
+        "company_info": {
+          "name": "",
+          "address": ""
+        },
+        "revision_history": [],
+        "languages_available": [],
+        "source_document": "",
+        "example_code": [{
+            "code": "",
+            "explaination": ""
+        }]
+      },
+    "Communication Module": {
+        "component_name": "",
+        "category": "Communication Module",
+        "manufacturer": "",
+        "sku": "",
+        "description": "",
+        "application_examples": [],
+        "related_products": [],
+        "specifications": {
+          "communication_type": "",
+          "frequency_range": "",
+          "data_rate": "",
+          "protocols_supported": [],
+          "operating_voltage": "",
+          "current_consumption": "",
+          "transmit_power": "",
+          "receiver_sensitivity": "",
+          "range": "",
+          "antenna_type": "",
+          "operating_temperature": "",
+          "dimensions": ""
+        },
+        "power": {
+          "supply_voltage_range": "",
+          "max_current": "",
+          "consumption": ""
+        },
+        "pinout": {
+          "communication_pins": {},
+          "power_pins": {},
+          "control_pins": {}
+        },
+        "certifications": [],
+        "getting_started": {
+          "connection_guide": "",
+          "example_code_url": ""
+        },
+        "sample_sketches": "",
+        "online_resources": [],
+        "datasheet_url": "",
+        "company_info": {
+          "name": "",
+          "address": ""
+        },
+        "revision_history": [],
+        "languages_available": [],
+        "source_document": "",
+        "example_code": [{
+            "code": "",
+            "explaination": ""
+        }]
+      },
+    "Displays": {
+        "component_name": "",
+        "category": "Display / Output Device",
+        "manufacturer": "",
+        "sku": "",
+        "description": "",
+        "application_examples": [],
+        "related_products": [],
+        "specifications": {
+          "display_type": "",
+          "resolution": "",
+          "color_support": "",
+          "interface": "",
+          "operating_voltage": "",
+          "current_consumption": "",
+          "viewing_angle": "",
+          "brightness": "",
+          "refresh_rate": "",
+          "sound_level": "",
+          "dimensions": "",
+          "operating_temperature": ""
+        },
+        "power": {
+          "supply_voltage_range": "",
+          "max_current": "",
+          "consumption": ""
+        },
+        "pinout": {
+          "signal_pins": {},
+          "power_pins": {},
+          "control_pins": {}
+        },
+        "certifications": [],
+        "getting_started": {
+          "connection_guide": "",
+          "example_code_url": ""
+        },
+        "sample_sketches": "",
+        "online_resources": [],
+        "datasheet_url": "",
+        "company_info": {
+          "name": "",
+          "address": ""
+        },
+        "revision_history": [],
+        "languages_available": [],
+        "source_document": ""
+      },
+    "Power Component": {
+        "component_name": "",
+        "category": "Power Component",
+        "sub_category": "",
+        "manufacturer": "",
+        "sku": "",
+        "description": "",
+        "application_examples": [],
+        "related_products": [],
+        "specifications": {
+          "type": "",
+          "voltage_input_range": "",
+          "voltage_output_range": "",
+          "current_output_continuous": "",
+          "current_output_peak": "",
+          "efficiency": "",
+          "capacity": "",
+          "discharge_rate": "",
+          "charging_current": "",
+          "protection_features": [],
+          "operating_temperature": "",
+          "dimensions": "",
+          "weight": ""
+        },
+        "power": {
+          "vin_max": "",
+          "vout_max": "",
+          "consumption": ""
+        },
+        "pinout": {
+          "input_pins": {},
+          "output_pins": {},
+          "control_pins": {}
+        },
+        "certifications": [],
+        "getting_started": {
+          "connection_guide": "",
+          "example_usage": ""
+        },
+        "sample_sketches": "",
+        "online_resources": [],
+        "datasheet_url": "",
+        "company_info": {
+          "name": "",
+          "address": ""
+        },
+        "revision_history": [],
+        "languages_available": [],
+        "source_document": ""
+      },
+    "Other Module": {
+        "component_name": "",
+        "category": "Miscellaneous Module",
+        "sub_category": "",
+        "manufacturer": "",
+        "sku": "",
+        "description": "",
+        "application_examples": [],
+        "related_products": [],
+        "specifications": {
+          "type": "",
+          "operating_voltage": "",
+          "current_consumption": "",
+          "input_trigger_voltage": "",
+          "switching_capacity": "",
+          "timing_accuracy": "",
+          "storage_support": "",
+          "frequency_range": "",
+          "sound_level": "",
+          "special_features": [],
+          "operating_temperature": "",
+          "dimensions": "",
+          "weight": ""
+        },
+        "power": {
+          "supply_voltage_range": "",
+          "max_current": "",
+          "consumption": ""
+        },
+        "pinout": {
+          "signal_pins": {},
+          "power_pins": {},
+          "control_pins": {}
+        },
+        "certifications": [],
+        "getting_started": {
+          "connection_guide": "",
+          "example_code_url": ""
+        },
+        "sample_sketches": "",
+        "online_resources": [],
+        "datasheet_url": "",
+        "company_info": {
+          "name": "",
+          "address": ""
+        },
+        "revision_history": [],
+        "languages_available": [],
+        "source_document": ""
+      }
+
+}

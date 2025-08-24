@@ -1,0 +1,66 @@
+component_name: MAX7219 8x8 LED Matrix Module
+category: Display / Output Device
+manufacturer: 
+sku: 
+description: A compact 8x8 LED matrix display module driven by the MAX7219 IC, capable of controlling 64 individual LEDs with a simple serial interface. Features daisy‑chainable design, adjustable brightness, low power consumption, and compatibility with popular microcontrollers such as Arduino and Raspberry Pi.
+application_examples:
+  - LED Signage
+  - Advertising billboards
+  - Public Information displays
+  - Retail displays
+  - Entertainment venues
+  - Industrial monitoring
+  - Healthcare notifications
+  - Educational tools
+  - Wearable technology
+  - Art installations
+  - DIY projects
+related_products:
+  - 16x2 LCD
+  - 7‑segment display
+  - TM1637 4‑digit display
+  - 2.4” TFT
+  - 128x64 LCD
+  - LED Bar Display
+  - OLED Display
+  - Nokia 5110 LCD
+specifications:
+  display_type: 8x8 dot matrix LED
+  resolution: 8x8
+  color_support: Single color (LED)
+  interface: Serial (SPI‑like)
+  operating_voltage: 3.7 to 5.3 V
+  current_consumption: 320 mA
+  viewing_angle: 
+  brightness: Adjustable via software
+  refresh_rate: 
+  sound_level: 
+  dimensions: 32 mm x 32 mm
+  operating_temperature: 
+power:
+  supply_voltage_range: 3.7–5.3 V
+  max_current: 320 mA
+  consumption: 
+pinout:
+  signal_pins:
+    DIN: Data In
+    CLK: Clock
+    CS: Chip Select
+  power_pins:
+    VCC: Power In/Out
+    GND: Ground In/Out
+  control_pins:
+    DOUT: Data Out to next module
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 5V, GND to GND, DIN to Arduino pin 11, CLK to pin 13, CS to pin 10. Use the MD_MAX72xx library for Arduino.
+  example_code_url: 
+sample_sketches: MD_MAX72xx library example sketch (display smiley animation).
+online_resources:
+datasheet_url: 
+company_info:
+  name: 
+  address: 
+revision_history:
+languages_available:
+source_document: Provided source text

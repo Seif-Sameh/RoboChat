@@ -1,0 +1,84 @@
+{
+  "component_name": "nRF24L01+PA+LNA 2.4GHz RF Transceiver Module",
+  "category": "Communication Module",
+  "manufacturer": "Handson Technology",
+  "sku": "MDU1087",
+  "description": "A 2.4GHz RF transceiver module based on Nordic nRF24L01+ with integrated Power Amplifier (PA) and Low\u2011Noise Amplifier (LNA) for extended range up to 1,000\u202fm. Supports 250\u202fkbps, 1\u202fMbps, and 2\u202fMbps data rates, 1.9\u20113.6\u202fV supply, and an external SMA antenna.",
+  "application_examples": [
+    "Arduino wireless communication",
+    "Wireless sensor networks",
+    "Remote control systems",
+    "IoT device communication"
+  ],
+  "related_products": [
+    "nRF24L01",
+    "nRF24L01+"
+  ],
+  "specifications": {
+    "communication_type": "Wireless RF Transceiver (2.4\u202fGHz ISM band)",
+    "frequency_range": "2.4\u202fGHz",
+    "data_rate": "250\u202fkbps, 1\u202fMbps, 2\u202fMbps",
+    "protocols_supported": [
+      "SPI"
+    ],
+    "operating_voltage": "1.9\u202fV to 3.6\u202fV",
+    "current_consumption": "",
+    "transmit_power": "~20\u202fdBm",
+    "receiver_sensitivity": "~-95\u202fdBm",
+    "range": ">1000\u202fm line\u2011of\u2011sight",
+    "antenna_type": "External SMA antenna",
+    "operating_temperature": "",
+    "dimensions": ""
+  },
+  "power": {
+    "supply_voltage_range": "1.9\u202fV to 3.6\u202fV",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "communication_pins": {
+      "CE": "",
+      "CSN": "",
+      "SCK": "",
+      "MOSI": "",
+      "MISO": ""
+    },
+    "power_pins": {
+      "VCC": "",
+      "GND": ""
+    },
+    "control_pins": {
+      "CE": "",
+      "CSN": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect module to Arduino: GND\u2192GND, VCC\u21923.3V, CE\u2192D9, CSN\u2192D8, SCK\u2192D13, MOSI\u2192D11, MISO\u2192D12. Use the RF24 library (https://github.com/nRF24/RF24).",
+    "example_code_url": "https://github.com/nRF24/RF24"
+  },
+  "sample_sketches": "// Transmitter sketch\n#include <SPI.h>\n#include <nRF24L01.h>\n#include <RF24.h>\n\nRF24 radio(9, 8);  // CE, CSN\nconst byte address[6] = \"00001\";\n\nvoid setup() {\n  radio.begin();\n  radio.setPALevel(RF24_PA_LOW);\n  radio.setChannel(108);\n  radio.setDataRate(RF24_250KBPS);\n  radio.openWritingPipe(address);\n  radio.stopListening();\n}\n\nvoid loop() {\n  const char text[] = \"Welcome to Handson Tech\";\n  radio.write(&text, sizeof(text));\n  delay(500);\n}\n\n// Receiver sketch\n#include <SPI.h>\n#include <nRF24L01.h>\n#include <RF24.h>\n\nRF24 radio(9, 8);  // CE, CSN\nconst byte address[6] = \"00001\";\n\nvoid setup() {\n  Serial.begin(9600);\n  radio.begin();\n  radio.setPALevel(RF24_PA_LOW);\n  radio.setChannel(108);\n  radio.setDataRate(RF24_250KBPS);\n  radio.openReadingPipe(0, address);\n  radio.startListening();\n}\n\nvoid loop() {\n  if (radio.available()) {\n    char text[32] = {0};\n    radio.read(&text, sizeof(text));\n    Serial.println(text);\n  }\n}\n",
+  "online_resources": [
+    "https://www.deviceplus.com/how-tos/arduino-guide/nrf24l01-rf-module-tutorial/",
+    "https://github.com/nRF24/RF24",
+    "https://lastminuteengineers.com/nrf24l01-arduino-wireless-communication/",
+    "https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/",
+    "https://howtomechatronics.com/tutorials/arduino/how-to-build-an-arduino-wireless-network-with-multiple-nrf24l01-modules/"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "https://www.handsontec.com",
+  "example_code": [
+    {
+      "code": "// Transmitter sketch\n#include <SPI.h>\n#include <nRF24L01.h>\n#include <RF24.h>\n\nRF24 radio(9, 8);  // CE, CSN\nconst byte address[6] = \"00001\";\n\nvoid setup() {\n  radio.begin();\n  radio.setPALevel(RF24_PA_LOW);\n  radio.setChannel(108);\n  radio.setDataRate(RF24_250KBPS);\n  radio.openWritingPipe(address);\n  radio.stopListening();\n}\n\nvoid loop() {\n  const char text[] = \"Welcome to Handson Tech\";\n  radio.write(&text, sizeof(text));\n  delay(500);\n}\n",
+      "explaination": "This sketch initializes the nRF24L01+ module as a transmitter, sets the power level, channel, and data rate, and sends a simple text message every 500\u202fms."
+    }
+  ]
+}

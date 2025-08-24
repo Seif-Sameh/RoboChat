@@ -1,0 +1,61 @@
+{
+  "component_name": "PBC Linear NEMA 17 Stepper Motor",
+  "category": "Motor",
+  "manufacturer": "PBC Linear",
+  "sku": "6200490",
+  "description": "Linear stepper motor, NEMA 17, 200 steps/revolution, 2 phases, \u00b15% step accuracy, 20,000 hours at 1000 RPM, IP40, RoHS compliant, operating temperature -20\u00b0C to +40\u00b0C, insulation class B, 100 M\u03a9 insulation resistance.",
+  "application_examples": [
+    "Linear motion control",
+    "Robotics",
+    "CNC machines",
+    "3D printers"
+  ],
+  "related_products": [
+    "PBC Linear NEMA 23 Stepper Motor",
+    "PBC Linear NEMA 17 Stepper Motor (hollow and extended shaft variants)"
+  ],
+  "specifications": {
+    "motor_type": "Stepper Motor",
+    "voltage_rating": "48 Vdc",
+    "current_rating": "2 A rms",
+    "torque": "0.48 oz-in (0.003 Nm)",
+    "speed_rpm": "1800 RPM",
+    "gear_ratio": "",
+    "shaft_diameter": "",
+    "weight": "0.28 kg",
+    "operating_temperature": "-20\u00b0C to +40\u00b0C",
+    "dimensions": "39.8 mm (1.57 in) length"
+  },
+  "power": {
+    "supply_voltage_range": "48 Vdc",
+    "max_current": "2 A rms",
+    "consumption": "2 A"
+  },
+  "pinout": {
+    "wiring": {
+      "VCC": "48 Vdc",
+      "GND": "Ground",
+      "Control_Signal": "Step / Dir (to driver)",
+      "Other": ""
+    }
+  },
+  "certifications": [
+    "RoHS"
+  ],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 48 Vdc supply, GND to ground, Step and Dir signals to a bipolar stepper driver. Use a 2 A rated driver.",
+    "example_code_url": "https://pbclinear.com"
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://pbclinear.com"
+  ],
+  "datasheet_url": "https://pbclinear.com",
+  "company_info": {
+    "name": "PBC Linear",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "PBC Linear NEMA 17 Stepper Motor datasheet"
+}

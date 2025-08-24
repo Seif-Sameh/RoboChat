@@ -1,0 +1,101 @@
+component_name: Water Sensor Module
+category: Sensor
+manufacturer: Shenzhen KeYi Interactive Robot Co., Ltd.
+sku: K-0135
+description: Compact, lightweight analog water level sensor that detects trace amounts of water droplets using a series of parallel wires. Features low power consumption, high sensitivity, and direct analog output for microcontroller integration.
+application_examples:
+  - Arduino
+  - STC microcontroller
+  - AVR microcontroller
+related_products:
+  - Arduino sensor expansion board
+specifications:
+  sensor_type: Analog
+  measuring_range: Detection area 40mm x 16mm
+  accuracy: 
+  resolution: 
+  response_time: 
+  operating_voltage: DC 5V
+  current_consumption: <20mA
+  interface: Analog output
+  operating_temperature: 10 °C to -30 °C
+  dimensions: 65mm x 20mm x 8mm
+  other:
+    - Production process: FR4 double‑sided HASL
+    - Mounting hole size: 3.0mm
+    - User‑friendly design: half‑moon slip handle depression
+    - Weight: 3g
+power:
+  supply_voltage_range: 5 V DC
+  max_current: <20 mA
+  consumption: <20 mA
+pinout:
+  pins:
+    VCC: 5 V
+    GND: Ground
+    Data: Analog output (connect to Arduino analog pin)
+    Other: 
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 5 V, GND to ground, and the sensor’s analog output to an Arduino analog input (e.g., A1).
+  example_code_url: http://keyes-arduino.taobao.com
+  example_code:
+    - Item 1:
+      code: int analogPin = 1; // level sensor connected to an analog port
+int led = 12; // Piranha LED connected to digital port 12
+int val = 0; // define a variable val initial value of 0
+int data = 0; // define a variable data initial value of 0
+
+void setup ()
+{
+  pinMode (led, OUTPUT); // define led to an output pin
+  Serial.begin (9600); // set the baud rate to 9600
+}
+
+void loop ()
+{
+  val = analogRead (analogPin); // read the analog value to the variable val
+  if (val> 700) { // determine whether more than 700 variables val
+    digitalWrite (led, HIGH); // when variable val is greater than 700, Piranha LED lights
+  }
+  else {
+    digitalWrite (led, LOW); // when variable val is less than 700, the lamp goes out piranha
+  }
+  data = val; // variable is assigned to the variable data val
+  Serial.println (data); // Serial print variable data
+  delay (100);
+}
+      explaination: This Arduino sketch reads the analog value from the water sensor. If the value exceeds 700, it turns on an LED to indicate water presence; otherwise, the LED stays off. The sensor value is also printed to the serial monitor.
+sample_sketches: int analogPin = 1; // level sensor connected to an analog port
+int led = 12; // Piranha LED connected to digital port 12
+int val = 0; // define a variable val initial value of 0
+int data = 0; // define a variable data initial value of 0
+
+void setup ()
+{
+  pinMode (led, OUTPUT); // define led to an output pin
+  Serial.begin (9600); // set the baud rate to 9600
+}
+
+void loop ()
+{
+  val = analogRead (analogPin); // read the analog value to the variable val
+  if (val> 700) { // determine whether more than 700 variables val
+    digitalWrite (led, HIGH); // when variable val is greater than 700, Piranha LED lights
+  }
+  else {
+    digitalWrite (led, LOW); // when variable val is less than 700, the lamp goes out piranha
+  }
+  data = val; // variable is assigned to the variable data val
+  Serial.println (data); // Serial print variable data
+  delay (100);
+}
+online_resources:
+  - http://keyes-arduino.taobao.com
+datasheet_url: http://keyes-arduino.taobao.com
+company_info:
+  name: Shenzhen KeYi Interactive Robot Co., Ltd.
+  address: 
+revision_history:
+languages_available:
+source_document: I. Notice ... Shenzhen市科易互动机器人有限公司 产品手册 Http://keyes-arduino.taobao.com

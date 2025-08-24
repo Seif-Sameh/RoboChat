@@ -1,0 +1,49 @@
+component_name: Nema 23 Stepper Motor FY56ES250A
+category: Motor
+manufacturer: Automation Technologies Online
+sku: FY56ES250A
+description: Hybrid bipolar Nema 23 stepper motor with 1.8° step angle, 41 mm length, 4.2 A rated current, 0.40 N·m holding torque, and 8 mm shaft diameter.
+application_examples:
+  - Robotic arm joint control
+  - CNC machine axis
+  - 3D printer extruder drive
+  - Automated conveyor belt
+related_products:
+specifications:
+  motor_type: Hybrid Bipolar Stepper Motor
+  voltage_rating: 
+  current_rating: 4.2 A
+  torque: 0.40 N·m
+  speed_rpm: 
+  gear_ratio: 
+  shaft_diameter: 8 mm
+  weight: 0.47 kg
+  operating_temperature: Ambient -20 °C to +50 °C, temperature rise 80 °C max
+  dimensions: Length 41 mm
+power:
+  supply_voltage_range: 
+  max_current: 4.2 A
+  consumption: 
+pinout:
+  wiring:
+    VCC: 
+    GND: 
+    Control_Signal: 
+    Other: 
+certifications:
+  - CE
+  - RoHS
+  - FCC
+getting_started:
+  connection_guide: 
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - https://www.ato.com
+datasheet_url: 
+company_info:
+  name: Automation Technologies Online
+  address: 
+revision_history:
+languages_available:
+source_document: Nema 23 Stepper Motor datasheet

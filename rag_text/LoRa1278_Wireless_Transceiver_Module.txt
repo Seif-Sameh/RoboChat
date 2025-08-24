@@ -1,0 +1,70 @@
+component_name: LoRa1278 Wireless Transceiver Module
+category: Communication Module
+manufacturer: niceRF
+sku: LoRa1278-433
+description: LoRa1278 is a compact wireless transceiver module based on the Semtech SX1278 chip, supporting LoRa, FSK, GFSK, and OOK modulation. It offers high sensitivity (-139 dBm), a maximum output power of 20 dBm, and operates over a customizable frequency range of 137–1020 MHz. The module features low power consumption (10.8 mA RX, 100 mA TX @20 dBm, <0.2 µA sleep) and a wide operating temperature range of -40 °C to +85 °C.
+application_examples:
+  - Remote control
+  - Remote meter reading
+  - Home security alarm and remote keyless entry
+  - Industrial control
+  - Home automation remote sensing
+  - Individual data records
+  - Toys control
+  - Sensor network
+  - Tire pressure monitoring
+  - Health monitoring
+  - Wireless PC peripherals
+  - Tag reading and writing
+related_products:
+specifications:
+  communication_type: LoRa, FSK, GFSK, OOK
+  frequency_range: 137-1020 MHz
+  data_rate: FSK: 1.2-300 kbps; LoRa: 0.018-37.5 kbps
+  protocols_supported:
+  operating_voltage: 1.8-3.7 V
+  current_consumption: RX: 10.8 mA; TX @20 dBm: 100 mA; Sleep: <0.2 µA
+  transmit_power: -1 to 20 dBm
+  receiver_sensitivity: -139 dBm @LoRa BW=125 kHz SF=12 CR=4/5
+  range: 
+  antenna_type: 50 Ω coaxial
+  operating_temperature: -40 °C to +85 °C
+  dimensions: 
+power:
+  supply_voltage_range: 1.8-3.7 V
+  max_current: 100 mA
+  consumption: RX: 10.8 mA; TX @20 dBm: 100 mA; Sleep: <0.2 µA
+pinout:
+  communication_pins:
+    SCK: Serial clock for SPI interface
+    MISO: Serial MISO for SPI interface
+    MOSI: Serial MOSI for SPI interface
+    NSS: SPI enable
+    DIO0: Digital I/O
+    DIO1: Digital I/O
+    DIO2: Digital I/O
+  power_pins:
+    VCC: Positive power supply (3.3 V)
+    GND: Power ground
+  control_pins:
+    TXEN: Antenna switch control (Tx)
+    RXEN: Antenna switch control (Rx)
+    NRESET: Reset input
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 3.3 V, GND to ground, and use SPI (SCK, MOSI, MISO, NSS) for communication. Use TXEN/RXEN to select transmit or receive mode. The module supports LoRa, FSK, GFSK, and OOK modulation.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - https://www.nicerf.com
+datasheet_url: 
+company_info:
+  name: niceRF
+  address: 
+revision_history:
+languages_available:
+source_document: https://www.nicerf.com
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

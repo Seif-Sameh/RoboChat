@@ -1,0 +1,50 @@
+{
+  "component_name": "INR18650-25R",
+  "category": "Power Component",
+  "sub_category": "Battery Cell",
+  "manufacturer": "Samsung SDI Co., Ltd.",
+  "sku": "",
+  "description": "Lithium\u2011ion NCA 18650 cell with 2.56\u202fAh capacity, 20\u202fA continuous discharge, 100\u202fA peak pulse.",
+  "application_examples": [],
+  "related_products": [],
+  "specifications": {
+    "type": "Lithium\u2011ion NCA",
+    "voltage_input_range": "",
+    "voltage_output_range": "",
+    "current_output_continuous": "20 A",
+    "current_output_peak": "100 A",
+    "efficiency": "",
+    "capacity": "2.56 Ah (2560\u202fmAh)",
+    "discharge_rate": "0.2\u202fC (2.56\u202fAh) / 10\u202fA (2.54\u202fAh)",
+    "charging_current": "1.25\u202fA standard, 4\u202fA max",
+    "protection_features": [],
+    "operating_temperature": "0\u202f\u00b0C to 60\u202f\u00b0C",
+    "dimensions": "Diameter 18.33\u202fmm, Height 64.85\u202fmm",
+    "weight": "43.8\u202fg"
+  },
+  "power": {
+    "vin_max": "",
+    "vout_max": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "input_pins": {},
+    "output_pins": {},
+    "control_pins": {}
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "",
+    "example_usage": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Samsung SDI Co., Ltd.",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "INR18650-25R datasheet, Oct 2013, Samsung SDI"
+}

@@ -1,0 +1,90 @@
+{
+  "component_name": "LTC4056-4.2",
+  "category": "Power Component",
+  "sub_category": "Li\u2011Ion Battery Charger Controller",
+  "manufacturer": "Linear Technology Corporation",
+  "sku": "405642f",
+  "description": "Low\u2011cost, single\u2011cell constant\u2011current/constant\u2011voltage Li\u2011Ion battery charger controller with a programmable termination timer. It requires no external sense resistor or blocking diode, supports 200\u202fmA to 700\u202fmA charge currents, and includes undervoltage lockout, overcurrent, overtemperature, and short\u2011circuit protection. The device is packaged in a 1\u202fmm high 8\u2011lead SOT\u201123 (ThinSOT) package.",
+  "application_examples": [
+    "USB\u2011powered Li\u2011Ion charging",
+    "Standalone single\u2011cell Li\u2011Ion charger",
+    "NiCd/NiMH constant\u2011current charging",
+    "Low\u2011cost, small\u2011size battery charger modules"
+  ],
+  "related_products": [
+    "LTC1732",
+    "LTC1733",
+    "LTC1734",
+    "LTC1734L",
+    "LTC4002",
+    "LTC4050",
+    "LTC4052",
+    "LTC4053",
+    "LTC4054",
+    "LTC4057",
+    "LTC4058",
+    "LTC4064",
+    "LTC4410"
+  ],
+  "specifications": {
+    "type": "Li\u2011Ion charger controller (constant\u2011current/constant\u2011voltage)",
+    "voltage_input_range": "4.5\u202fV to 6.5\u202fV (typical)",
+    "voltage_output_range": "4.0\u202fV to 4.2\u202fV (battery float)",
+    "current_output_continuous": "200\u202fmA to 700\u202fmA (programmable)",
+    "current_output_peak": "900\u202fmA (ISENSE max)",
+    "efficiency": "",
+    "capacity": "",
+    "discharge_rate": "",
+    "charging_current": "200\u202fmA to 700\u202fmA (programmable via RPROG)",
+    "protection_features": [
+      "Undervoltage lockout",
+      "Undervoltage charge current limiting",
+      "Overcurrent protection",
+      "Overtemperature protection",
+      "Short\u2011circuit protection",
+      "Manual shutdown",
+      "Sleep mode"
+    ],
+    "operating_temperature": "-40\u202f\u00b0C to 85\u202f\u00b0C",
+    "dimensions": "2.9\u202fmm \u00d7 1.95\u202fmm \u00d7 1.0\u202fmm (approx.)",
+    "weight": ""
+  },
+  "power": {
+    "vin_max": "6.5\u202fV",
+    "vout_max": "4.2\u202fV",
+    "consumption": "400\u202f\u00b5A typical (600\u202f\u00b5A max) in normal operation; 40\u202f\u00b5A in shutdown"
+  },
+  "pinout": {
+    "input_pins": {
+      "VCC": "Pin 1 \u2013 Positive input supply",
+      "ISENSE": "Pin 2 \u2013 Current sense output",
+      "DRIVE": "Pin 3 \u2013 Base drive output for external PNP transistor",
+      "GND": "Pin 4 \u2013 Ground"
+    },
+    "output_pins": {
+      "CHRG": "Pin 8 \u2013 Open\u2011drain charge status output",
+      "BAT": "Pin 6 \u2013 Battery voltage sense"
+    },
+    "control_pins": {
+      "PROG": "Pin 5 \u2013 Charge current programming resistor",
+      "TIMER/SHDN": "Pin 7 \u2013 Programmable termination timer / manual shutdown"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 4.5\u20136.5\u202fV supply, GND to ground, BAT to battery, ISENSE to sense resistor, PROG to a resistor to ground (200\u202f\u03a9\u20131\u202fk\u03a9 for 200\u2013700\u202fmA), TIMER/SHDN to a capacitor for timer (1\u202f\u00b5F typical). Use CHRG to monitor charge status.",
+    "example_usage": "USB charging: connect VCC to USB 5\u202fV, use a 1\u202f\u00b5F capacitor on TIMER/SHDN, set PROG to 1.3\u202fk\u03a9 for 700\u202fmA, and monitor CHRG for LED indication."
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.linear.com/docs/4056.pdf"
+  ],
+  "datasheet_url": "https://www.linear.com/docs/4056.pdf",
+  "company_info": {
+    "name": "Linear Technology Corporation",
+    "address": "1630 McCarthy Blvd., Milpitas, CA 95035-7417"
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "LTC4056-4.2 datasheet"
+}

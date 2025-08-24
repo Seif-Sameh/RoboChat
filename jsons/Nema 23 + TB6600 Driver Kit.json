@@ -1,0 +1,53 @@
+{
+  "component_name": "Nema-23 Stepper Motor (Model 57BYG250B-6.35)",
+  "category": "Motor",
+  "manufacturer": "Handson Technology",
+  "sku": "FAM1040",
+  "description": "4\u2011wire uni\u2011polar/bipolar Nema\u201123 stepper motor with 1.8\u00b0 step angle, rated 3A per phase, 12\u201124V DC, holding torque 1.2\u202fN\u00b7m, shaft diameter \u00d86.35\u202fmm, suitable for 3D\u2011printer, robotics, and linear motion applications.",
+  "application_examples": [
+    "3D printer",
+    "Robotics",
+    "Linear motion projects"
+  ],
+  "related_products": [],
+  "specifications": {
+    "motor_type": "Stepper Motor (Nema\u201123)",
+    "voltage_rating": "12V~24V DC",
+    "current_rating": "3A per phase",
+    "torque": "1.2\u202fN\u00b7m (holding)",
+    "speed_rpm": "",
+    "gear_ratio": "",
+    "shaft_diameter": "\u00d86.35\u202fmm",
+    "weight": "770\u202fg",
+    "operating_temperature": "",
+    "dimensions": "56\u202fmm \u00d7 56\u202fmm (frame) \u00d7 56\u202fmm (body length)"
+  },
+  "power": {
+    "supply_voltage_range": "12\u201124\u202fV DC",
+    "max_current": "3\u202fA per phase",
+    "consumption": ""
+  },
+  "pinout": {
+    "wiring": {
+      "VCC": "A+",
+      "GND": "A-",
+      "Control_Signal": "B+",
+      "Other": "B-"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect the motor wires to the driver terminals: A+ to A+, A- to A-, B+ to B+, B- to B-.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "www.handsontec.com"
+}

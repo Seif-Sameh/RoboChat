@@ -1,0 +1,131 @@
+component_name: Arduino Nano ESP32
+category: Control Board
+manufacturer: Arduino S.r.l.
+sku: ABX00083
+description: The Arduino Nano ESP32 is a Nano‑form factor development board based on the ESP32‑S3 SoC (NORA‑W106‑10B from u‑blox). It supports Wi‑Fi and Bluetooth LE, offers 3.3 V operation, 6–21 V input, and is ideal for IoT, MicroPython, and low‑power applications.
+application_examples:
+  - Home automation – smart switches, automatic lighting, motor control
+  - IoT sensors – monitoring sensor values with ADC, I2C/SPI buses
+  - Low‑power designs – battery powered, deep sleep mode
+related_products:
+specifications:
+  main_processor: ESP32‑S3 (Xtensa LX7 dual‑core)
+  memory_main:
+    flash: 16 MB (external QSPI flash)
+    sram: 512 kB
+    eeprom: 
+  secondary_processor: 
+  memory_secondary:
+    flash: 
+    sram: 
+    eeprom: 
+  operating_voltage: 3.3 V
+  input_voltage_recommended: 6–21 V
+  input_voltage_limits: 6–21 V
+  operating_temperature: -40 °C to 105 °C
+  digital_io_pins: 14 (21 including analog)
+  pwm_pins: 
+  analog_input_pins: 8
+  dc_current_per_io_pin: Source 40 mA, Sink 28 mA
+  flash_memory_for_bootloader: 
+power:
+  vin_max: 21 V
+  vusb_max: 5.5 V
+  consumption: 
+pinout:
+  analog_pins:
+    1: D13 / SCK
+    2: +3V3
+    3: BOOT0
+    4: A0
+    5: A1
+    6: A2
+    7: A3
+    8: A4 (SDA)
+    9: A5 (SCL)
+    10: A6
+    11: A7
+    12: VBUS
+    13: BOOT1
+    14: GND
+    15: VIN
+  digital_pins:
+    1: D12 / CIPO
+    2: D11 / COPI
+    3: D10 / CS
+    4: D9
+    5: D8
+    6: D7
+    7: D6
+    8: D5
+    9: D4
+    10: D3
+    11: D2
+    12: GND
+    13: RST
+    14: D0 / RX
+    15: D1 / TX
+  power_pins:
+    3.3V: 3.3 V rail
+    GND: Ground
+    VIN: Input voltage (6–21 V)
+    VBUS: 5 V from USB‑C (when powered via USB)
+certifications:
+  - CE
+  - RoHS
+  - FCC
+  - SRRC
+getting_started:
+  ide: Arduino IDE
+  cloud_editor: Arduino Cloud Editor
+sample_sketches: 
+online_resources:
+  - https://www.arduino.cc/en/Main/Software
+  - https://create.arduino.cc/editor
+  - https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor
+  - https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending
+  - https://github.com/arduino-libraries/
+  - https://store.arduino.cc/
+datasheet_url: 
+company_info:
+  name: Arduino S.r.l.
+  address: Via Andrea Appiani, 25 Monza, MB, 20900 Italy
+revision_history:
+  - Item 1:
+    date: 2023/08/06
+    changes: Release
+  - Item 2:
+    date: 2023/09/01
+    changes: Updated power tree flowchart
+  - Item 3:
+    date: 2023/09/11
+    changes: Updated SPI section, analog/digital pin section
+  - Item 4:
+    date: 2023/11/06
+    changes: Corrected company name, VBUS/VUSB
+  - Item 5:
+    date: 2023/11/09
+    changes: Block diagram update, antenna specifications
+  - Item 6:
+    date: 2023/11/15
+    changes: Ambient temperature update
+  - Item 7:
+    date: 2023/11/23
+    changes: Added LP mode labels
+  - Item 8:
+    date: 2024/02/23
+    changes: Added antenna frequency to block diagram
+  - Item 9:
+    date: 2024/08/23
+    changes: SRRC certification
+  - Item 10:
+    date: 2024/09/05
+    changes: Updated Cloud Editor from Web Editor
+languages_available:
+  - English
+  - Chinese
+source_document: User Manual – Arduino Nano ESP32
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

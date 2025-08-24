@@ -1,0 +1,57 @@
+component_name: Micro SD Card Adapter Reader
+category: Miscellaneous Module
+sub_category: Memory Card Reader
+manufacturer: 
+sku: 
+description: A compact Micro SD/SDHC card reader module designed for Arduino and other microcontroller platforms. It features a standard SPI interface, a 3.3V LDO regulator for level conversion, and 4 M2 screw mounting holes for easy installation.
+application_examples:
+  - Arduino projects requiring external storage
+  - Microcontroller-based data logging
+  - Embedded systems needing file system access
+related_products:
+specifications:
+  type: Micro SD/SDHC card reader
+  operating_voltage: 4.5V ~ 5.5V (VCC), 3.3V LDO regulator output
+  current_consumption: 
+  input_trigger_voltage: 
+  switching_capacity: 
+  timing_accuracy: 
+  storage_support: Micro SD, Micro SDHC
+  frequency_range: 
+  sound_level: 
+  special_features:
+    - 5V/3.3V level conversion circuit
+    - 3.3V LDO regulator
+    - SPI interface (MISO, MOSI, SCK, CS)
+    - 4 M2 screw mounting holes
+  operating_temperature: 
+  dimensions: 
+  weight: 
+power:
+  supply_voltage_range: 4.5V ~ 5.5V
+  max_current: 
+  consumption: 
+pinout:
+  signal_pins:
+    MISO: Master In Slave Out
+    MOSI: Master Out Slave In
+    SCK: Serial Clock
+    CS: Chip Select
+  power_pins:
+    VCC: Power supply (4.5V-5.5V)
+    GND: Ground
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 4.5-5.5V, GND to ground, MISO, MOSI, SCK, and CS to the corresponding SPI pins on the microcontroller. Use the Arduino SD library for file system access.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+datasheet_url: 
+company_info:
+  name: 
+  address: 
+revision_history:
+languages_available:
+  - English
+source_document: eBay Search: Micro SD Card Micro SDHC Mini TF Card Adapter Reader Module for Arduino

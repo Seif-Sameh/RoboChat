@@ -1,0 +1,84 @@
+component_name: DHT22
+category: Sensor
+manufacturer: Adafruit Industries
+sku: 385
+description: Low-cost digital temperature and humidity sensor featuring a capacitive humidity sensor and a thermistor. Operates on 3–5 V, uses a single digital pin for data output, and includes a 10 kΩ pull‑up resistor on the data line.
+application_examples:
+  - Hobbyist data logging
+  - Environmental monitoring
+  - Home automation
+  - Weather stations
+related_products:
+  - DHT11
+  - AM2302
+  - AHT20
+specifications:
+  sensor_type: Digital temperature & humidity sensor
+  measuring_range: Humidity 0–100 %, Temperature –40 °C to 80 °C
+  accuracy: Humidity 2–5 %, Temperature ±0.5 °C
+  resolution: 
+  response_time: ≈2 s (0.5 Hz sampling rate)
+  operating_voltage: 3–5 V
+  current_consumption: 2.5 mA max during conversion
+  interface: Single‑wire digital
+  operating_temperature: -40 °C to 80 °C
+  dimensions: 15.1 mm × 25 mm × 7.7 mm
+  other:
+    - 10 kΩ pull‑up resistor recommended on data line
+power:
+  supply_voltage_range: 3–5 V
+  max_current: 2.5 mA
+  consumption: 2.5 mA max during conversion
+pinout:
+  pins:
+    VCC: Pin 1
+    GND: Pin 4
+    Data: Pin 2
+    Other: Pin 3 (not used)
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 3.3–5 V, GND to ground, Data to a digital pin with a 10 kΩ pull‑up to VCC. Pin 3 is unused. Use a microcontroller that can handle microsecond timing (e.g., Arduino, CircuitPython).
+  example_code_url: https://learn.adafruit.com/dht
+  example_code:
+    - Item 1:
+      code: #include <DHT.h>
+
+#define DHTPIN 2
+#define DHTTYPE DHT22
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  if (isnan(h) || isnan(t)) {
+    Serial.println("Failed to read from DHT sensor!");
+    return;
+  }
+  Serial.print("Humidity: ");
+  Serial.print(h);
+  Serial.print(" %	Temperature: ");
+  Serial.print(t);
+  Serial.println(" *C");
+  delay(2000);
+}
+      explaination: Arduino sketch that initializes the DHT22, reads humidity and temperature, and prints the values to the serial monitor every 2 seconds.
+sample_sketches: DHTtester (Arduino example from Adafruit library)
+online_resources:
+  - Adafruit DHT library (Arduino)
+  - Adafruit CircuitPython DHT library
+  - Wokwi DHT simulator
+datasheet_url: https://adafru.it/aJZ
+company_info:
+  name: Adafruit Industries
+  address: 
+revision_history:
+languages_available:
+  - C++
+  - Python
+source_document: DHT11, DHT22 and AM2302 Sensors – Adafruit tutorial (https://learn.adafruit.com/dht)

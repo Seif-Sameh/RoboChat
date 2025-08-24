@@ -1,0 +1,124 @@
+component_name: Arduino® UNO R4 WiFi
+category: Control Board
+manufacturer: Arduino SRL
+sku: ABX00087
+description: The Arduino® UNO R4 WiFi is the first UNO board to feature a 32‑bit microcontroller and an ESP32‑S3 Wi‑Fi® module (ESP32‑S3‑MINI‑1‑N8). It uses a Renesas RA4M1 series microcontroller (R7FA4M1AB3CFM#AA0) based on a 48 MHz Arm® Cortex‑M4 core with FPU, and a secondary ESP32‑S3 module for Wi‑Fi and Bluetooth® connectivity. The board offers 256 kB flash, 32 kB SRAM, 8 kB EEPROM, 14 analog inputs, 14 digital I/O pins (6 PWM), and a 12×8 LED matrix.
+application_examples:
+  - Maker projects
+  - Beginner electronics
+  - Educational use
+  - IoT prototypes
+  - LED matrix animations
+related_products:
+  - Arduino UNO R3
+  - Arduino UNO R3 SMD
+  - Arduino UNO R4 Minima
+specifications:
+  main_processor: R7FA4M1AB3CFM#AA0 (RA4M1)
+  memory_main:
+    flash: 256 kB
+    sram: 32 kB
+    eeprom: 8 kB
+  secondary_processor: ESP32‑S3‑MINI‑1‑N8
+  memory_secondary:
+    flash: 384 kB ROM
+    sram: 512 kB
+    eeprom: 
+  operating_voltage: 5 V (RA4M1) / 3.3 V (ESP32‑S3)
+  input_voltage_recommended: 6–24 V
+  input_voltage_limits: 6–24 V
+  operating_temperature: -40 °C to 85 °C
+  digital_io_pins: 14
+  pwm_pins: 6 (D3, D5, D6, D9, D10, D11)
+  analog_input_pins: 6 (A0–A5)
+  dc_current_per_io_pin: 8 mA
+  flash_memory_for_bootloader: 
+power:
+  vin_max: 24 V
+  vusb_max: 5.5 V
+  consumption: 
+pinout:
+  analog_pins:
+    A0: Pin 9
+    A1: Pin 10
+    A2: Pin 11
+    A3: Pin 12
+    A4: Pin 13
+    A5: Pin 14
+  digital_pins:
+    D0: Pin 18
+    D1: Pin 17
+    D2: Pin 16
+    D3: Pin 15
+    D4: Pin 14
+    D5: Pin 13
+    D6: Pin 12
+    D7: Pin 11
+    D8: Pin 10
+    D9: Pin 9
+    D10: Pin 8
+    D11: Pin 7
+    D12: Pin 6
+    D13: Pin 5
+  power_pins:
+    +5V: Pin 5
+    +3V3: Pin 4
+    GND: Pins 6, 7, 15
+    VIN: Pin 8
+    IOREF: Pin 2
+    VUSB: USB‑C connector
+certifications:
+  - CE
+  - RoHS
+  - FCC
+  - SRRC
+getting_started:
+  ide: Arduino Desktop IDE
+  cloud_editor: Arduino Cloud Editor
+sample_sketches: 
+online_resources:
+  - https://www.arduino.cc/en/Main/Software
+  - https://create.arduino.cc/editor
+  - https://docs.arduino.cc/cloud/web-editor/tutorials/getting-started/getting-started-web-editor
+  - https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending
+  - https://github.com/arduino-libraries/
+  - https://store.arduino.cc/
+datasheet_url: https://www.arduino.cc/en/Reference/UNO_R4_WiFi_Datasheet
+company_info:
+  name: Arduino SRL
+  address: Via Andrea Appiani, 25 - 20900 MONZA (Italy)
+revision_history:
+  - Item 1:
+    date: 09/04/2025
+    revision: 7
+    changes: Fixed I2C information
+  - Item 2:
+    date: 05/09/2024
+    revision: 6
+    changes: Cloud Editor updated from Web Editor
+  - Item 3:
+    date: 03/07/2024
+    revision: 5
+    changes: Update Assets
+  - Item 4:
+    date: 19/09/2023
+    revision: 4
+    changes: Update FCC section
+  - Item 5:
+    date: 25/07/2023
+    revision: 3
+    changes: Update Pin Table
+  - Item 6:
+    date: 30/06/2023
+    revision: 2
+    changes: Update Pinout File
+  - Item 7:
+    date: 08/06/2023
+    revision: 1
+    changes: First Release
+languages_available:
+source_document: User Manual – Arduino UNO R4 WiFi – Modified 07/08/2025
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

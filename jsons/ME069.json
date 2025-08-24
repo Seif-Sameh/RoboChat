@@ -1,0 +1,68 @@
+{
+  "component_name": "TCS3200 Color Sensor (ME069)",
+  "category": "Sensor",
+  "manufacturer": "IDUINO",
+  "sku": "ME069",
+  "description": "TCS3200 Color Sensor is a complete color detector, including a TAOS TCS3200 RGB sensor chip and 4 white LEDs. It can detect a wide range of visible colors and is used for test strip reading, sorting by color, ambient light sensing, calibration, and color matching.",
+  "application_examples": [
+    "Test strip reading",
+    "Color sorting",
+    "Ambient light sensing",
+    "Calibration",
+    "Color matching"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "RGB color sensor",
+    "measuring_range": "",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "2.7V to 5.5V",
+    "current_consumption": "",
+    "interface": "Digital frequency output (OUT pin)",
+    "operating_temperature": "",
+    "dimensions": "28.4x28.4mm",
+    "other": [
+      "Single-supply operation",
+      "High-resolution conversion of light intensity to frequency",
+      "Programmable color and full-scale output frequency",
+      "Power down feature",
+      "Supports LED lamp light supplement control"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "2.7V to 5.5V",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Vcc (5V/DC)",
+      "GND": "GND",
+      "Data": "OUT (frequency output)",
+      "Other": "S0, S1, S2, S3 (control pins)"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect Vcc to 5V, GND to GND, S0 to D3, S1 to D4, S2 to D5, S3 to D6, OUT to D2.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "#include <TimerOne.h>\n#include <Wire.h>\n#include <LiquidCrystal_I2C.h>\nLiquidCrystal_I2C lcd(0x27,20,4);\n\n#define S0 6\n#define S1 5\n#define S2 4\n#define S3 3\n#define OUT 2\n\nint g_count = 0;\nint g_array[3];\nint g_flag = 0;\nfloat g_SF[3];\n\nvoid TSC_Init() {\n  pinMode(S0, OUTPUT);\n  pinMode(S1, OUTPUT);\n  pinMode(S2, OUTPUT);\n  pinMode(S3, OUTPUT);\n  pinMode(OUT, INPUT);\n  digitalWrite(S0, LOW);\n  digitalWrite(S1, HIGH);\n}\n\nvoid TSC_FilterColor(int Level01, int Level02) {\n  if(Level01 != 0) Level01 = HIGH;\n  if(Level02 != 0) Level02 = HIGH;\n  digitalWrite(S2, Level01);\n  digitalWrite(S3, Level02);\n}\n\nvoid TSC_Count() { g_count++; }\n\nvoid TSC_Callback() {\n  // Handle color reading and scaling\n}\n\nvoid setup() {\n  TSC_Init();\n  lcd.init();\n  lcd.backlight();\n  Serial.begin(9600);\n  Timer1.initialize();\n  Timer1.attachInterrupt(TSC_Callback);\n  attachInterrupt(0, TSC_Count, RISING);\n}\n\nvoid loop() {\n  // Process readings and display RGB values\n}\n",
+        "explaination": "This sketch initializes the TCS3200 sensor, sets up timer interrupts to count frequency pulses for each color channel, calculates RGB values, and displays them on an LCD. The S0\u2013S3 pins are used to select the color filter and frequency scaling, while the OUT pin provides the frequency output."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "IDUINO",
+    "address": "Open Platform, www.openplatform.cc"
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "User Manual for TCS 3200 Color Sensor (ME069)"
+}

@@ -1,0 +1,144 @@
+component_name: ESP32
+category: System-on-Chip (SoC) / MCU
+manufacturer: Espressif Systems
+sku: ESP32-D0WD
+description: The ESP32 is a single 2.4 GHz Wi‑Fi‑and‑Bluetooth combo chip featuring a dual‑core Xtensa LX6 microprocessor, integrated RF, and a rich set of peripherals. It is designed for low‑power IoT, wearable, and embedded applications.
+application_examples:
+  - IoT sensor hubs
+  - Data loggers
+  - Video streaming cameras
+  - Smart home devices (lights, plugs, door locks)
+  - Industrial wireless control
+  - Audio streaming devices
+  - Wearable electronics
+  - Robotics
+  - POS machines
+related_products:
+  - ESP32‑WROOM‑32 module
+  - ESP32‑WROVER module
+  - ESP32‑S2 series
+  - ESP32‑C3 series
+specifications:
+  main_processor: Dual‑core Xtensa LX6 32‑bit (up to 240 MHz)
+  memory_main:
+    flash: 448 KB ROM (internal)
+    sram: 520 KB SRAM (internal)
+    eeprom: 
+  secondary_processor: Ultra‑Low‑Power (ULP) co‑processor
+  memory_secondary:
+    flash: 
+    sram: 8 KB RTC FAST memory
+    eeprom: 
+  operating_voltage: 2.3 V – 3.6 V
+  input_voltage_recommended: 3.3 V
+  input_voltage_limits: 2.3 V – 3.6 V
+  operating_temperature: -40 °C to 125 °C
+  digital_io_pins: 34
+  pwm_pins: 16 (LED PWM channels)
+  analog_input_pins: 18 (12‑bit SAR ADC channels)
+  dc_current_per_io_pin: ≤40 mA (max per pin)
+  flash_memory_for_bootloader: 
+power:
+  vin_max: 3.6 V
+  vusb_max: 
+  consumption: 
+pinout:
+  analog_pins:
+    GPIO34: ADC1_CH6
+    GPIO35: ADC1_CH7
+    GPIO32: ADC1_CH4
+    GPIO33: ADC1_CH5
+    GPIO25: ADC2_CH8
+    GPIO26: ADC2_CH9
+    GPIO27: ADC2_CH7
+    GPIO2: ADC2_CH2
+    GPIO0: ADC2_CH1
+    GPIO4: ADC2_CH0
+  digital_pins:
+    GPIO0: 
+    GPIO1: 
+    GPIO2: 
+    GPIO3: 
+    GPIO4: 
+    GPIO5: 
+    GPIO6: 
+    GPIO7: 
+    GPIO8: 
+    GPIO9: 
+    GPIO10: 
+    GPIO11: 
+    GPIO12: 
+    GPIO13: 
+    GPIO14: 
+    GPIO15: 
+    GPIO16: 
+    GPIO17: 
+    GPIO18: 
+    GPIO19: 
+    GPIO21: 
+    GPIO22: 
+    GPIO23: 
+    GPIO25: 
+    GPIO26: 
+    GPIO27: 
+    GPIO32: 
+    GPIO33: 
+    GPIO34: 
+    GPIO35: 
+    GPIO36: 
+    GPIO37: 
+    GPIO38: 
+    GPIO39: 
+  power_pins:
+    VDD3P3_RTC: 
+    VDD3P3_CPU: 
+    VDD_SDIO: 
+    VDD3P3: 
+    VDDA: 
+certifications:
+  - Wi‑Fi Alliance
+  - Bluetooth SIG
+getting_started:
+  ide: ESP‑IDF (Espressif IoT Development Framework)
+  cloud_editor: ESP‑IDF Web IDE (Espressif Cloud)
+sample_sketches: 
+online_resources:
+  - https://www.espressif.com/en/support/download/documents
+  - https://docs.espressif.com/projects/esp-idf/en/latest/esp32/
+  - https://github.com/espressif/esp-idf
+  - https://www.espressif.com/en/support/faq
+datasheet_url: https://www.espressif.com/en/support/download/documents
+company_info:
+  name: Espressif Systems (Shanghai) Co., Ltd.
+  address: Shanghai, China
+revision_history:
+  - 2020‑04‑27 V3.4 – Added ESP32‑U4WDH
+  - 2020‑01 V3.3 – Added ESP32‑D0WD‑V3 and ESP32‑D0WDQ6‑V3
+  - 2019‑10 V3.2 – Updated power‑up timing
+  - 2019‑07 V3.1 – Added new chip variants
+  - 2019‑04 V3.0 – Updated strapping pin notes
+  - 2019‑02 V2.9 – Updated pin description formatting
+  - 2018‑11 V2.7 – Updated pin status at reset
+  - 2018‑08 V2.5 – Added power consumption table
+  - 2018‑05 V2.2 – Updated voltage ranges and reliability tables
+  - 2018‑01 V2.1 – Deleted software‑specific features
+  - 2017‑12 V2.0 – Added pin sequence note
+  - 2017‑10 V1.9 – Updated pin description and power scheme
+  - 2017‑08 V1.7 – Updated RF parameters and power consumption
+  - 2017‑06 V1.6 – Corrected typos
+  - 2017‑05 V1.5 – Updated power supply range
+  - 2017‑04 V1.4 – Added frequency note
+  - 2017‑03 V1.3 – Added pin lists appendix
+  - 2017‑02 V1.2 – Updated internal memory note
+  - 2017‑01 V1.1 – Added part number section
+  - 2016‑08 V1.0 – First release
+languages_available:
+  - C
+  - C++
+  - Python (MicroPython)
+  - Lua (NodeMCU)
+source_document: ESP32 Datasheet V3.4 (provided source text)
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

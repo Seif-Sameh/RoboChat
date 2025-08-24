@@ -1,0 +1,73 @@
+{
+  "component_name": "HC-05 Bluetooth Module",
+  "category": "Communication Module",
+  "manufacturer": "CSR (Qualcomm)",
+  "sku": "",
+  "description": "The HC-05 is a compact Bluetooth SPP (Serial Port Protocol) module based on the CSR Bluecore 04 chip, supporting Bluetooth 2.0+EDR with up to 3\u202fMbps data rate. It features a 2.4\u202fGHz radio, integrated antenna, low\u2011power 1.8\u202fV operation, and programmable UART interface.",
+  "application_examples": [
+    "Wireless serial communication between microcontrollers and PCs",
+    "Remote control of devices via Bluetooth",
+    "Sensor data transmission to mobile devices"
+  ],
+  "related_products": [],
+  "specifications": {
+    "communication_type": "Bluetooth SPP (Serial Port Protocol)",
+    "frequency_range": "2.4\u202fGHz",
+    "data_rate": "Up to 3\u202fMbps (Bluetooth 2.0+EDR)",
+    "protocols_supported": [
+      "SPP",
+      "Bluetooth 2.0+EDR"
+    ],
+    "operating_voltage": "1.8\u202fV low\u2011power, 3.3\u20135\u202fV I/O",
+    "current_consumption": "",
+    "transmit_power": "+4\u202fdBm",
+    "receiver_sensitivity": "-80\u202fdBm",
+    "range": "",
+    "antenna_type": "Integrated",
+    "operating_temperature": "",
+    "dimensions": "12.7\u202fmm \u00d7 27\u202fmm"
+  },
+  "power": {
+    "supply_voltage_range": "1.8\u202fV to 5\u202fV",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "communication_pins": {
+      "TXD": "UART transmit",
+      "RXD": "UART receive",
+      "KEY": "AT command mode control"
+    },
+    "power_pins": {
+      "VCC": "3.3\u20135\u202fV supply",
+      "GND": "Ground"
+    },
+    "control_pins": {
+      "PIO9": "LED control (red)",
+      "PIO8": "LED control (blue)"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 3.3\u20135\u202fV, GND to ground, TXD to MCU RX, RXD to MCU TX. Use KEY pin to enter AT mode (connect to VCC). PIO9/PIO8 can drive status LEDs.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.electronica60norte.com"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Electronica60Norte",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "HC-05 datasheet",
+  "example_code": [
+    {
+      "code": "#include <SoftwareSerial.h>\n\nSoftwareSerial BTSerial(10, 11); // RX, TX\n\nvoid setup() {\n  Serial.begin(9600);\n  BTSerial.begin(9600); // HC-05 default baud\n  Serial.println(\"Bluetooth module ready\");\n}\n\nvoid loop() {\n  if (BTSerial.available()) {\n    Serial.write(BTSerial.read());\n  }\n  if (Serial.available()) {\n    BTSerial.write(Serial.read());\n  }\n}",
+      "explaination": "This sketch forwards data between the Arduino serial monitor and the HC-05 module, enabling simple Bluetooth serial communication."
+    }
+  ]
+}

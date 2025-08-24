@@ -1,0 +1,55 @@
+component_name: ULN2003 Stepper Driver Board
+category: Motor Driver
+manufacturer: 
+sku: 
+description: A stepper driver board based on the ULN2003 Darlington transistor array. It features four output channels capable of driving up to 500 mA per channel at up to 50 V. The board includes LED indicators for each control line, an ON/OFF jumper, and a keyed motor connector. It requires an external 5 V logic supply and a separate 5 V motor supply.
+application_examples:
+  - Driving a 28BYJ‑48 stepper motor with an Arduino
+  - Controlling small DC motors or relays up to 500 mA
+related_products:
+specifications:
+  driver_type: ULN2003 Darlington transistor array
+  motor_channels: 4
+  voltage_range_motor: Up to 50 V
+  voltage_range_logic: 5 V
+  continuous_current_per_channel: 500 mA
+  peak_current_per_channel: 
+  control_interface: Digital input (Arduino)
+  operating_frequency: 
+  operating_temperature: 
+  dimensions: 
+  protection_features:
+    - LED indicators for each control line
+    - ON/OFF jumper to isolate power
+power:
+  vin_max: 50 V
+  vlogic_max: 5 V
+  consumption: 
+pinout:
+  motor_outputs:
+  control_pins:
+    IN1: Digital input 1
+    IN2: Digital input 2
+    IN3: Digital input 3
+    IN4: Digital input 4
+  power_pins:
+    VDD: Motor supply (external 5 V)
+    GND: Common ground
+certifications:
+getting_started:
+  connection_guide: Connect an external 5 V supply to VDD and GND. Tie the GND to the Arduino ground. Connect IN1‑IN4 to Arduino digital pins (e.g., 8‑11). Hook the motor cable to the keyed connector. Use the ON/OFF jumper to isolate power when needed.
+  example_code_url: 
+sample_sketches: 
+online_resources:
+  - https://lastminuteengineers.com
+datasheet_url: 
+company_info:
+  name: 
+  address: 
+revision_history:
+languages_available:
+source_document: The ULN2003 Driver Board description provided in the user prompt
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

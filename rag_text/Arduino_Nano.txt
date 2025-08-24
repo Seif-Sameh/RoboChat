@@ -1,0 +1,114 @@
+component_name: Arduino Nano
+category: Control Board
+manufacturer: Arduino S.r.l.
+sku: A000005
+description: Arduino® Nano is an intelligent development board designed for building faster prototypes with the smallest dimension. The board offers 20 digital input/output pins, 8 analog pins, and a mini-USB port.
+application_examples:
+  - Maker
+  - Security
+  - Environmental
+  - Robotics
+  - Control Systems
+related_products:
+  - Arduino® Nano 33 BLE (SKU: ABX00030)
+  - Arduino® 33 IoT (SKU: ABX00027)
+  - Arduino® Micro (SKU: A000093)
+specifications:
+  main_processor: ATmega328
+  memory_main:
+    flash: 32 kB (2 kB used by bootloader)
+    sram: 2 kB
+    eeprom: 1 kB
+  secondary_processor: 
+  memory_secondary:
+    flash: 
+    sram: 
+    eeprom: 
+  operating_voltage: 5 V
+  input_voltage_recommended: 7-15 V (unregulated external supply)
+  input_voltage_limits: 7-15 V
+  operating_temperature: -40 °C to 85 °C
+  digital_io_pins: 20
+  pwm_pins: 6
+  analog_input_pins: 8
+  dc_current_per_io_pin: 
+  flash_memory_for_bootloader: 2 kB
+power:
+  vin_max: 15 V
+  vusb_max: 5 V
+  consumption: 
+pinout:
+  analog_pins:
+    A0: Pin 2
+    A1: Pin 3
+    A2: Pin 4
+    A3: Pin 5
+    A4: Pin 6
+    A5: Pin 7
+    A6: Pin 8
+    A7: Pin 9
+  digital_pins:
+    D0: Pin 2
+    D1: Pin 1
+    D2: Pin 3
+    D3: Pin 4
+    D4: Pin 5
+    D5: Pin 6
+    D6: Pin 7
+    D7: Pin 8
+    D8: Pin 9
+    D9: Pin 10
+    D10: Pin 11
+    D11: Pin 12
+    D12: Pin 13
+    D13: Pin 14
+  power_pins:
+    +3V3: Pin 1
+    +5V: Pin 10
+    GND: Pin 12
+    VIN: Pin 12
+    Reset: Pin 15
+certifications:
+  - CE DoC (EU)
+  - RoHS & REACH
+  - Conflict Minerals Declaration
+  - FCC Caution
+getting_started:
+  ide: Arduino Desktop IDE
+  cloud_editor: Arduino Cloud Editor
+sample_sketches: 
+online_resources:
+  - https://www.arduino.cc/en/software
+  - https://create.arduino.cc/editor
+  - https://docs.arduino.cc/arduino-cloud/guides/editor/
+  - https://docs.arduino.cc/hardware/nano
+  - https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending
+  - https://www.arduino.cc/reference/en/libraries/
+  - https://store.arduino.cc/
+datasheet_url: 
+company_info:
+  name: Arduino S.r.l.
+  address: Via Andrea Appiani 25, 20900 MONZA MB, Italy
+revision_history:
+  - Item 1:
+    date: 12/06/2025
+    revision: 4
+    changes: Updated power tree
+  - Item 2:
+    date: 25/04/2024
+    revision: 3
+    changes: Updated link to new Cloud Editor
+  - Item 3:
+    date: 03/08/2022
+    revision: 2
+    changes: Reference documentation links updates
+  - Item 4:
+    date: 12/04/2022
+    revision: 1
+    changes: First Release
+languages_available:
+source_document: User Manual
+example_code:
+  - Item 1:
+    code: 
+    explaination: 

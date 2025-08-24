@@ -1,0 +1,49 @@
+component_name: ICR18650 2P 3.7V 4400mAh Li-ion Battery Pack
+category: Power Component
+sub_category: Battery Pack
+manufacturer: Hunan Sounddon New Energy Co., Ltd
+sku: APL-2013517
+description: Cylindrical Li-ion battery pack consisting of two 18650 cells in parallel, nominal voltage 3.7 V, capacity 4400 mAh, maximum discharge current 4.4 A, maximum charge voltage 4.2 V, suitable for robotics, portable electronics, and power backup applications.
+application_examples:
+  - Robotics power supply
+  - Portable electronics
+  - Power backup systems
+related_products:
+specifications:
+  type: Li-ion battery pack
+  voltage_input_range: 
+  voltage_output_range: 2.75 V – 4.2 V (nominal 3.7 V)
+  current_output_continuous: 4.4 A
+  current_output_peak: 
+  efficiency: 
+  capacity: 4400 mAh (C5)
+  discharge_rate: 0.5 C5A (standard), 1 C5A (max charge)
+  charging_current: 0.2 C5A (standard), 1 C5A (max)
+  protection_features:
+  operating_temperature: Charge: 0 °C – 40 °C; Discharge: –20 °C – 60 °C
+  dimensions: Diameter 18.4 mm, Height 65 mm (single cell) – pack dimensions similar
+  weight: 85 g (reference)
+power:
+  vin_max: 
+  vout_max: 4.2 V
+  consumption: 
+pinout:
+  input_pins:
+  output_pins:
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect the pack to a Protection Circuit Module (PCM) ensuring correct polarity. Use appropriate wiring rated for the maximum discharge current.
+  example_usage: Use as a power source for a small robot or as a backup battery in a portable device.
+sample_sketches: 
+online_resources:
+  - http://www.soundnewenergy.com
+datasheet_url: 
+company_info:
+  name: Hunan Sounddon New Energy Co., Ltd
+  address: No.98, Fuzhou Road, Jinhua Demonstration Area, Xiangtan City, Hunan Province, China.
+revision_history:
+languages_available:
+  - English
+  - Chinese
+source_document: APL-2013517

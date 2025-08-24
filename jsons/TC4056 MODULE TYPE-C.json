@@ -1,0 +1,61 @@
+{
+  "component_name": "Lithium Battery Charging & Protection Module (TP4056)",
+  "category": "Power Component",
+  "sub_category": "Battery Charger",
+  "manufacturer": "",
+  "sku": "",
+  "description": "A compact module that charges single or two parallel Li\u2011ion cells using CC/CV method while providing over\u2011discharge, over\u2011charge, over\u2011current, short\u2011circuit, soft\u2011start, and trickle charge protection. Powered via 5V USB or external supply.",
+  "application_examples": [
+    "Charging single Li\u2011ion cells in portable electronics",
+    "Charging two parallel Li\u2011ion cells for higher capacity",
+    "USB powered battery chargers for DIY projects"
+  ],
+  "related_products": [],
+  "specifications": {
+    "type": "Lithium\u2011ion battery charger with protection",
+    "voltage_input_range": "5V",
+    "voltage_output_range": "4.2V \u00b11%",
+    "current_output_continuous": "1A",
+    "current_output_peak": "3A",
+    "efficiency": "",
+    "capacity": "",
+    "discharge_rate": "",
+    "charging_current": "1A",
+    "protection_features": [
+      "Over\u2011discharge protection (2.4V)",
+      "Over\u2011charge protection (4.2V)",
+      "Over\u2011current protection (3A)",
+      "Short\u2011circuit protection",
+      "Soft\u2011start protection",
+      "Trickle charge (130mA)"
+    ],
+    "operating_temperature": "",
+    "dimensions": "26mm x 17mm",
+    "weight": "1.6g"
+  },
+  "power": {
+    "vin_max": "5V",
+    "vout_max": "4.2V",
+    "consumption": ""
+  },
+  "pinout": {
+    "input_pins": {},
+    "output_pins": {},
+    "control_pins": {}
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect 5V USB or external 5V supply to the module\u2019s input. Attach the Li\u2011ion cell(s) to the battery terminals. Observe the red LED for charging and blue LED for charge completion.",
+    "example_usage": "Use the module to charge a single 3.7V Li\u2011ion cell or two cells in parallel for double capacity. Ensure the input supply can deliver at least 1A."
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Lithium Battery Charging & Protection Module description and specifications provided in the user prompt."
+}

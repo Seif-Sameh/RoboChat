@@ -1,0 +1,67 @@
+{
+  "component_name": "IR Proximity Sensor",
+  "category": "Sensor",
+  "manufacturer": "Silicon TechnoLabs",
+  "sku": "",
+  "description": "Multipurpose Infrared Sensor that detects lines or nearby objects by measuring reflected infrared light. Includes onboard RED LED indicator and adjustable sensing range via variable resistor. Suitable for line follower and obstacle avoiding robots.",
+  "application_examples": [
+    "Line follower robot",
+    "Obstacle avoiding robot",
+    "Object counter"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Infrared Proximity Sensor",
+    "measuring_range": "0-20 cm (adjustable)",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "5VDC",
+    "current_consumption": "20 mA",
+    "interface": "Digital output (HIGH when object detected)",
+    "operating_temperature": "",
+    "dimensions": "50 x 20 x 10 mm (L x B x H)",
+    "other": [
+      "Hole size: \u03c62.5 mm",
+      "Built-in ambient light sensor",
+      "5V and 3.3V I/O compliant",
+      "Variable resistor for range adjustment"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "5VDC",
+    "max_current": "20 mA",
+    "consumption": "20 mA"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "5V",
+      "GND": "GND",
+      "Data": "Digital output pin (OUT)",
+      "Other": "Variable resistor, onboard RED LED indicator"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5V, GND to GND, OUT to a digital input pin on Arduino. Use jumper wires to the 3-pin header. Adjust variable resistor to set sensing range.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "// Object counter\n// Counts the number of objects and prints the results to the serial monitor.\n// The circuit:\n// * OUT attached to pin 2\n// Created 2015\n// by Harshit Borad <http://www.silicontechnolabs.in>\n\nconst int OUT = 2; // the number of the IR Proximity Sensor pin\nconst int ledPin = 13; // the number of the LED pin\nint Number_of_Object = 0; // variable for reading the Number of Objects passing from sensor\nint SensorState = 0;\n\nvoid setup() {\n  Serial.begin(9600); // initialize serial communications at 9600 bps:\n  pinMode(ledPin, OUTPUT); // initialize the LED pin as an output:\n  pinMode(OUT, INPUT); // initialize the IR Proximity Sensor pin as an input:\n}\n\nvoid loop() {\n  SensorState = digitalRead(OUT); // read the state of the Sensor Signal\n  if (SensorState == HIGH) {\n    digitalWrite(ledPin, HIGH); // turn LED on:\n    Number_of_Object++;\n    Serial.println(Number_of_Object); // print the results to the serial monitor:\n  } else {\n    digitalWrite(ledPin, LOW); // turn LED off:\n  }\n}",
+        "explaination": "This Arduino sketch reads the digital output of the IR proximity sensor. When an object is detected (sensor output HIGH), it turns on an onboard LED, increments a counter, and prints the count to the serial monitor."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.silicontechnolabs.in"
+  ],
+  "datasheet_url": "https://www.silicontechnolabs.in",
+  "company_info": {
+    "name": "Silicon TechnoLabs",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Silicon TechnoLabs IR Proximity Sensor Datasheet"
+}

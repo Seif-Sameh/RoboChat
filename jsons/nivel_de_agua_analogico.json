@@ -1,0 +1,69 @@
+{
+  "component_name": "Water Sensor Module",
+  "category": "Sensor",
+  "manufacturer": "Shenzhen KeYi Interactive Robot Co., Ltd.",
+  "sku": "K-0135",
+  "description": "Compact, lightweight analog water level sensor that detects trace amounts of water droplets using a series of parallel wires. Features low power consumption, high sensitivity, and direct analog output for microcontroller integration.",
+  "application_examples": [
+    "Arduino",
+    "STC microcontroller",
+    "AVR microcontroller"
+  ],
+  "related_products": [
+    "Arduino sensor expansion board"
+  ],
+  "specifications": {
+    "sensor_type": "Analog",
+    "measuring_range": "Detection area 40mm x 16mm",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "DC 5V",
+    "current_consumption": "<20mA",
+    "interface": "Analog output",
+    "operating_temperature": "10\u202f\u00b0C to -30\u202f\u00b0C",
+    "dimensions": "65mm x 20mm x 8mm",
+    "other": [
+      "Production process: FR4 double\u2011sided HASL",
+      "Mounting hole size: 3.0mm",
+      "User\u2011friendly design: half\u2011moon slip handle depression",
+      "Weight: 3g"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "5\u202fV DC",
+    "max_current": "<20\u202fmA",
+    "consumption": "<20\u202fmA"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "5\u202fV",
+      "GND": "Ground",
+      "Data": "Analog output (connect to Arduino analog pin)",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5\u202fV, GND to ground, and the sensor\u2019s analog output to an Arduino analog input (e.g., A1).",
+    "example_code_url": "http://keyes-arduino.taobao.com",
+    "example_code": [
+      {
+        "code": "int analogPin = 1; // level sensor connected to an analog port\nint led = 12; // Piranha LED connected to digital port 12\nint val = 0; // define a variable val initial value of 0\nint data = 0; // define a variable data initial value of 0\n\nvoid setup ()\n{\n  pinMode (led, OUTPUT); // define led to an output pin\n  Serial.begin (9600); // set the baud rate to 9600\n}\n\nvoid loop ()\n{\n  val = analogRead (analogPin); // read the analog value to the variable val\n  if (val> 700) { // determine whether more than 700 variables val\n    digitalWrite (led, HIGH); // when variable val is greater than 700, Piranha LED lights\n  }\n  else {\n    digitalWrite (led, LOW); // when variable val is less than 700, the lamp goes out piranha\n  }\n  data = val; // variable is assigned to the variable data val\n  Serial.println (data); // Serial print variable data\n  delay (100);\n}",
+        "explaination": "This Arduino sketch reads the analog value from the water sensor. If the value exceeds 700, it turns on an LED to indicate water presence; otherwise, the LED stays off. The sensor value is also printed to the serial monitor."
+      }
+    ]
+  },
+  "sample_sketches": "int analogPin = 1; // level sensor connected to an analog port\nint led = 12; // Piranha LED connected to digital port 12\nint val = 0; // define a variable val initial value of 0\nint data = 0; // define a variable data initial value of 0\n\nvoid setup ()\n{\n  pinMode (led, OUTPUT); // define led to an output pin\n  Serial.begin (9600); // set the baud rate to 9600\n}\n\nvoid loop ()\n{\n  val = analogRead (analogPin); // read the analog value to the variable val\n  if (val> 700) { // determine whether more than 700 variables val\n    digitalWrite (led, HIGH); // when variable val is greater than 700, Piranha LED lights\n  }\n  else {\n    digitalWrite (led, LOW); // when variable val is less than 700, the lamp goes out piranha\n  }\n  data = val; // variable is assigned to the variable data val\n  Serial.println (data); // Serial print variable data\n  delay (100);\n}",
+  "online_resources": [
+    "http://keyes-arduino.taobao.com"
+  ],
+  "datasheet_url": "http://keyes-arduino.taobao.com",
+  "company_info": {
+    "name": "Shenzhen KeYi Interactive Robot Co., Ltd.",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "I. Notice ... Shenzhen\u5e02\u79d1\u6613\u4e92\u52a8\u673a\u5668\u4eba\u6709\u9650\u516c\u53f8 \u4ea7\u54c1\u624b\u518c Http://keyes-arduino.taobao.com"
+}

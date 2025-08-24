@@ -1,0 +1,86 @@
+component_name: ESP8266 ESP-01 WiFi Serial Module
+category: Communication Module
+manufacturer: Espressif Systems
+sku: ESP-01
+description: A compact Wi‑Fi module based on the ESP8266 chip, featuring 802.11b/g/n support, integrated antenna switch, low‑power operation, and a UART interface for serial communication.
+application_examples:
+  - Smart Power Plug
+  - Home Automation
+  - Mesh Network
+  - Industrial Wireless Control
+  - Baby Monitor
+  - Network Camera
+  - Sensor Networks
+  - Wearable Electronics
+  - Wireless Location‑Aware Devices
+  - Security ID Tag
+  - Wireless Positioning System
+related_products:
+  - ESP-12
+  - ESP-01S
+  - ESP-07
+  - ESP-8266-NodeMCU
+specifications:
+  communication_type: Wi‑Fi 802.11b/g/n
+  frequency_range: 2.4 GHz (2412–2484 MHz)
+  data_rate: up to 54 Mbps (802.11g) / 72.2 Mbps (MCS7)
+  protocols_supported:
+    - TCP/IP
+    - Wi‑Fi Direct (P2P)
+    - SoftAP
+    - UDP
+    - HTTP
+    - MQTT
+  operating_voltage: 3.3 V
+  current_consumption: typical 135 mA (802.11n, 1.4 dBm output)
+  transmit_power: up to +19.5 dBm (802.11b) / +16 dBm (802.11n)
+  receiver_sensitivity: -98 dBm (1 Mbps) / -91 dBm (11 Mbps) / -75 dBm (54 Mbps)
+  range: typical indoor range ~100 m
+  antenna_type: PCB antenna with integrated balun
+  operating_temperature: -20 °C to 100 °C
+  dimensions: 
+power:
+  supply_voltage_range: 3.0–3.6 V
+  max_current: 200 mA
+  consumption: typical 135 mA (802.11n)
+pinout:
+  communication_pins:
+    TXD: UART Transmit
+    RXD: UART Receive
+    GPIO0: General Purpose I/O / Boot mode selector
+    GPIO2: General Purpose I/O / Power‑up indicator
+  power_pins:
+    VCC: 3.3 V supply
+    GND: Ground
+  control_pins:
+    CH_PD: Chip Enable (must be tied high for operation)
+    RST: Reset (active low)
+    GPIO0: Boot mode selector (low = download mode)
+    GPIO2: Power‑up indicator (high when powered)
+certifications:
+getting_started:
+  connection_guide: Connect VCC to 3.3 V, GND to ground, CH_PD to VCC, RST to 3.3 V (or pull‑up). Connect TXD to host RX, RXD to host TX. Use a 3.3 V UART level shifter if the host is 5 V.
+  example_code_url: https://github.com/esp8266/esp8266-wiki/wiki
+sample_sketches: 
+online_resources:
+  - https://github.com/esp8266/esp8266-wiki/wiki
+  - http://www.esp8266.com/
+  - https://www.seeedstudio.com/depot/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html
+  - https://github.com/themadinventor/esptool
+  - http://www.seeedstudio.com/document/pdf/ESP8266%20Specifications(Chinese).pdf
+datasheet_url: http://www.seeedstudio.com/document/pdf/ESP8266%20Specifications(Chinese).pdf
+company_info:
+  name: Espressif Systems
+  address: Shanghai, China
+revision_history:
+languages_available:
+  - C
+  - C++
+  - Arduino
+  - Lua
+  - MicroPython
+source_document: Provided source text
+example_code:
+  - Item 1:
+    code: AT+RST
+    explaination: Resets the ESP8266 module to factory defaults and restarts the firmware.

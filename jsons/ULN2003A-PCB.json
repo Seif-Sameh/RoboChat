@@ -1,0 +1,74 @@
+{
+  "component_name": "4 Phase ULN2003 Stepper Motor Driver PCB",
+  "category": "Motor Driver",
+  "manufacturer": "Kiatronics",
+  "sku": "",
+  "description": "A compact stepper motor driver board based on the ULN2003AN IC, providing 4-channel direct drive for 4-phase stepper motors with 5-12VDC motor supply and 5V logic input. Includes LED status indicators, an ON/OFF jumper, and a standard motor header.",
+  "application_examples": [
+    "Stepper motor control in robotics",
+    "CNC machines",
+    "3D printers",
+    "Automated conveyor systems"
+  ],
+  "related_products": [],
+  "specifications": {
+    "driver_type": "ULN2003AN",
+    "motor_channels": "4",
+    "voltage_range_motor": "5-12VDC",
+    "voltage_range_logic": "5V",
+    "continuous_current_per_channel": "500mA",
+    "peak_current_per_channel": "",
+    "control_interface": "4-bit digital input (GPIO)",
+    "operating_frequency": "",
+    "operating_temperature": "",
+    "dimensions": "",
+    "protection_features": [
+      "ON/OFF jumper",
+      "LED status indicators"
+    ]
+  },
+  "power": {
+    "vin_max": "12V",
+    "vlogic_max": "5V",
+    "consumption": ""
+  },
+  "pinout": {
+    "motor_outputs": {
+      "A": "IN1",
+      "B": "IN2",
+      "C": "IN3",
+      "D": "IN4"
+    },
+    "control_pins": {
+      "IN1": "GPIO1",
+      "IN2": "GPIO2",
+      "IN3": "GPIO3",
+      "IN4": "GPIO4"
+    },
+    "power_pins": {
+      "V+": "Motor supply +",
+      "GND": "Ground"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect the 4 microcontroller GPIO pins to IN1-IN4, supply 5-12V to V+ and GND to ground, and use the ON/OFF jumper to enable the motor supply. LED indicators show active channels.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Kiatronics",
+    "address": "P.O. Box 8231, Cherrywood, Tauranga, New Zealand"
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Provided specification text",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+component_name: LM78L series linear regulator
+category: Power Component
+sub_category: Fixed Output Linear Regulator
+manufacturer: Texas Instruments
+sku: LM78Lxx
+description: Low‑cost, low‑power, fixed output linear regulator providing 5 V, 6.2 V, 8.2 V, 9 V, 12 V, or 15 V output with 100 mA continuous current, internal protection, available in TO‑92, SOIC, and DSBGA packages.
+application_examples:
+  - Battery chargers
+  - Portable instrumentation
+  - LED lighting
+  - Appliances
+  - Fixed output regulator circuits
+  - Adjustable output regulator circuits
+related_products:
+  - UA78L
+  - LM340
+  - LM340A
+  - LM78Mxx
+  - LM78LxxAC
+  - LM78LxxAI
+  - LM78LxxIT
+specifications:
+  type: Fixed Output Linear Regulator
+  voltage_input_range: Up to 30 V
+  voltage_output_range: 5 V, 6.2 V, 8.2 V, 9 V, 12 V, 15 V
+  current_output_continuous: 100 mA
+  current_output_peak: 140 mA
+  efficiency: 
+  capacity: 
+  discharge_rate: 
+  charging_current: 
+  protection_features:
+    - Internal thermal overload protection
+    - Internal short‑circuit current limit
+    - Output transistor safe area protection
+  operating_temperature: 0 °C to 125 °C (TO‑92, SOIC); –40 °C to 85 °C (DSBGA)
+  dimensions: TO‑92: 3.70 mm × 4.70 mm; SOIC: 3.90 mm × 4.90 mm; DSBGA: 1.30 mm × 1.30 mm
+  weight: 
+power:
+  vin_max: 30 V
+  vout_max: 15 V
+  consumption: Quiescent current 3–5 mA
+pinout:
+  input_pins:
+    VIN: Pin 3 (TO‑92, SOIC, DSBGA)
+  output_pins:
+    VOUT: Pin 1
+  control_pins:
+certifications:
+getting_started:
+  connection_guide: Connect VIN to input supply, GND to ground, VOUT to load. Use a 0.33 µF input capacitor if the regulator is more than 3 inches from the supply filter. Use a 0.01 µF load capacitor for noise reduction.
+  example_usage: Use as a fixed output regulator in battery chargers, LED lighting, or portable instrumentation. No external components are required for basic operation.
+sample_sketches: 
+online_resources:
+  - https://www.ti.com/lit/ds/symlink/lm78l.pdf
+  - https://www.ti.com/lit/an/an1112/an1112.pdf
+  - https://www.ti.com/lit/an/taa001/taa001.pdf
+datasheet_url: https://www.ti.com/lit/ds/symlink/lm78l.pdf
+company_info:
+  name: Texas Instruments
+  address: Dallas, Texas 75265
+revision_history:
+  - Jan 2000 – original release
+  - June 2020 – revised
+languages_available:
+  - English
+source_document: Provided source text

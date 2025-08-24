@@ -1,0 +1,75 @@
+{
+  "component_name": "MPU6050 6-axis Accelerometer and Gyro",
+  "category": "Sensor",
+  "manufacturer": "Adafruit Industries",
+  "sku": "",
+  "description": "The MPU-6050 is a popular six-axis accelerometer and gyroscope (gyro) that provides 16-bit measurements for motion sensing, commonly used as an inertial measurement unit (IMU).",
+  "application_examples": [
+    "Water rocket telemetry",
+    "Robot balance",
+    "Motion sensing"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "6-axis IMU (accelerometer + gyroscope)",
+    "measuring_range": "Accelerometer: \u00b12g, \u00b14g, \u00b18g, \u00b116g; Gyroscope: \u00b1250\u00b0/s, \u00b1500\u00b0/s, \u00b11000\u00b0/s, \u00b12000\u00b0/s",
+    "accuracy": "",
+    "resolution": "16-bit",
+    "response_time": "",
+    "operating_voltage": "3.3V (regulated)",
+    "current_consumption": "",
+    "interface": "I2C",
+    "operating_temperature": "",
+    "dimensions": "",
+    "other": [
+      "I2C address 0x68/0x69"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "3-5V",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Vin (3-5V input)",
+      "GND": "GND",
+      "Data": "SDA",
+      "Other": "SCL, INT, AD0, FS, SCE, SDE, CLKIN"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5V (or 3.3V), GND to GND, SCL to I2C clock, SDA to I2C data. Use I2C address 0x68 or 0x69. The board includes a voltage regulator to accept 3-5V input and outputs 3.3V for the sensor.",
+    "example_code_url": "https://learn.adafruit.com/mpu6050-6-axis-accelerometer-and-gyro",
+    "example_code": [
+      {
+        "code": "// Arduino example\n#include <Adafruit_MPU6050.h>\n#include <Adafruit_Sensor.h>\n#include <Wire.h>\nAdafruit_MPU6050 mpu;\nvoid setup(void) {\n  Serial.begin(115200);\n  while (!Serial) delay(10);\n  if (!mpu.begin()) { Serial.println(\"Failed to find MPU6050 chip\"); while (1) delay(10); }\n  mpu.setAccelerometerRange(MPU6050_RANGE_8_G);\n  mpu.setGyroRange(MPU6050_RANGE_500_DEG);\n  mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);\n}\nvoid loop() {\n  sensors_event_t a, g, temp;\n  mpu.getEvent(&a, &g, &temp);\n  Serial.print(\"Acceleration X: \"); Serial.print(a.acceleration.x); Serial.print(\", Y: \"); Serial.print(a.acceleration.y); Serial.print(\", Z: \"); Serial.print(a.acceleration.z); Serial.println(\" m/s^2\");\n  Serial.print(\"Rotation X: \"); Serial.print(g.gyro.x); Serial.print(\", Y: \"); Serial.print(g.gyro.y); Serial.print(\", Z: \"); Serial.print(g.gyro.z); Serial.println(\" deg/s\");\n  Serial.print(\"Temperature: \"); Serial.print(temp.temperature); Serial.println(\" degC\");\n  delay(500);\n}",
+        "explaination": "Initializes the MPU6050, sets ranges, and prints acceleration, gyro, and temperature readings over serial."
+      }
+    ]
+  },
+  "sample_sketches": "basic_readings example from Adafruit library",
+  "online_resources": [
+    "MPU6050 Datasheet",
+    "MPU6050 Register Map",
+    "EagleCAD files on GitHub",
+    "Fritzing object in Adafruit Fritzing Library",
+    "Schematic",
+    "Fab Print"
+  ],
+  "datasheet_url": "https://adafru.it/GEu",
+  "company_info": {
+    "name": "Adafruit Industries",
+    "address": ""
+  },
+  "revision_history": [
+    "Last updated: 2019-11-06 09:51:47 PM UTC"
+  ],
+  "languages_available": [
+    "Arduino",
+    "CircuitPython",
+    "Python"
+  ],
+  "source_document": "https://learn.adafruit.com/mpu6050-6-axis-accelerometer-and-gyro"
+}

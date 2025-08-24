@@ -1,0 +1,57 @@
+{
+  "component_name": "SG90 TowerPro Micro Servo Motor",
+  "category": "Motor",
+  "manufacturer": "TowerPro",
+  "sku": "EMH1140",
+  "description": "Tiny and lightweight micro servo motor with high output power. Rotates approximately 180\u00b0 (\u00b190\u00b0) and is suitable for beginners and small projects. Comes with 3 arms and hardware.",
+  "application_examples": [
+    "Arduino servo control",
+    "Robotic arm movement",
+    "Hobby electronics projects"
+  ],
+  "related_products": [
+    "MG996R All Metal Gear Servo Motor",
+    "25T Metal Horns Round Disc For MG995 Servomotor",
+    "Aluminum Dual Clamping Arm/Horn for Servo Motor"
+  ],
+  "specifications": {
+    "motor_type": "3-pole",
+    "voltage_rating": "4.8V",
+    "current_rating": "",
+    "torque": "25 oz-in (1.80 kg-cm)",
+    "speed_rpm": "",
+    "gear_ratio": "",
+    "shaft_diameter": "",
+    "weight": "0.32oz (9.0 g)",
+    "operating_temperature": "",
+    "dimensions": "Length: 0.91 in (23.0 mm), Width: 0.48 in (12.2 mm), Height: 1.14 in (29.0 mm)"
+  },
+  "power": {
+    "supply_voltage_range": "",
+    "max_current": "",
+    "consumption": ""
+  },
+  "pinout": {
+    "wiring": {
+      "VCC": "Red",
+      "GND": "Black or Brown",
+      "Control_Signal": "Yellow, Orange or White",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect the red wire to the 5V pin on the Arduino, the black/brown wire to a GND pin, and the signal wire to pin 9. Upload the Arduino \"Sweep\" example to see the servo move 180\u00b0 back and forth.",
+    "example_code_url": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [],
+  "source_document": "Handsontec.com User Guide SG90 TowerPro Micro Servo Motor"
+}

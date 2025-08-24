@@ -1,0 +1,70 @@
+component_name: ISM330IS
+category: Sensor
+manufacturer: STMicroelectronics
+sku: ISM330IS
+description: The ISM330IS is a 6‑axis inertial measurement unit (IMU) system‑in‑package featuring a 3‑axis digital accelerometer and a 3‑axis digital gyroscope. It includes an ultra‑low‑power intelligent sensor processing unit (ISPU) for on‑edge AI and a sensor hub that can interface up to four external sensors. The device operates from 1.71 V to 3.6 V (analog) with an independent 1.62 V to 3.6 V IO supply, supports SPI and I²C serial interfaces, and is available in a compact LGA‑14L package (2.5 × 3.0 × 0.83 mm).
+application_examples:
+  - Industrial robots
+  - Asset tracking
+  - Anomaly detection and condition monitoring
+  - Event detection in alarms and smart homes
+  - Complex motion detection and gesture recognition for personal health
+  - IoT and connected devices
+related_products:
+specifications:
+  sensor_type: 6‑axis IMU (3‑axis accelerometer + 3‑axis gyroscope)
+  measuring_range: Accelerometer: ±2 g / ±4 g / ±8 g / ±16 g; Gyroscope: ±125 dps / ±250 dps / ±500 dps / ±1000 dps / ±2000 dps
+  accuracy: 
+  resolution: 
+  response_time: 
+  operating_voltage: 1.71 V to 3.6 V (analog), 1.62 V to 3.6 V (IO)
+  current_consumption: 
+  interface: SPI (3‑ or 4‑wire) and I²C (fast mode 400 kHz, fast‑mode‑plus 1 MHz)
+  operating_temperature: -40 °C to +85 °C
+  dimensions: 2.5 mm × 3.0 mm × 0.83 mm (LGA‑14L)
+  other:
+    - Ultra‑low‑power ISPU for on‑edge AI
+    - Sensor hub capable of reading up to four external sensors
+    - Low‑noise: 70 µg/√Hz (high‑performance mode)
+    - Low‑power consumption: 0.59 mA (high‑performance), 0.46 mA (low‑power)
+    - ECOPACK and RoHS compliant
+power:
+  supply_voltage_range: 1.71 V to 3.6 V (analog), 1.62 V to 3.6 V (IO)
+  max_current: 0.59 mA (high‑performance mode)
+  consumption: 0.59 mA (high‑performance), 0.46 mA (low‑power)
+pinout:
+  pins:
+    VCC: Vdd (1.71 V to 3.6 V)
+    GND: Ground
+    Data: I²C SDA/SCL or SPI SDI/SDO
+    Other: CS, SCL, SDA, INT1, INT2, Vdd_IO, GND, GND, Vdd, INT1, INT2, RES, RES, CS, SCL, SDA
+certifications:
+  - ECOPACK
+  - RoHS
+getting_started:
+  connection_guide: Connect Vdd to 1.71–3.6 V, Vdd_IO to 1.62–3.6 V, GND to ground. For I²C, pull‑up the SDA and SCL lines to Vdd_IO. For SPI, connect CS, SCL (SPC), SDI, and SDO. INT1 and INT2 are programmable interrupt pins. The device supports both 3‑wire and 4‑wire SPI modes.
+  example_code_url: https://www.st.com/resource/en/datasheet/ism330is.pdf
+  example_code:
+    - Item 1:
+      code: 
+      explaination: 
+sample_sketches: 
+online_resources:
+  - https://www.st.com/resource/en/datasheet/ism330is.pdf
+  - https://www.st.com/en/mems-and-sensors/ism330is.html
+datasheet_url: https://www.st.com/resource/en/datasheet/ism330is.pdf
+company_info:
+  name: STMicroelectronics
+  address: 1, rue de la République, 75000 Paris, France
+revision_history:
+  - Item 1:
+    date: 01-Jun-2022
+    version: 1
+    changes: Initial release
+  - Item 2:
+    date: 09-Aug-2023
+    version: 2
+    changes: Updated title, product resources, and description
+languages_available:
+  - English
+source_document: Source text provided in the prompt

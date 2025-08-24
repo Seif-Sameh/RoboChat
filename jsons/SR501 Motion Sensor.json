@@ -1,0 +1,71 @@
+{
+  "component_name": "HC-SR501 Passive Infrared (PIR) Motion Sensor",
+  "category": "Sensor",
+  "manufacturer": "Handson Technology",
+  "sku": "",
+  "description": "A passive infrared motion sensor module featuring the LHI778 PIR sensor and BISS0001 IC. It offers adjustable sensitivity for a detection range of 3 to 7 meters, time delay adjustments from 0.3 to 5 minutes, and a trigger selection jumper for single or repeatable triggers. The module outputs a TTL signal (3.3V/0V) and operates on 5\u201320\u202fVDC.",
+  "application_examples": [
+    "Dance floor motion detection with adjustable delay and trigger modes",
+    "Arduino-based motion-activated lighting or alerts"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "Passive Infrared (PIR)",
+    "measuring_range": "3\u20137 meters",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "",
+    "operating_voltage": "5\u201320\u202fVDC",
+    "current_consumption": "65\u202fmA",
+    "interface": "TTL output 3.3\u202fV/0\u202fV",
+    "operating_temperature": "-15\u202f\u00b0C to +70\u202f\u00b0C",
+    "dimensions": "32\u202fmm \u00d7 23\u202fmm",
+    "other": [
+      "Sensing cone <120\u00b0 within 7\u202fm",
+      "Fresnel lens \u00d823\u202fmm",
+      "Mounting screw pitch 28\u202fmm, M2 screw",
+      "Delay time adjustment 0.3\u20135\u202fmin",
+      "Lock time 0.2\u202fs",
+      "Trigger method: L = disable repeat trigger; H = enable repeat trigger"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "5\u201320\u202fVDC",
+    "max_current": "65\u202fmA",
+    "consumption": "65\u202fmA"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "Power Supply Pin (5\u201320\u202fVDC)",
+      "GND": "Ground Pin",
+      "Data": "Output Pin (TTL 3.3\u202fV/0\u202fV)",
+      "Other": "Time Delay Adjustment, Sensitivity Adjust, Trigger Selection Jumper"
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to a 5\u201320\u202fVDC supply, GND to ground, and the Output pin to a digital input on your microcontroller (e.g., Arduino pin 2). Use the Time Delay Adjustment, Sensitivity Adjust, and Trigger Selection Jumper to configure the sensor as needed.",
+    "example_code_url": "https://RandomNerdTutorials.com/pirsensor",
+    "example_code": [
+      {
+        "code": "int led = 13;\\nint sensor = 2;\\nint state = LOW;\\nint val = 0;\\n\\nvoid setup() {\\n  pinMode(led, OUTPUT);\\n  pinMode(sensor, INPUT);\\n  Serial.begin(9600);\\n}\\n\\nvoid loop(){\\n  val = digitalRead(sensor);\\n  if (val == HIGH) {\\n    digitalWrite(led, HIGH);\\n    delay(100);\\n    if (state == LOW) {\\n      Serial.println(\"Motion detected!\");\\n      state = HIGH;\\n    }\\n  } else {\\n    digitalWrite(led, LOW);\\n    delay(200);\\n    if (state == HIGH){\\n      Serial.println(\"Motion stopped!\");\\n      state = LOW;\\n    }\\n  }\\n}",
+        "explaination": "This Arduino sketch turns on an LED when motion is detected and prints status messages to the serial monitor. It accounts for the sensor\u2019s 1\u2011minute initialization period by simply ignoring early false positives."
+      }
+    ]
+  },
+  "sample_sketches": "See example_code in getting_started.",
+  "online_resources": [
+    "https://www.handsontec.com",
+    "https://RandomNerdTutorials.com/pirsensor"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "Handson Technology User Guide for HC\u2011SR501 Passive Infrared (PIR) Motion Sensor"
+}

@@ -1,0 +1,64 @@
+{
+  "component_name": "MQ2 Gas Sensor Module",
+  "category": "Sensor",
+  "manufacturer": "Handson Technology",
+  "sku": "MDU-1027",
+  "description": "Analog smoke/LPG/CO gas sensor module utilizing MQ-2 with protection and adjustable resistors. Detects LPG, i-butane, propane, methane, alcohol, hydrogen, and smoke with fast response and adjustable sensitivity.",
+  "application_examples": [
+    "Gas leakage detection in home and industrial environments",
+    "Arduino-based smoke detection with buzzer and LED indicators"
+  ],
+  "related_products": [],
+  "specifications": {
+    "sensor_type": "MQ-2 Gas Sensor (MQ2)",
+    "measuring_range": "Detects LPG, i-butane, propane, methane, alcohol, hydrogen, smoke",
+    "accuracy": "",
+    "resolution": "",
+    "response_time": "Fast; warm\u2011up time ~20 seconds for stable output",
+    "operating_voltage": "5VDC",
+    "current_consumption": "~150mA",
+    "interface": "Analog output A0 (0.1\u20130.3\u202fV), Digital TTL output D0 (0\u202fV/5\u202fV)",
+    "operating_temperature": "",
+    "dimensions": "32\u202fmm \u00d7 20\u202fmm \u00d7 22\u202fmm",
+    "other": [
+      "Weight: 8.5\u202fg",
+      "Connector: 4\u2011pin header, 2.54\u202fmm pitch"
+    ]
+  },
+  "power": {
+    "supply_voltage_range": "5\u202fVDC",
+    "max_current": "150\u202fmA",
+    "consumption": "\u2248150\u202fmA"
+  },
+  "pinout": {
+    "pins": {
+      "VCC": "5\u202fVDC",
+      "GND": "Ground",
+      "Data": "A0 (Analog) or D0 (Digital TTL)",
+      "Other": ""
+    }
+  },
+  "certifications": [],
+  "getting_started": {
+    "connection_guide": "Connect VCC to 5\u202fV, GND to ground, A0 to an analog input pin, and D0 to a digital input pin on the microcontroller. Use a 4\u2011pin header with 2.54\u202fmm pitch.",
+    "example_code_url": "",
+    "example_code": [
+      {
+        "code": "// MQ2 Gas/Smoke Sensor Example\nint redLed = 12;\nint greenLed = 11;\nint buzzer = 10;\nint smokeA0 = A5;\nint sensorThres = 400;\n\nvoid setup() {\n  pinMode(redLed, OUTPUT);\n  pinMode(greenLed, OUTPUT);\n  pinMode(buzzer, OUTPUT);\n  pinMode(smokeA0, INPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  int analogSensor = analogRead(smokeA0);\n  Serial.print(\"Pin A0: \");\n  Serial.println(analogSensor);\n  if (analogSensor > sensorThres) {\n    digitalWrite(redLed, HIGH);\n    digitalWrite(greenLed, LOW);\n    tone(buzzer, 1000, 200);\n  } else {\n    digitalWrite(redLed, LOW);\n    digitalWrite(greenLed, HIGH);\n    noTone(buzzer);\n  }\n  delay(100);\n}",
+        "explaination": "Reads the analog voltage from the MQ2 sensor. If the value exceeds a threshold, it activates a red LED, turns off the green LED, and sounds a buzzer. Otherwise, it activates the green LED, turns off the red LED, and stops the buzzer."
+      }
+    ]
+  },
+  "sample_sketches": "",
+  "online_resources": [],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Handson Technology",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "Handson Technology MQ2 Gas Sensor Module datasheet and application notes (provided text)"
+}

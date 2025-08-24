@@ -1,0 +1,75 @@
+{
+  "component_name": "Raspberry Pi 5",
+  "category": "Single-board computer",
+  "manufacturer": "Raspberry Pi Ltd",
+  "sku": "",
+  "description": "The Raspberry Pi 5 is a 64\u2011bit quad\u2011core ARM Cortex\u2011A76 single\u2011board computer featuring a 2.4\u202fGHz CPU, VideoCore VII GPU, dual 4Kp60 HDMI output with HDR, 4Kp60 HEVC decoder, LPDDR4X\u20114267 SDRAM (2/4/8/16\u202fGB options), dual\u2011band 802.11ac Wi\u2011Fi, Bluetooth\u202f5.0, microSD slot with SDR104 mode, USB\u202f3.0 and USB\u202f2.0 ports, Gigabit Ethernet with PoE+ support, two 4\u2011lane MIPI camera/display transceivers, PCIe\u202f2.0\u202fx1 interface, 5\u202fV/5\u202fA USB\u2011C power with Power Delivery, and a 40\u2011pin header.",
+  "application_examples": [
+    "Desktop computing",
+    "Industrial automation",
+    "Robotics",
+    "Media center"
+  ],
+  "related_products": [
+    "Raspberry Pi 4",
+    "Raspberry Pi 3"
+  ],
+  "specifications": {
+    "main_processor": "Broadcom BCM2712 2.4GHz quad\u2011core 64\u2011bit Arm Cortex\u2011A76 CPU",
+    "memory_main": {
+      "flash": "",
+      "sram": "",
+      "eeprom": ""
+    },
+    "secondary_processor": "",
+    "memory_secondary": {
+      "flash": "",
+      "sram": "",
+      "eeprom": ""
+    },
+    "operating_voltage": "5V",
+    "input_voltage_recommended": "5V",
+    "input_voltage_limits": "",
+    "operating_temperature": "",
+    "digital_io_pins": "",
+    "pwm_pins": "",
+    "analog_input_pins": "",
+    "dc_current_per_io_pin": "",
+    "flash_memory_for_bootloader": ""
+  },
+  "power": {
+    "vin_max": "5V",
+    "vusb_max": "5V",
+    "consumption": ""
+  },
+  "pinout": {
+    "analog_pins": {},
+    "digital_pins": {},
+    "power_pins": {}
+  },
+  "certifications": [],
+  "getting_started": {
+    "ide": "",
+    "cloud_editor": ""
+  },
+  "sample_sketches": "",
+  "online_resources": [
+    "https://www.raspberrypi.com/products/raspberry-pi-5/"
+  ],
+  "datasheet_url": "",
+  "company_info": {
+    "name": "Raspberry Pi Ltd",
+    "address": ""
+  },
+  "revision_history": [],
+  "languages_available": [
+    "English"
+  ],
+  "source_document": "Raspberry Pi 5 Specification Sheet",
+  "example_code": [
+    {
+      "code": "",
+      "explaination": ""
+    }
+  ]
+}

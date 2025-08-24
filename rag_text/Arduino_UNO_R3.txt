@@ -1,0 +1,106 @@
+component_name: Arduino UNO R3
+category: Control Board
+manufacturer: Arduino S.r.l
+sku: A000066
+description: The Arduino® UNO R3 is the perfect board to get familiar with electronics and coding. This versatile development board is equipped with the well-known ATmega328P and the ATMega 16U2 Processor.
+application_examples:
+  - First entry to electronics
+  - Industry-standard development board
+  - Education purposes
+related_products:
+  - Arduino Starter Kit
+  - Arduino UNO R4 Minima
+  - Arduino UNO R4 WiFi
+  - Tinkerkit Braccio Robot
+specifications:
+  main_processor: ATmega328P
+  memory_main:
+    flash: 32 kB
+    sram: 2 kB
+    eeprom: 1 kB
+  secondary_processor: ATmega16U2
+  memory_secondary:
+    flash: 16 kB ISP
+    sram: 512 B
+    eeprom: 512 B
+  operating_voltage: 5 V
+  input_voltage_recommended: 
+  input_voltage_limits: VIN: 6-20 V, USB: 5.5 V
+  operating_temperature: -40 to 85 °C
+  digital_io_pins: 14
+  pwm_pins: 6
+  analog_input_pins: 6
+  dc_current_per_io_pin: 
+  flash_memory_for_bootloader: 
+power:
+  vin_max: 20 V
+  vusb_max: 5.5 V
+  consumption: 
+pinout:
+  analog_pins:
+    A0: 9
+    A1: 10
+    A2: 11
+    A3: 12
+    A4/SDA: 13
+    A5/SCL: 14
+  digital_pins:
+    D0: 1
+    D1: 2
+    D2: 3
+    D3: 4
+    D4: 5
+    D5: 6
+    D6: 7
+    D7: 8
+    D8: 9
+    D9: 10
+    SS: 11
+    MOSI: 12
+    MISO: 13
+    SCK: 14
+    GND: 15
+    AREF: 16
+    A4/SD4: 17
+    A5/SD5: 18
+  power_pins:
+    VIN: 8
+    5V: 5
+    +3V3: 4
+    GND: 6,7,15
+certifications:
+  - CE
+  - RoHS
+  - FCC
+getting_started:
+  ide: Arduino Desktop IDE
+  cloud_editor: Arduino Cloud Editor
+sample_sketches: 
+online_resources:
+  - https://www.arduino.cc/en/Main/Software
+  - https://create.arduino.cc/editor
+  - https://docs.arduino.cc/arduino-cloud/guides/editor/
+  - https://www.arduino.cc/
+  - https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending
+  - https://www.arduino.cc/reference/en/
+  - https://store.arduino.cc/
+datasheet_url: 
+company_info:
+  name: Arduino S.r.l
+  address: Via Andrea Appiani 25 20900 MONZA Italy
+revision_history:
+  - Item 1:
+    date: 25/04/2024
+    revision: 3
+    changes: Updated link to new Cloud Editor
+  - Item 2:
+    date: 26/07/2023
+    revision: 2
+    changes: General Update
+  - Item 3:
+    date: 06/2021
+    revision: 1
+    changes: Datasheet release
+languages_available:
+source_document: User Manual
+example_code:
